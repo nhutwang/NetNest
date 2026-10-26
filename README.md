@@ -16,7 +16,7 @@ Website thuyết trình nội thất 3D tương tác bằng cuộn trang.
 
 NetNest giới thiệu **LINEA**, bàn console với kệ điều chỉnh vị trí, và **ROAM**, bàn gập thay đổi chiều cao. Camera, mô hình, ảnh và chữ chuyển cảnh theo thao tác cuộn; cuộn ngược quay về trạng thái trước. Website phục vụ bài thuyết trình khoảng 7 phút, không có chế độ video tự chạy hoặc bộ đếm thời gian.
 
-> Website trình bày concept từ ảnh tham chiếu, chưa phải CAD sản xuất hoặc mô phỏng cơ khí đã kiểm định. Giá hiển thị là **giá đề xuất**: LINEA **$99.99**, ROAM **$74.99**, đối chiếu NỘI DUNG EEC.docx, mục SLIDE CONTENT và [listing Canva](https://www.canva.com/design/DAHZCC5ljzc/6Aml3CaUvXyVT2g4EyagzQ/edit) ngày 27/10/2026.
+> Website trình bày concept từ ảnh tham chiếu, chưa phải CAD sản xuất hoặc mô phỏng cơ khí đã kiểm định. Giá hiển thị là **giá đề xuất**: LINEA **$99.99**, ROAM **$74.99**, đối chiếu NỘI DUNG EEC.docx, mục SLIDE CONTENT và listing Canva do nhóm cung cấp ngày 27/10/2026.
 
 <table>
   <tr>
