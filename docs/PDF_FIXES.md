@@ -46,3 +46,7 @@ Tên package là `netnest`, workspace VS Code là `NetNest.code-workspace`; gói
 Workflow `.github/workflows/pages.yml` kiểm tra trên push/PR vào `main`; chỉ push hoặc chạy thủ công mới đóng gói/deploy. Artifact chỉ có index.html, .nojekyll và 4 ảnh, không kèm docs/script/Git. Repo local đã khởi tạo nhánh main; chưa commit, thêm remote, push hoặc publish. Cần chọn GitHub Actions trong Settings → Pages của repo đích trước khi chạy deploy. Workflow đã được đối chiếu cấu hình với hướng dẫn GitHub, chưa chạy trên GitHub thực tế.
 
 Kiểm tra bàn giao: npm run check đạt; HTTP local trả 200 cho trang và 4 ảnh mới, 404 cho đường dẫn ngoài runtime. Artifact 6 file đã chạy qua HTTP dưới /NetNest/: ảnh tải đủ, WebGL ready và model LINEA/thước hiển thị. NetNest.zip gồm 20 file nguồn, kiểm tra CRC và SHA-256 từng entry trùng nguồn; không chứa .git, releases hoặc cache. Kiểm tra artifact local không thay thế một lần chạy workflow GitHub thật.
+
+## Publish · 26/10/2026
+
+Người dùng yêu cầu trực tiếp tự push và deploy. Đã tạo repo công khai https://github.com/nhutwang/NetNest bằng phiên GitHub Chrome của nhutwang, push 20 file từ nhánh main. Pages Source đã đặt GitHub Actions. Run 40270040414 (attempt 2) có cả check-and-package và deploy thành công; URL môi trường là https://nhutwang.github.io/NetNest/. Lần đầu chạy trước khi bật Pages dừng tại Configure Pages; sau khi lưu Source và chạy lại đã qua. Không đổi code/animation khi publish.

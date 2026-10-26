@@ -10,7 +10,7 @@ Website thuyết trình nội thất 3D tương tác bằng cuộn trang.
 
 **Three.js r152.2 · GSAP / ScrollTrigger 3.12.5 · HTML / CSS / JavaScript**
 
-[Chạy local](#chay-local) · [Trải nghiệm](#trai-nghiem) · [Cấu trúc](#cau-truc) · [GitHub & deploy](#github-deploy)
+[Xem website](https://nhutwang.github.io/NetNest/) · [Mã nguồn](https://github.com/nhutwang/NetNest) · [Chạy local](#chay-local) · [Trải nghiệm](#trai-nghiem) · [Cấu trúc](#cau-truc) · [GitHub & deploy](#github-deploy)
 
 </div>
 
@@ -123,7 +123,7 @@ Lệnh kiểm tra chín chương, camera đo cố định, bố cục thước t
 
 ### 1. Tạo repository
 
-Tạo repo tên **NetNest** trên tài khoản của bạn. Nếu dùng các lệnh bên dưới, tạo repo trống, không thêm README hay `.gitignore` trên GitHub. Thay `YOUR_USERNAME` bằng tài khoản thực của bạn.
+Tạo repo tên **NetNest** trên tài khoản của bạn. Nếu dùng các lệnh bên dưới, tạo repo trống, không thêm README hay `.gitignore` trên GitHub. Thay `nhutwang` bằng tài khoản thực của bạn.
 
 Tại thư mục dự án, nếu chưa có Git:
 
@@ -136,7 +136,7 @@ Sau đó:
 ```bash
 git add .
 git commit -m "Prepare NetNest website"
-git remote add origin https://github.com/YOUR_USERNAME/NetNest.git
+git remote add origin https://github.com/nhutwang/NetNest.git
 git push -u origin main
 ```
 
@@ -156,13 +156,13 @@ Workflow sẽ:
 
 Mỗi lần push vào `main` sẽ kiểm tra và deploy lại. Pull request chỉ chạy kiểm tra. Hướng dẫn cấu hình theo [tài liệu GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-GitHub hiển thị URL thật trong **Settings → Pages** và kết quả job deploy; dạng thường gặp là `https://YOUR_USERNAME.github.io/NetNest/`. Đây là URL mẫu, chưa phải URL dự án đã publish.
+GitHub hiển thị URL thật trong **Settings → Pages** và kết quả job deploy; dạng thường gặp là `https://nhutwang.github.io/NetNest/`. Website chính thức: [nhutwang.github.io/NetNest](https://nhutwang.github.io/NetNest/).
 
 ### 3. Xác nhận sau deploy
 
 Mở URL do GitHub cung cấp, kiểm tra logo/ảnh, cuộn đủ chín cảnh, thước ba chiều, nâng hạ, gập và hai giá. Thử cuộn ngược, màn hình dọc và tải lại dưới đường dẫn repo. Nếu workflow lỗi, xem job tương ứng trong tab Actions.
 
-Gói bàn giao đã được kiểm tra local. Workflow chưa được chạy trên một repository GitHub thực tế; chưa tạo repo, push hoặc publish website trong lượt chuẩn bị này.
+Website đã được push lên [nhutwang/NetNest](https://github.com/nhutwang/NetNest) và deploy bằng GitHub Pages ngày 26/10/2026. Cả job kiểm tra/đóng gói và deploy đã chạy thành công trên GitHub Actions. Các lần push tiếp theo vào `main` tự kiểm tra và deploy lại.
 
 ## Bảo trì và nguồn
 
