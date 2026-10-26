@@ -6,7 +6,7 @@
 
 Website thuyết trình nội thất 3D tương tác bằng cuộn trang.
 
-<img src="docs/images/hero.jpg" alt="Logo NÉT NEST và không gian sống ROAM" width="100%">
+<img src="docs/images/hero.jpg" alt="Hai bộ sưu tập SPACE và MOTION với nút Explore" width="100%">
 
 **Three.js r152.2 · GSAP / ScrollTrigger 3.12.5 · HTML / CSS / JavaScript**
 
@@ -16,7 +16,7 @@ Website thuyết trình nội thất 3D tương tác bằng cuộn trang.
 
 NetNest giới thiệu **LINEA**, bàn console với kệ điều chỉnh vị trí, và **ROAM**, bàn gập thay đổi chiều cao. Camera, mô hình, ảnh và chữ chuyển cảnh theo thao tác cuộn; cuộn ngược quay về trạng thái trước. Website phục vụ bài thuyết trình khoảng 7 phút, không có chế độ video tự chạy hoặc bộ đếm thời gian.
 
-> Website trình bày concept từ ảnh tham chiếu, chưa phải CAD sản xuất hoặc mô phỏng cơ khí đã kiểm định. Giá hiển thị là **giá mục tiêu**: LINEA **$89.99**, ROAM **$69.99**.
+> Website trình bày concept từ ảnh tham chiếu, chưa phải CAD sản xuất hoặc mô phỏng cơ khí đã kiểm định. Giá hiển thị là **giá đề xuất**: LINEA **$99.99**, ROAM **$74.99**, đối chiếu NỘI DUNG EEC.docx, mục SLIDE CONTENT và [listing Canva](https://www.canva.com/design/DAHZCC5ljzc/6Aml3CaUvXyVT2g4EyagzQ/edit) ngày 27/10/2026.
 
 <table>
   <tr>
@@ -58,21 +58,21 @@ Nên chạy qua HTTP hoặc Live Server thay vì mở bằng `file://`. Bốn �
 
 ## Trải nghiệm và nội dung
 
-Cuộn xuống để tiến câu chuyện; cuộn lên để xem lại. Dừng cuộn tại cấu hình cần giải thích. Điều khiển model bằng tiến trình cuộn, chưa có kéo xoay tự do hoặc bảng chọn màu riêng.
+Cuộn xuống để tiến câu chuyện; cuộn lên để xem lại. Dừng cuộn tại cấu hình cần giải thích. Chọn **Explore LINEA / Explore ROAM** ở bộ sưu tập để tới model tương ứng. Trong cảnh kích thước đầy đủ, bấm mẫu màu để thay vật liệu trực tiếp: Rustic Brown / Natural Oak cho LINEA và White / Black cho ROAM. Camera và cơ cấu model được điều khiển bằng tiến trình cuộn.
 
 | Cảnh | Nội dung |
 | --- | --- |
-| 01 · Brand | Ảnh không gian sống, logo và định hướng thương hiệu |
-| 02 · Collections | SPACE / LINEA và MOTION / ROAM |
-| 03 · Market | Hai số thị trường cùng trượt lên; dữ liệu Amazon US từ MPG cấp ITK |
+| 01 · Brand | Ảnh mở đầu, logo và giải nghĩa NÉT / NEST |
+| 02 · Vision | Rooted in Vietnam. Designed for modern living. |
+| 03 · Collections | Hai mảng SPACE / MOTION và nút Explore tới model |
 | 04 · LINEA | Ảnh sản phẩm trong không gian sống, chuyển vào model |
 | 05 · LINEA details | Kích thước 110 × 30 × 80 cm; kệ 10/25/40 cm; vật liệu, vít/giá đỡ và exploded view |
 | 06 · Match cut | Chuyển từ LINEA sang ROAM |
 | 07 · ROAM details | Kích thước 122 × 61 × 74 cm; chiều cao 55/65/74 cm; lật, thu/gập chân, gập đôi, chốt, xách, vật liệu và carton |
-| 08 · Products | Ảnh nguyên sản phẩm và hai giá mục tiêu |
+| 08 · Products | Ảnh nguyên sản phẩm và hai giá đề xuất |
 | 09 · End | Hai góc nhìn, một triết lý thiết kế |
 
-Khung đo dùng hình chiếu song song theo ảnh mẫu: thước dài ở cạnh sau, thước sâu gặp tại góc chung, thước cao đứng dọc. Thước có mũi tên hai đầu, cm và inches; số đo cập nhật theo model khi nâng hạ. Chú thích chi tiết nối bằng một đoạn thẳng có fade. LINEA dùng ivory ấm, ROAM dùng xám xanh nhạt.
+Khung đo dùng hình chiếu song song theo ảnh mẫu: thước dài ở cạnh sau, thước sâu gặp tại góc chung, thước cao đứng dọc. Thước có mũi tên hai đầu, cm và inches; số đo cập nhật theo model khi nâng hạ. Chú thích chi tiết nối bằng một đoạn thẳng có fade. LINEA dùng ivory ấm, ROAM dùng xám xanh nhạt. Vân MFC tạo theo seed, bề mặt thép đen mờ và HDPE có microtexture; camera chuyển góc theo quỹ đạo quanh sản phẩm, giữ khoảng cách có chủ đích để tránh zoom ngoài ý muốn.
 
 Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện. Có nhánh reduced-motion và ảnh thay thế khi không dựng được WebGL. Kiểm tra mạng, máy trình chiếu và toàn bộ hành trình cuộn trước buổi trình bày.
 
@@ -113,7 +113,7 @@ NetNest/
 npm run check
 ```
 
-Lệnh kiểm tra chín chương, camera đo cố định, bố cục thước theo ảnh mẫu, số đo động, số thị trường đi lên một lần, fade chú thích, thứ tự gập/đóng gói, tính xác định khi cuộn ngược/nhảy mốc, bốn ảnh nguồn, giá, JavaScript inline và ảnh README.
+Lệnh kiểm tra chín chương, camera đo cố định, bố cục thước theo ảnh mẫu, số đo động, điểm đến Explore, nội dung thương hiệu/vision, fade chú thích, thứ tự gập/đóng gói, tính xác định khi cuộn ngược/nhảy mốc, bốn ảnh nguồn, giá, JavaScript inline và ảnh README.
 
 Đã xem trực quan ở desktop và viewport mobile; đây chưa phải nghiệm thu touch/iOS/Android thật hoặc đo FPS trên máy thi. Chi tiết và giới hạn nằm trong [docs/PDF_FIXES.md](docs/PDF_FIXES.md).
 
@@ -140,7 +140,7 @@ git remote add origin https://github.com/nhutwang/NetNest.git
 git push -u origin main
 ```
 
-Nếu Git yêu cầu danh tính, cấu hình tên/email của chính bạn tại repo trước khi commit. Không đưa API key, mật khẩu hay file môi trường vào Git. `releases/`, ZIP, cache và `_site/` đã được ignore.
+Nếu Git yêu cầu danh tính, cấu hình tên/email của chính bạn tại repo trước khi commit. Không đưa API key, mật khẩu hay file môi trường vào Git. `releases/`, ZIP, cache, `_site/` và các kết quả nghiên cứu local trong `output/` đã được ignore.
 
 Có thể dùng **Add file → Upload files** thay cho terminal, nhưng phải đưa cả `.github/workflows/pages.yml`, `.nojekyll` và các file cấu hình dấu chấm lên đầy đủ. `index.html` và `assets/` phải nằm ngay ở gốc repo, không lồng thêm một thư mục `NetNest/` trong repo.
 

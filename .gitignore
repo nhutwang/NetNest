@@ -15,3 +15,6 @@ coverage/
 # Local packages and generated Pages artifact
 releases/
 _site/
+
+# Unrelated local research outputs; never package or publish with the website
+/output/

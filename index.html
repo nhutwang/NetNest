@@ -6,45 +6,49 @@
 <style>
 *{box-sizing:border-box;margin:0}[hidden]{display:none!important}:root{color-scheme:light;--iv:#F8F3E9;--cr:#EDE5D5;--ol:#1F3D2E;--sa:#C3AA7E;--ch:#25372D;--se:'Cormorant Garamond',Georgia,serif;--sn:'Hanken Grotesk',system-ui,sans-serif}
 html{scroll-behavior:auto}body{background:var(--iv);color:var(--ch);font:400 17px/1.5 var(--sn);overflow-x:hidden}::selection{background:#1f3d2e;color:var(--iv)}#sp{height:2800vh}#stage{position:fixed;inset:0;overflow:hidden;background:radial-gradient(ellipse at 62% 37%,#fffcf5 0%,var(--iv) 52%,#eae2d1 100%)}#stage.roam-stage{background:radial-gradient(ellipse at 62% 37%,#f6faf6 0%,#e6eee8 56%,#cddbd1 100%)}#stage.roam-stage #detail-note{background:#edf3ed}#gl{position:absolute;inset:0;width:100%;height:100%;opacity:0;pointer-events:none}.sc{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none}.sc img{display:block;width:100%;height:100%;object-fit:cover}.se,h1,h2{font-family:var(--se);font-weight:500;letter-spacing:-.025em;line-height:1.02}h1{font-size:clamp(70px,12vw,180px)}h2{font-size:clamp(40px,5.8vw,84px);text-wrap:balance}.mk{overflow:hidden;display:block}.mk i{font-style:normal;display:block}
-#s1{background:var(--iv)}#s1 .ph{position:absolute;inset:0}#s1 .ph:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#252724a8)}#s1 .tt{position:absolute;left:5vw;bottom:9vh;color:var(--iv)}#s1 .tt p{font-size:clamp(17px,1.8vw,28px);margin-top:15px}#s1 .lg{position:absolute;left:3vw;top:50%;width:46vw;height:auto;transform:translateY(-50%);object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.08);opacity:0}#s1 .brand-detail{position:absolute;right:4vw;top:8vh;width:43vw;height:84vh;overflow:hidden;opacity:0}#s1 .brand-detail img{object-position:54% center;transform:scale(1.1)}
-#s2,#s9{display:flex;align-items:center;justify-content:space-between;gap:3vw;padding:7vh 5vw}#s2{background:var(--cr)}#s2 figure{width:31vw;flex:none}#s2 figure img{height:57vh;object-fit:contain;object-position:center}#s2 figcaption{text-align:center;font-size:clamp(14px,1.25vw,19px);margin-top:24px;letter-spacing:.025em}#s2 h2{text-align:center;flex:1;font-size:clamp(35px,4.8vw,76px)}
-#s3{background:var(--ol);color:var(--iv)}#s3 .in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:8vw;padding:5vw}#s3 .stat{width:44%;overflow:hidden}#s3 .stat b{font-size:clamp(85px,12.8vw,210px);font-weight:500;color:var(--sa);display:block;margin:.08em 0;white-space:nowrap}#s3 .stat>p{font-size:clamp(17px,1.5vw,23px);line-height:1.6}#s3 .stat small{font-size:clamp(13px,1.1vw,17px);display:block;line-height:1.7}#s3 .stat .mk{overflow:hidden}
-#s4 .fr{position:absolute;inset:0}#s4 .fr img{object-position:64% center}#s4 .fr:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f8f3e9e6 0,#f8f3e950 26%,transparent 48%)}#s4 .tx{position:absolute;left:5vw;top:15vh;width:31vw}#s4 .tx p{font-size:clamp(19px,2vw,30px);max-width:19ch;margin-top:20px}
+#s1{background:var(--iv)}#s1 .ph{position:absolute;inset:0}#s1 .ph:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#252724a8)}#s1 .tt{position:absolute;left:5vw;bottom:9vh;color:var(--iv)}#s1 .tt p{font-size:clamp(17px,1.8vw,28px);margin-top:15px}#s1 .lg{position:absolute;left:5vw;top:3vh;width:23vw;height:24vh;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.08);opacity:0}#brand-story{position:absolute;inset:33vh 8vw 10vh;display:grid;grid-template-columns:1fr 1fr;column-gap:10vw;align-content:center}#brand-story h2{font-size:clamp(62px,7vw,100px)}#brand-story p{max-width:35ch;margin-top:24px;font-size:clamp(16px,1.4vw,21px);line-height:1.65}#brand-story .signature{grid-column:1/-1;max-width:none;margin-top:9vh;font-size:15px;letter-spacing:.08em}#brand-story article{border-top:1px solid #1f3d2e40;padding-top:22px}
+#s2{background:var(--cr);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:8vw;padding:8vh 7vw}#s2 h2{font-size:clamp(45px,5.7vw,82px);margin-bottom:25px}#s2 h3{font-family:var(--se);font-size:clamp(25px,2.5vw,38px);font-weight:500;line-height:1.15;margin-bottom:20px}#s2 p{max-width:44ch;font-size:clamp(15px,1.3vw,19px);margin-top:16px;line-height:1.65}#s2 .signature{font-size:13px;letter-spacing:.06em;margin-top:30px}#s2 figure img{height:72vh;object-fit:contain}
+#s3{background:var(--iv);display:grid;grid-template-columns:1fr 1fr}#s3>h2{position:absolute;top:5vh;left:5vw;font-size:clamp(32px,3.2vw,48px);z-index:1}#s3 article{padding:19vh 5vw 5vh;display:flex;flex-direction:column;justify-content:center}#s3 article.motion{background:var(--ol);color:var(--iv)}#s3 h3{font:500 clamp(50px,6.4vw,96px)/1 var(--se);letter-spacing:-.025em}#s3 h3 span{display:block;font:400 14px var(--sn);letter-spacing:.18em;margin-top:12px}#s3 p{max-width:34ch;font-size:clamp(16px,1.3vw,20px);margin:25px 0 18px}#s3 article img{height:28vh;width:100%;object-fit:contain;margin:0 0 25px}a{color:inherit;text-underline-offset:6px}a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:6px}a:hover{text-decoration-thickness:2px}.explore{pointer-events:auto;align-self:flex-start;padding:10px 0;text-decoration:none;border-bottom:1px solid currentColor;font-size:15px;display:flex;gap:35px;align-items:center}.explore svg{width:30px;height:16px;fill:none;stroke:currentColor;stroke-width:1.2}
+#s4{background:var(--iv)}#s4 .fr{position:absolute;inset:7vh 3vw 7vh 43vw}#s4 .fr img{object-fit:contain}#s4 .tx{position:absolute;left:6vw;top:23vh;width:31vw}#s4 .tx h2{font-size:clamp(64px,7vw,110px)}#s4 .tx p{font:500 clamp(27px,3vw,42px)/1.15 var(--se);margin-top:22px}#s4 .tx .description{font:400 clamp(15px,1.25vw,19px)/1.65 var(--sn);margin-top:28px}
 #s6 .wp{position:absolute;inset:0;background:var(--cr);transform:scaleX(0);transform-origin:left}
 #s8{background:var(--cr);display:grid;grid-template-columns:1fr 1fr;gap:5vw;padding:7vh 7vw;align-items:center}#s8 figure img{height:57vh;object-fit:contain}#s8 figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin-top:20px;border-top:1px solid #1f3d2e35;padding-top:14px}#s8 figcaption span{font-size:18px}#s8 b{font-size:clamp(35px,4vw,62px);font-family:var(--se);font-weight:500}#s8 small{font:400 11px var(--sn);display:block;text-align:right}
 #s9{background:var(--ol);color:var(--iv)}#s9 figure{width:32vw;flex:none}#s9 figure img{height:65vh;object-fit:contain}#s9 .m9{flex:1;text-align:center}#s9 h2{font-size:clamp(36px,4.7vw,76px)}
 #inspector{position:absolute;left:5vw;top:14vh;width:29vw;z-index:5;pointer-events:none}#inspector.right{left:auto;right:5vw}#inspector.bottom{top:auto;bottom:7vh;width:38vw}#inspector.top{top:8vh;left:auto;right:5vw;width:27vw}#inspector h2{font-size:clamp(38px,5.1vw,76px);line-height:1.02}#inspector p{font-size:clamp(15px,1.5vw,22px);line-height:1.6;margin-top:17px;max-width:27ch;color:#565747}
 #measurements,#leaders{position:absolute;inset:0;width:100%;height:100%;z-index:4;overflow:visible;pointer-events:none}#measurements path,#leaders path{fill:none;stroke:#1f3d2e;stroke-width:1.2}#measurements .arrowheads{fill:#1f3d2e;stroke:none}#measurements text{font:500 17px var(--sn);text-anchor:middle;fill:var(--ch)}#measurements .imperial{font-size:11px;fill:#666650}#detail-note{position:absolute;z-index:5;width:190px;padding:14px 16px;border:1px solid #1f3d2e60;background:#f8f3e9f2;font-size:14px;line-height:1.5;pointer-events:none}#fallback-image{position:absolute;inset:8vh 5vw 8vh auto;width:62vw;height:84vh;object-fit:contain}#network-message{position:absolute;z-index:10;bottom:3vh;left:5vw;background:var(--iv);padding:12px;max-width:36ch;font-size:14px}noscript{position:fixed;bottom:0;z-index:15;background:var(--iv);padding:20px;width:100%}
-@media(max-width:700px){#gl{height:100%}#sp{height:3000svh}h1{font-size:19vw}#s1 .tt{left:7vw;right:7vw;bottom:12vh}#s1 .tt p{font-size:17px;max-width:25ch}#s1 .lg{left:1vw;width:96vw;top:27%}#s1 .brand-detail{top:45vh;height:49vh;width:86vw;right:7vw}#s2{display:grid;grid-template-columns:1fr 1fr;gap:8vw;padding:11vh 7vw;align-content:center}#s2 figure{width:auto}#s2 figure img{height:29vh;object-fit:contain}#s2 figcaption{font-size:12px;line-height:1.6;margin-top:16px}#s2 h2{grid-row:2;grid-column:1/-1;font-size:12vw;line-height:1.02;margin-top:3vh}#s3 .in{flex-direction:column;justify-content:center;gap:9vh;padding:10vh 7vw}#s3 .stat{width:100%}#s3 .stat b{font-size:25vw;margin:7px 0}#s3 .stat>p{font-size:16px}#s3 .stat small{font-size:12px}#s4 .fr img{object-fit:contain;background:var(--iv)}#s4 .fr:after{background:none}#s4 .tx{left:7vw;top:8vh;width:86vw}#s4 .tx h2{font-size:20vw}#s4 .tx p{font-size:20px;max-width:24ch;margin-top:14px}#inspector,#inspector.right,#inspector.bottom,#inspector.top{left:7vw;right:7vw;top:auto;bottom:7vh;width:auto}#inspector h2{font-size:12vw;max-width:19ch}#inspector p{font-size:15px;max-width:32ch;margin-top:10px}#detail-note{width:146px;font-size:11px;padding:10px 12px}#measurements .arrowheads{fill:#1f3d2e;stroke:none}#measurements text{font-size:13px}#measurements .imperial{font-size:9px}#s8{padding:9vh 7vw;gap:6vh;grid-template-columns:1fr;align-content:center}#s8 figure img{height:25vh}#s8 figcaption{margin-top:8px;padding-top:7px}#s8 b{font-size:35px}#s8 figcaption span{font-size:15px}#s9{display:grid;grid-template-columns:1fr 1fr;padding:9vh 6vw;gap:6vw;align-content:center}#s9 figure{width:100%}#s9 figure img{height:30vh}#s9 .m9{grid-column:1/-1;grid-row:2;padding:6vh 0 0}#s9 h2{font-size:12vw}#fallback-image{inset:5vh 2vw auto;width:96vw;height:60vh}}
+#product-panel{position:absolute;left:5vw;top:20vh;width:26vw;max-width:340px;z-index:5}#product-panel h2{font-size:clamp(40px,5.2vw,76px)}#product-panel .tagline{font:500 clamp(23px,2.3vw,34px)/1.15 var(--se);margin-top:18px;text-wrap:balance}#product-panel .description{font-size:clamp(14px,1.1vw,17px);line-height:1.65;margin-top:20px}#product-panel .qualities{font-size:12px;letter-spacing:.04em;margin-top:23px}#finishes{border:0;margin-top:24px}#finishes legend{font-size:12px;margin-bottom:10px}#finishes .choices{display:flex;gap:10px}#finishes button{width:44px;height:44px;cursor:pointer;border-radius:50%;border:1px solid #25372d50;background:var(--swatch);padding:4px;background-clip:content-box}#finishes button[aria-pressed=true]{outline:1px solid var(--ch);outline-offset:3px}#finishes button:hover{border-color:var(--ch)}#finishes button:disabled{cursor:default;opacity:.4}#story-nav{position:absolute;top:3vh;right:4vw;z-index:8;display:flex;gap:24px;font-size:13px}#story-nav a{padding:8px 0}#scroll-hint{position:absolute;bottom:4vh;right:5vw;z-index:5;color:var(--iv);font-size:12px;letter-spacing:.06em}#s8 .product-details{font-size:13px;line-height:1.7;margin-top:15px}#s8 figure img{height:48vh}#s8 .product-details strong{font-weight:500}#stage:focus{outline:none}#s9{display:flex;align-items:center;justify-content:space-between;gap:3vw;padding:7vh 5vw}
+@media(max-width:700px){#sp{height:3000svh}h1{font-size:19vw}#s1 .tt{left:7vw;right:7vw;bottom:14vh}#s1 .tt p{font-size:17px;max-width:25ch}#s1 .lg{left:5vw;top:3vh;width:55vw;height:19vh}#brand-story{inset:27vh 8vw 6vh;display:block}#brand-story article{padding-top:14px;margin-bottom:25px}#brand-story h2{font-size:46px}#brand-story p{font-size:14px;line-height:1.6;margin-top:10px}#brand-story .signature{font-size:11px;margin-top:20px}#s2{grid-template-columns:1fr;padding:8vh 8vw;gap:4vh;align-content:center}#s2 h2{font-size:49px;margin-bottom:20px}#s2 h3{font-size:28px;margin-bottom:15px}#s2 p{font-size:14px;line-height:1.6;margin-top:14px}#s2 .signature{margin-top:20px;font-size:11px}#s2 figure img{height:23vh;object-position:center}#s3{grid-template-columns:1fr;grid-template-rows:1fr 1fr}#s3>h2{top:3vh;left:7vw;font-size:29px}#s3 article{position:relative;padding:11vh 7vw 3vh;justify-content:center}#s3 article.motion{padding-top:4vh}#s3 h3{font-size:49px}#s3 h3 span{font-size:10px;margin-top:6px}#s3 p{font-size:13px;width:57%;margin:14px 0 8px}#s3 article img{position:absolute;right:5vw;top:16vh;width:30vw;height:18vh;margin:0}#s3 article.motion img{top:10vh}.explore{font-size:13px;gap:17px;padding:7px 0}#s4 .fr{inset:40vh 6vw 6vh}#s4 .tx{left:8vw;top:9vh;width:84vw}#s4 .tx h2{font-size:65px}#s4 .tx p{font-size:28px;margin-top:15px;max-width:23ch}#s4 .tx .description{font-size:14px;margin-top:18px;max-width:37ch}#product-panel{left:7vw;right:7vw;top:auto;bottom:6vh;width:auto;max-width:none}#product-panel h2{font-size:46px}#product-panel .tagline{font-size:24px;margin-top:9px;max-width:29ch}#product-panel .description{font-size:14px;line-height:1.5;margin-top:12px;max-width:42ch}#product-panel .qualities{font-size:11px;margin-top:12px}#finishes{margin-top:16px}#finishes legend{font-size:11px}#finishes button{width:44px;height:44px}#story-nav{top:2vh;right:7vw;font-size:11px;gap:18px}#inspector,#inspector.right,#inspector.bottom,#inspector.top{left:7vw;right:7vw;top:auto;bottom:7vh;width:auto}#inspector h2{font-size:12vw;max-width:19ch}#inspector p{font-size:14px;max-width:38ch;margin-top:10px}#detail-note{width:146px;font-size:11px;padding:10px 12px}#measurements text{font-size:13px}#measurements .imperial{font-size:9px}#s8{padding:7vh 7vw;gap:4vh;grid-template-columns:1fr;align-content:center}#s8 figure img{height:21vh}#s8 figcaption{margin-top:6px;padding-top:6px}#s8 b{font-size:32px}#s8 figcaption span{font-size:15px}#s8 .product-details{font-size:11px;margin-top:8px}#s9{display:grid;grid-template-columns:1fr 1fr;padding:9vh 6vw;gap:6vw;align-content:center}#s9 figure{width:100%}#s9 figure img{height:30vh}#s9 .m9{grid-column:1/-1;grid-row:2;padding:6vh 0 0}#s9 h2{font-size:12vw}#fallback-image{inset:6vh 2vw auto;width:96vw;height:51vh}}
+@media(max-height:720px) and (min-width:701px){#brand-story{inset:29vh 8vw 6vh}#brand-story p{font-size:15px;margin-top:15px}#brand-story .signature{margin-top:5vh}#product-panel{top:16vh}#product-panel h2{font-size:50px}#product-panel .tagline{font-size:26px}#product-panel .description{font-size:14px;margin-top:14px}#product-panel .qualities{margin-top:14px}#finishes{margin-top:18px}#s2 h2{font-size:54px}#s2 h3{font-size:27px}#s2 p{font-size:15px}#s3 article{padding-top:17vh}#s3 p{font-size:15px;margin:18px 0 13px}}
+@media(max-height:740px) and (max-width:700px){#product-panel h2{font-size:36px}#product-panel .tagline{font-size:21px}#product-panel .description{font-size:12px}#product-panel{bottom:4vh}#brand-story{top:24vh}#brand-story p{font-size:12px}#brand-story article{margin-bottom:19px}#s2 figure{display:none}}
 @media(min-width:701px) and (max-height:650px){#inspector h2{font-size:clamp(32px,4.7vw,58px)}#inspector p{font-size:16px}#inspector{top:11vh}#detail-note{font-size:12px;padding:11px 13px}#s4 .tx{top:10vh}#s4 .tx h2{font-size:12vh}}
-@media(min-width:701px){#inspector[data-kind=bracket]{top:6vh}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}#s1 .brand-detail img{transform:none}.mk i{will-change:auto!important}}
+@media(min-width:701px){#inspector[data-kind=bracket]{top:6vh}#inspector[data-kind=packing] h2{font-size:clamp(36px,4.1vw,62px)}#inspector[data-kind=packing] p{font-size:clamp(14px,1.2vw,18px)}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}#s1 .ph{transform:none}}
 </style></head><body>
-<div id="sp" aria-hidden="true"></div><main id="stage" aria-label="NÉT NEST furniture story"><canvas id="gl" role="img" aria-label="Proposed LINEA and ROAM furniture models"></canvas>
-<section class="sc" id="s1"><div class="ph"><img src="assets/brand-garden.jpg" alt="NÉT NEST garden scene"></div><div class="brand-detail"><img src="assets/roam-lifestyle.jpg" alt="ROAM on a sunlit terrace"></div><div class="tt"><h1>NÉT NEST</h1><p>Thoughtfully Designed for the Way We Live.</p></div><img class="lg" src="assets/netnest-logo.jpg" alt="NÉT NEST logo"></section>
-<section class="sc" id="s2" hidden><figure class="a"><img src="assets/linea-lifestyle.jpg" alt="Complete LINEA console in an entryway"><figcaption>SPACE Collection · LINEA</figcaption></figure><h2>Two Perspectives.<br>One Design Philosophy.</h2><figure class="b"><img src="assets/roam-lifestyle.jpg" alt="Complete ROAM folding table on a terrace"><figcaption>MOTION Collection · ROAM</figcaption></figure></section>
-<section class="sc" id="s3" hidden><div class="in"><div class="stat"><p>Console Tables</p><b class="se mk"><i>~2.10M</i></b><small>units / 12 months</small><small>+29.0% YoY · ASP $90.98</small></div><div class="stat"><p>Folding Tables</p><b class="se mk"><i>~2.22M</i></b><small>units / 12 months</small><small>+42.4% YoY · ASP $66.87</small></div></div></section>
-<section class="sc" id="s4" hidden><div class="fr"><img src="assets/linea-lifestyle.jpg" alt="LINEA, fully assembled in an entryway"></div><div class="tx"><h2>LINEA</h2><p>Defined by Lines.<br>Designed for Living.</p></div></section>
+<div id="sp" aria-hidden="true"></div><main id="stage" tabindex="-1" aria-label="NÉT NEST furniture story"><canvas id="gl" role="img" aria-label="Proposed LINEA and ROAM furniture models"></canvas>
+<section class="sc" id="s1"><div class="ph"><img src="assets/brand-garden.jpg" alt="NÉT NEST garden scene"></div><div class="tt"><h1>NÉT NEST</h1><p>Thoughtfully Designed for the Way We Live.</p></div><img class="lg" src="assets/netnest-logo.jpg" alt="NÉT NEST — Vietnamese Roots × Modern Living"><div id="brand-story" hidden><article><h2>NÉT</h2><p>A Vietnamese word for a distinctive line, detail, or character.<br>It represents the subtle Vietnamese design elements we bring into each product.</p></article><article><h2>NEST</h2><p>A place of comfort, belonging, and everyday living.<br>It reflects our goal of creating furniture that naturally becomes part of the home.</p></article><p class="signature">NÉT NEST — Vietnamese Roots × Modern Living</p></div><span id="scroll-hint">Scroll to explore</span></section>
+<section class="sc" id="s2" hidden><div class="vision-copy"><h2>Our vision</h2><h3>Rooted in Vietnam.<br>Designed for modern living.</h3><p>We bring the warmth, simplicity, and thoughtful details of Vietnamese design into furniture made for contemporary homes.</p><p>By combining cultural character with practical, space-conscious design, NÉT NEST creates pieces that feel distinctive, functional, and naturally at home in everyday life.</p><p class="signature">Vietnamese Roots × Modern Living</p></div><figure><img src="assets/linea-lifestyle.jpg" alt="LINEA bringing warmth to a contemporary entryway"></figure></section>
+<section class="sc" id="s3" hidden><h2>Our collection</h2><article class="space"><h3>SPACE<span>COLLECTION</span></h3><p>Designed to make better use of compact spaces through smart, adaptable furniture.</p><img src="assets/linea-lifestyle.jpg" alt="LINEA console table from the SPACE collection"><a class="explore" href="#linea" data-story-target="linea">Explore LINEA <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8H29M22 1L29 8L22 15"/></svg></a></article><article class="motion"><h3>MOTION<span>COLLECTION</span></h3><p>Designed to move, fold, and adapt as everyday needs change.</p><img src="assets/roam-lifestyle.jpg" alt="ROAM folding table from the MOTION collection"><a class="explore" href="#roam" data-story-target="roam">Explore ROAM <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8H29M22 1L29 8L22 15"/></svg></a></article></section>
+<section class="sc" id="s4" hidden><div class="fr"><img src="assets/linea-lifestyle.jpg" alt="LINEA, fully assembled in an entryway"></div><div class="tx"><h2>LINEA</h2><p>Designed to fit where life happens.</p><p class="description">At only 11.8&quot; deep, LINEA fits naturally into entryways, hallways, behind sofas, bedrooms, and other compact spaces.</p></div></section>
 <section class="sc" id="s5" aria-label="LINEA dimensions, shelf, materials and assembly" hidden></section>
 <section class="sc" id="s6" aria-label="Walnut to ivory match cut" hidden><div class="wp"></div></section>
 <section class="sc" id="s7" aria-label="ROAM dimensions, folding, materials and packaging" hidden></section>
-<section class="sc" id="s8" hidden><figure><img src="assets/linea-lifestyle.jpg" alt="Complete LINEA console, styled in an entryway"><figcaption><span>LINEA</span><div><b>$89.99</b><small>Target price</small></div></figcaption></figure><figure><img src="assets/roam-lifestyle.jpg" alt="Complete ROAM table, styled on a terrace"><figcaption><span>ROAM</span><div><b>$69.99</b><small>Target price</small></div></figcaption></figure></section>
+<section class="sc" id="s8" hidden><figure><img src="assets/linea-lifestyle.jpg" alt="Complete LINEA console, styled in an entryway"><figcaption><span>LINEA</span><div><b>$99.99</b><small>Proposed price</small></div></figcaption><p class="product-details"><strong>43.3&quot;W × 11.8&quot;D × 31.5&quot;H</strong><br>4 FlexiShelf configurations · Adjustable feet · Flat-pack design</p></figure><figure><img src="assets/roam-lifestyle.jpg" alt="Complete ROAM table, styled on a terrace"><figcaption><span>ROAM</span><div><b>$74.99</b><small>Proposed price</small></div></figcaption><p class="product-details"><strong>48&quot;W × 24&quot;D × 21.7–29.1&quot;H</strong><br>3 adjustable heights · Fold-in-half design · Carrying handle</p></figure></section>
 <section class="sc" id="s9" hidden><figure><img src="assets/linea-lifestyle.jpg" alt="LINEA console, complete product view"></figure><div class="m9"><h2>SPACE / MOTION</h2></div><figure><img src="assets/roam-lifestyle.jpg" alt="ROAM table, complete product view"></figure></section>
+<nav id="story-nav" aria-label="Story navigation" hidden><a href="#collections" data-story-target="collections">Collections</a><a href="#top" data-story-target="top">Back to start</a></nav><div id="product-panel" hidden><h2></h2><p class="tagline"></p><p class="description"></p><p class="qualities"></p><fieldset id="finishes"><legend>Finish: <span></span></legend><div class="choices"><button type="button" data-finish="0" aria-pressed="true"></button><button type="button" data-finish="1" aria-pressed="false"></button></div></fieldset></div>
 <div id="inspector" hidden aria-live="polite" aria-atomic="true"><h2></h2><p></p></div><svg id="measurements" aria-label="Product dimensions" hidden></svg><svg id="leaders" aria-hidden="true" hidden><path/></svg><div id="detail-note" hidden></div><img id="fallback-image" src="assets/linea-lifestyle.jpg" alt="Original product photograph" hidden><p id="network-message" hidden>Connect to the Internet and reload to load the 3D presentation.</p>
 </main><noscript>Enable JavaScript to view the interactive furniture story.</noscript>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script>
 /* STORY_STATE_START */
-const END=24.8,CHAPTERS=[0,1.2,2.6,5,6.7,13.2,14.3,21.9,23.4];
+const END=24.8,CHAPTERS=[0,2.45,4.3,5.5,6.7,13.2,14.3,21.9,23.4];
 const clamp=(n,a=0,b=1)=>Math.min(b,Math.max(a,n));
 const phase=(t,a,b)=>clamp((t-a)/(b-a));
-const smooth=x=>x*x*(3-2*x),blend=(a,b,x)=>a+(b-a)*x;
+const smooth=x=>x*x*x*(x*(x*6-15)+10),blend=(a,b,x)=>a+(b-a)*x;
 const STEPS=[
  [6.7,'linea-dimensions','LINEA','Made to fit.','bottom'],
  [7.8,'shelf-low','Low position','10 cm · 3.9 in','right'],[8.3,'shelf-middle','Middle position','25 cm · 9.8 in','right'],[8.8,'shelf-high','High position','40 cm · 15.7 in','right'],[9.3,'shelf-removed','Space, opened up.','Removable lower shelf.','right'],
- [9.8,'walnut','Walnut, in detail.','Warm woodgrain. A softly rounded edge.','right'],[10.7,'steel','Clean lines.','Black powder-coated steel.','left'],[11.05,'feet','A thoughtful footing.','Adjustable foot pads.','right'],[11.4,'bracket','A considered connection.','Steel brackets and threaded inserts.','right'],[12.3,'exploded','Every part, considered.','Panels, side frames and hardware.','bottom'],
- [14.3,'roam-intro','ROAM','Made to Move with You.','right'],[15,'roam-dimensions','Room to gather.','A generous surface. A compact idea.','bottom'],[15.8,'height-low','Low position','55 cm · 21.7 in','left'],[16.15,'height-middle','Middle position','65 cm · 25.6 in','left'],[16.5,'height-high','High position','74 cm · 29.1 in','left'],
- [16.85,'flip','Turn it over.','Open and flip.','right'],[17.45,'legs','Fold the legs.','Retract. Then fold inward.','right'],[18.05,'half','Half the footprint.','Close the two halves.','right'],[18.65,'latch','Close. Secure.','Bring the latch into place.','left'],[19.05,'carry','Ready to go.','A handle for the next move.','left'],[19.55,'hdpe','Made for everyday.','A textured HDPE shell.','right'],[20.15,'roam-steel','Details that move.','Black steel. A purposeful handle.','left'],[20.65,'packing','The next chapter.','Corner protection. A compact carton.','right']
+ [9.8,'walnut','Warmth, in detail.','Woodgrain MFC. Warm surfaces with softly rounded corners and clean edge banding.','right'],[10.7,'steel','Clean lines.','A matte-black steel frame gives LINEA a clean, contemporary character.','left'],[11.05,'feet','A thoughtful footing.','Adjustable foot pads help level the table on uneven floors.','right'],[11.4,'bracket','A considered connection.','Steel brackets and threaded inserts.','right'],[12.3,'exploded','Every part, considered.','Flat-pack design. Pre-welded side frames and numbered hardware simplify assembly.','bottom'],
+ [14.3,'roam-intro','ROAM','Made to move. Ready to adapt.','right'],[15,'roam-dimensions','Room to gather.','A generous surface. A compact idea.','bottom'],[15.8,'height-low','Low position','55 cm · 21.7 in','left'],[16.15,'height-middle','Middle position','65 cm · 25.6 in','left'],[16.5,'height-high','High position','74 cm · 29.1 in','left'],
+ [16.85,'flip','Turn it over.','Fold & go. Turn the tabletop over to reveal the folding structure.','right'],[17.45,'legs','Fold the legs.','Retract the lower legs, then fold the steel frames neatly inside the tabletop.','right'],[18.05,'half','Half the footprint.','Fold the tabletop in half for compact transport and storage.','right'],[18.65,'latch','Easy-Lock.','Open. Lock. Use. Fold. A simplified locking system for intuitive setup and packing away.','left'],[19.05,'carry','Ready to go.','The built-in handle makes carrying, transport, and storage easier.','left'],[19.55,'hdpe','Made for everyday.','Hollow-molded HDPE. A practical, easy-care surface for dining, working, and gatherings.','right'],[20.15,'roam-steel','Details that move.','Powder-coated steel. A reinforced frame designed for flexible everyday use.','left'],[20.65,'packing','Protected for the journey.','Folded. Protected. Packed. Corner protection and a fitted carton illustrate the proposed packaging.','right']
 ];
 function storyAt(t){
  t=clamp(t,0,END);let chapter=1;CHAPTERS.forEach((b,i)=>{if(t>=b)chapter=i+1});
@@ -52,14 +56,20 @@ function storyAt(t){
  const shelfHeight=t<8.8?blend(.1,.25,smooth(phase(t,8.3,8.55))):blend(.25,.4,smooth(phase(t,8.8,9.05)));
  const measureMode=step?.[1]?.startsWith('shelf-')&&step[1]!=='shelf-removed'?'shelf':step?.[1]?.startsWith('height-')?'height':step?.[1]?.endsWith('-dimensions')?'full':'';
  const height=t<16.15?blend(.74,.55,smooth(phase(t,15.84,16.04))):t<16.5?blend(.55,.65,smooth(phase(t,16.19,16.39))):blend(.65,.74,smooth(phase(t,16.54,16.74)));
- return {chapter,step,product:t<13.85?'linea':'roam',model:t>=6.2&&t<21.9,shelfHeight,shelfRemove:smooth(phase(t,9.32,9.62))*(1-phase(t,11.3,11.4)),explosion:smooth(phase(t,12.35,12.85)),joint:Math.sin(Math.PI*phase(t,11.5,12.2)),roamHeight:blend(height,.53,smooth(phase(t,17.46,17.6))),flip:smooth(phase(t,16.91,17.36)),legFold:smooth(phase(t,17.63,17.98)),halfFold:smooth(phase(t,18.12,18.52)),latch:smooth(phase(t,18.73,18.96)),carry:smooth(phase(t,19.1,19.43))*(1-smooth(phase(t,20.67,20.98))),pack:smooth(phase(t,20.72,21.6)),measureMode,measureOnly:measureMode==='shelf'||measureMode==='height',dimensions:!!measureMode,dimReveal:dimensionOpacity(t),marketHold:t>=3.25&&t<=4.65?1:0};
+ return {chapter,step,product:t<13.85?'linea':'roam',model:t>=6.2&&t<21.9,shelfHeight,shelfRemove:smooth(phase(t,9.32,9.62))*(1-phase(t,11.3,11.4)),explosion:smooth(phase(t,12.35,12.85)),joint:Math.sin(Math.PI*phase(t,11.5,12.2)),roamHeight:blend(height,.53,smooth(phase(t,17.46,17.6))),flip:smooth(phase(t,16.91,17.36)),legFold:smooth(phase(t,17.63,17.98)),halfFold:smooth(phase(t,18.12,18.52)),latch:smooth(phase(t,18.73,18.96)),carry:smooth(phase(t,19.1,19.43))*(1-smooth(phase(t,20.67,20.98))),pack:smooth(phase(t,20.72,21.6)),measureMode,measureOnly:measureMode==='shelf'||measureMode==='height',dimensions:!!measureMode,dimReveal:dimensionOpacity(t)};
 }
 // Full dimensions fade; adjustable rulers stay visible while their values change.
 function dimensionOpacity(t){
  const windows=[[6.9,7.8],[7.8,9.3],[15.18,15.8],[15.8,16.85]];
  return Math.max(...windows.map(([a,b])=>smooth(phase(t,a,a+.06))*(1-smooth(phase(t,b-.06,b)))));
 }
-function marketMotion(t){return 1-smooth(phase(t,2.6,3.05));}
+const STORY_TARGETS={top:0,collections:4.72,linea:7.18,roam:15.42};
+function modelCopy(state){
+ if(!state.dimensions)return null;
+ if(state.measureMode==='shelf')return {title:'FlexiShelf',tagline:'One table. Four possibilities.',body:'Adjust the lower shelf between three heights — 3.9", 9.8", and 15.7" — or remove it completely for an open configuration.',qualities:'Make more of the space you have.'};
+ if(state.measureMode==='height')return {title:'Three heights.',tagline:'One table. Different moments.',body:'Choose between 21.7", 25.6", and 29.1" to adapt ROAM for dining, working, gatherings, and everyday activities.',qualities:'Made to move with your life.'};
+ return state.product==='linea'?{title:'LINEA',tagline:'Designed to fit where life happens.',body:'A slim, adaptable console table for modern homes where every inch matters. A clean silhouette with flexible storage for different spaces and everyday needs.',qualities:'Slim · Flexible · Functional'}:{title:'ROAM',tagline:'Made to move. Ready to adapt.',body:'A compact folding table for flexible everyday living. Adjustable height, easy portability, and a foldable structure that adapts as spaces and activities change.',qualities:'Portable · Adjustable · Versatile'};
+}
 function detailOpacity(t,start,end){return smooth(phase(t,start,start+.16))*(1-smooth(phase(t,end-.12,end)));}
 // Photo-reference layout: both top rulers meet above the same rear corner.
 // Orthographic measurement shots keep all three model axes parallel on screen.
@@ -78,51 +88,99 @@ function technicalRulers(state){
 }
 // Position, target and editorial horizontal view offset; holds use identical keys.
 const SHOTS=[
- [0,1.45,1.02,2.2,0,.4,0,.13],[6.2,1.45,1.02,2.2,0,.4,0,.13],[6.7,-.9,.83,2.6,0,.4,0,0],[7.75,-.9,.83,2.6,0,.4,0,0],
- [8,-.9,.83,2.6,0,.4,0,0],[9.3,-.9,.83,2.6,0,.4,0,0],[9.6,1.3,.94,2.1,0,.4,0,-.14],[10.05,.95,.96,.85,.3,.78,.04,-.14],[10.65,.95,.96,.85,.3,.78,.04,-.14],
+ [0,1.45,1.02,2.2,0,.4,0,.13],[6.2,1.45,1.02,2.2,0,.4,0,.13],[6.7,-.9,.83,2.6,0,.4,0,.15],[7.75,-.9,.83,2.6,0,.4,0,.15],
+ [8,-.9,.83,2.6,0,.4,0,.15],[9.3,-.9,.83,2.6,0,.4,0,.15],[9.6,1.3,.94,2.1,0,.4,0,-.14],[10.05,.95,.96,.85,.3,.78,.04,-.14],[10.65,.95,.96,.85,.3,.78,.04,-.14],
  [10.86,1.05,.74,.84,.51,.55,.12,.15],[11,.98,.7,.8,.51,.52,.12,.15],[11.17,.9,.22,.7,.51,.045,.12,-.14],[11.35,.9,.22,.7,.51,.045,.12,-.14],
  [11.62,.84,1.02,.52,.5,.87,.12,-.13],[12.22,.84,1.02,.52,.5,.87,.12,-.13],[12.5,1.85,1.35,2.6,0,.47,0,0],[13.12,1.85,1.35,2.6,0,.47,0,0],
  [13.6,.25,1.13,.36,.16,.96,.03,0],[13.84,.25,1.13,.36,.16,.96,.03,0],[13.85,.2,.93,.38,.13,.74,.03,0],[14.18,.2,.93,.38,.13,.74,.03,0],[14.65,1.6,1.1,2.2,0,.36,0,-.14],
- [15,-1.1,.82,2.7,0,.35,0,0],[15.75,-1.1,.82,2.7,0,.35,0,0],[16,-1.1,.82,2.7,0,.35,0,0],[16.85,-1.1,.82,2.7,0,.35,0,0],
+ [15,-1.1,.82,2.7,0,.35,0,.15],[15.75,-1.1,.82,2.7,0,.35,0,.15],[16,-1.1,.82,2.7,0,.35,0,.15],[16.85,-1.1,.82,2.7,0,.35,0,.15],
  [17.15,1.3,1.6,1.9,0,.28,0,-.14],[18.6,1.3,1.6,1.9,0,.28,0,-.14],[18.88,1.25,.9,1.6,0,.2,0,.14],[19.45,1.3,.86,1.7,0,.37,0,.14],
- [19.76,.9,.74,.96,0,.44,0,-.14],[20.1,.9,.74,.96,0,.44,0,-.14],[20.38,.9,.86,.9,0,.6,0,.13],[20.6,.9,.86,.9,0,.6,0,.13],[21.08,1.35,1.55,1.85,0,.16,0,-.13],[END,1.35,1.55,1.85,0,.16,0,-.13]
+ [19.76,.9,.74,.96,0,.44,0,-.14],[20.1,.9,.74,.96,0,.44,0,-.14],[20.38,.9,.86,.9,0,.6,0,.13],[20.6,.9,.86,.9,0,.6,0,.13],[21.08,1.6,1.75,2.2,0,.25,0,-.18],[END,1.6,1.75,2.2,0,.25,0,-.18]
 ];
-function cameraAt(t){if(t>=6.7&&t<9.3)t=7.2;if(t>=15&&t<16.85)t=15.3;let i=0;while(i<SHOTS.length-2&&t>=SHOTS[i+1][0])i++;const a=SHOTS[i],b=SHOTS[i+1],f=smooth(phase(t,a[0],b[0]));return a.slice(1).map((v,j)=>blend(v,b[j+1],f));}
+function cameraAt(t){
+ if(t>=6.7&&t<9.3)t=7.2;if(t>=15&&t<16.85)t=15.3;
+ let i=0;while(i<SHOTS.length-2&&t>=SHOTS[i+1][0])i++;
+ const a=SHOTS[i],b=SHOTS[i+1],f=smooth(phase(t,a[0],b[0])),target=a.slice(4,7).map((v,j)=>blend(v,b[j+4],f));
+ // Orbit around the subject; interpolate distance independently to avoid unintended push-ins.
+ const orbit=q=>{const x=q[1]-q[4],y=q[2]-q[5],z=q[3]-q[6],r=Math.hypot(x,y,z);return [r,Math.atan2(x,z),Math.asin(y/r)];};
+ const u=orbit(a),v=orbit(b),r=blend(u[0],v[0],f),yaw=u[1]+Math.atan2(Math.sin(v[1]-u[1]),Math.cos(v[1]-u[1]))*f,pitch=blend(u[2],v[2],f);
+ return [target[0]+r*Math.cos(pitch)*Math.sin(yaw),target[1]+r*Math.sin(pitch),target[2]+r*Math.cos(pitch)*Math.cos(yaw),...target,blend(a[7],b[7],f)];
+}
 /* STORY_STATE_END */
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let renderer,scene,camera,linea,roam,assembly,leftHalf,rightPivot,shelfGroup,topGroup,sideFrames=[],joints=[],railGroup,carton,lid;
 let ready=false,lastFrame='',lastShadow='',lastStep='',lastChapter=0;
+const selectedFinishes={linea:0,roam:0},FINISHES={linea:[['Rustic Brown × Matte Black','#875733','rustic'],['Natural Oak × Matte Black','#c4a170','oak']],roam:[['White × Matte Black','#e9e7df','white'],['Black × Matte Black','#282a29','black']]};
 const legFrames=[],feet=[],braces=[];
 try{
  if(new URLSearchParams(location.search).has('fallback'))throw Error('Fallback preview');
  renderer=new THREE.WebGLRenderer({canvas:$('#gl'),alpha:true,antialias:true,powerPreference:'high-performance'});
  renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;
- renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.08;
- renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
+ renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;
+ renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;renderer.shadowMap.autoUpdate=false;
  scene=new THREE.Scene();camera=new THREE.PerspectiveCamera(32,1,.012,45);
  const envScene=new THREE.Scene();envScene.background=new THREE.Color('#c8c4b8');
  for(const [x,y,z,w,h,power] of [[-3,3,2,3,5,3],[3,2,-2,2,4,1.8],[0,5,0,5,3,2]]){
   const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color('#fff5e6').multiplyScalar(power),side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,.4,0);envScene.add(m);
  }
  const pmrem=new THREE.PMREMGenerator(renderer),environment=pmrem.fromScene(envScene,.025);scene.environment=environment.texture;pmrem.dispose();envScene.traverse(o=>{o.geometry?.dispose();o.material?.dispose()});
- scene.add(new THREE.HemisphereLight('#fff7e8','#b7ad95',.8));
- const key=new THREE.DirectionalLight('#fff1da',2.6);key.position.set(-1.8,3,2.2);key.castShadow=true;key.shadow.mapSize.set(innerWidth<=700?1024:2048,innerWidth<=700?1024:2048);Object.assign(key.shadow.camera,{left:-2,right:2,top:2,bottom:-2,near:.1,far:8});key.shadow.bias=-.00012;key.shadow.normalBias=.001;key.shadow.radius=3;scene.add(key);
- const rim=new THREE.DirectionalLight('#dfebed',1.1);rim.position.set(2,2,-2);scene.add(rim);
- const fill=new THREE.DirectionalLight('#fff9f0',.6);fill.position.set(1,1,3);scene.add(fill);
- const ground=new THREE.Mesh(new THREE.PlaneGeometry(25,25),new THREE.ShadowMaterial({opacity:.18}));ground.rotation.x=-Math.PI/2;ground.position.y=-.0015;ground.receiveShadow=true;scene.add(ground);
- const steel=new THREE.MeshStandardMaterial({color:'#222622',roughness:.39,metalness:.64,envMapIntensity:.8});
- const rubber=new THREE.MeshStandardMaterial({color:'#292c26',roughness:.87});
- const zinc=new THREE.MeshStandardMaterial({color:'#737b72',roughness:.35,metalness:.8});
- const grainCanvas=document.createElement('canvas');grainCanvas.width=1024;grainCanvas.height=256;const g=grainCanvas.getContext('2d');g.fillStyle='#785035';g.fillRect(0,0,1024,256);let seed=23;
+ scene.add(new THREE.HemisphereLight('#fffaf1','#9caa9f',.7));
+ const key=new THREE.DirectionalLight('#fff3df',2.15);key.position.set(-1.8,3,2.2);key.castShadow=true;key.shadow.mapSize.set(innerWidth<=700?1024:2048,innerWidth<=700?1024:2048);Object.assign(key.shadow.camera,{left:-2,right:2,top:2,bottom:-2,near:.1,far:8});key.shadow.bias=-.00012;key.shadow.normalBias=.001;key.shadow.radius=3.5;scene.add(key);
+ const rim=new THREE.DirectionalLight('#e6eeed',.85);rim.position.set(2,2,-2);scene.add(rim);
+ const fill=new THREE.DirectionalLight('#fff9f0',.5);fill.position.set(1,1,3);scene.add(fill);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(25,25),new THREE.ShadowMaterial({opacity:.21}));ground.rotation.x=-Math.PI/2;ground.position.y=-.0015;ground.receiveShadow=true;scene.add(ground);
+ const steel=new THREE.MeshStandardMaterial({color:'#242923',roughness:.52,metalness:.22,envMapIntensity:.6});
+ const rubber=new THREE.MeshStandardMaterial({color:'#262b25',roughness:.9});
+ const zinc=new THREE.MeshStandardMaterial({color:'#7b8179',roughness:.38,metalness:.82});
+ let seed=23;
  const random=()=>{seed=seed*16807%2147483647;return(seed-1)/2147483646};
- for(let i=0;i<1800;i++){const y=random()*256,tone=45+random()*85;g.strokeStyle=`rgba(${tone+25},${tone*.65},${tone*.36},${.07+random()*.25})`;g.lineWidth=.15+random()*.9;g.beginPath();for(let x=0;x<=1024;x+=12){const yy=y+Math.sin(x*.004+i*.08)*(2+random()*2);if(x===0)g.moveTo(x,yy);else g.lineTo(x,yy);}g.stroke();}
- const woodMap=new THREE.CanvasTexture(grainCanvas);woodMap.colorSpace=THREE.SRGBColorSpace;woodMap.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
- const woodBump=woodMap.clone();woodBump.colorSpace=THREE.NoColorSpace;
- const wood=new THREE.MeshPhysicalMaterial({color:'#8f8b83',map:woodMap,bumpMap:woodBump,bumpScale:.00065,roughness:.5,metalness:0,clearcoat:.12,clearcoatRoughness:.5,envMapIntensity:.65});
- const noiseCanvas=document.createElement('canvas');noiseCanvas.width=noiseCanvas.height=128;const ng=noiseCanvas.getContext('2d'),pix=ng.createImageData(128,128);for(let i=0;i<pix.data.length;i+=4){const v=120+Math.floor(random()*20);pix.data.set([v,v,v,255],i);}ng.putImageData(pix,0,0);
+ // Seeded melamine print: flowing fibres, broad tonal variation and subtle pores.
+ // Both finishes share the same grain and geometry; only the print palette changes.
+ const lattice=Float32Array.from({length:4096},random);
+ const grainNoise=(u,v)=>{
+  const x=Math.floor(u),y=Math.floor(v),fx=u-x,fy=v-y,sx=fx*fx*(3-2*fx),sy=fy*fy*(3-2*fy);
+  const n=(a,b)=>lattice[((b&63)*64)+(a&63)];
+  return blend(blend(n(x,y),n(x+1,y),sx),blend(n(x,y+1),n(x+1,y+1),sx),sy);
+ };
+ const grainCanvas=document.createElement('canvas');grainCanvas.width=1024;grainCanvas.height=512;
+ const grainContext=grainCanvas.getContext('2d'),grainImage=grainContext.createImageData(1024,512);
+ const oakCanvas=document.createElement('canvas');oakCanvas.width=1024;oakCanvas.height=512;
+ const oakContext=oakCanvas.getContext('2d'),oakImage=oakContext.createImageData(1024,512);
+ for(let y=0;y<512;y++)for(let x=0;x<1024;x++){
+  const u=x/1024,v=y/512;
+  const flow=v*57+1.7*Math.sin(u*4.1+v*3.6)+1.8*(grainNoise(u*3.5,v*6)-.5);
+  const latewood=Math.pow(Math.abs(Math.sin(flow*Math.PI)),18);
+  const fine=Math.pow(Math.abs(Math.sin(flow*7.3+grainNoise(u*17,v*80)*2)),12);
+  const broad=grainNoise(u*4,v*9)-.5,pores=grainNoise(u*110,v*190)-.5;
+  const tone=1+broad*.29-latewood*.13-fine*.045+pores*.065;
+  const i=(y*1024+x)*4;
+  for(let c=0;c<3;c++){
+   grainImage.data[i+c]=[108,63,35][c]*tone;
+   oakImage.data[i+c]=[169,129,79][c]*(1+(tone-1)*.8);
+  }
+  grainImage.data[i+3]=oakImage.data[i+3]=255;
+ }
+ grainContext.putImageData(grainImage,0,0);oakContext.putImageData(oakImage,0,0);
+ const finishMaps={};
+ for(const [name,canvas] of [['rustic',grainCanvas],['oak',oakCanvas]]){
+  const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;
+  map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());finishMaps[name]=map;
+ }
+ const woodMap=finishMaps.rustic,woodBump=woodMap.clone();woodBump.colorSpace=THREE.NoColorSpace;
+ const wood=new THREE.MeshPhysicalMaterial({color:'#ffffff',map:woodMap,bumpMap:woodBump,bumpScale:.00018,roughness:.55,metalness:0,clearcoat:.06,clearcoatRoughness:.62,envMapIntensity:.55});
+ const noiseCanvas=document.createElement('canvas');noiseCanvas.width=noiseCanvas.height=128;
+ const ng=noiseCanvas.getContext('2d'),pix=ng.createImageData(128,128);
+ for(let i=0;i<pix.data.length;i+=4){const v=120+Math.floor(random()*20);pix.data.set([v,v,v,255],i);}ng.putImageData(pix,0,0);
  const micro=new THREE.CanvasTexture(noiseCanvas);micro.wrapS=micro.wrapT=THREE.RepeatWrapping;micro.repeat.set(15,15);
- const hdpe=new THREE.MeshPhysicalMaterial({color:'#c8c5b9',roughness:.72,envMapIntensity:.45,bumpMap:micro,bumpScale:.00022,metalness:0,clearcoat:.08,clearcoatRoughness:.65});
+ steel.bumpMap=micro;steel.bumpScale=.00008;
+ const hdpe=new THREE.MeshPhysicalMaterial({color:'#e5e3dc',roughness:.68,envMapIntensity:.45,bumpMap:micro,bumpScale:.0002,metalness:0,clearcoat:.04,clearcoatRoughness:.72});
+ var applyFinish=(product,choice)=>{
+  if(product==='linea'&&finishMaps[choice]){wood.map=finishMaps[choice];wood.needsUpdate=true;}
+  else if(product==='roam'&&['white','black'].includes(choice)){hdpe.color.set(choice==='black'?'#343a35':'#e5e3dc');}
+  else return false;
+  lastFrame='';return true;
+ };
  const boxGeometry=new THREE.BoxGeometry(1,1,1),tubeGeometry=new THREE.CylinderGeometry(1,1,1,16);
  function mesh(parent,geometry,material,x=0,y=0,z=0){const o=new THREE.Mesh(geometry,material);o.position.set(x,y,z);o.castShadow=o.receiveShadow=true;parent.add(o);return o;}
  function box(parent,w,h,d,x,y,z,mat=steel){const o=mesh(parent,boxGeometry,mat,x,y,z);o.scale.set(w,h,d);return o;}
@@ -277,12 +335,13 @@ function detailLines(state){
 }
 function syncText(state,t){
  $('#stage').classList.toggle('roam-stage',state.model&&state.product==='roam');
- const rise=reduced?0:marketMotion(t);
- for(const number of $$('#s3 .mk i')){number.style.transform=`translateY(${rise*105}%)`;number.style.opacity=String(1-rise);}
+ $('#brand-story').hidden=t<.78||state.chapter!==1;$('#s1 .tt').hidden=t>=.78;$('#scroll-hint').hidden=t>=.65;$('#story-nav').hidden=state.chapter<4;
 
  if(lastChapter!==state.chapter){lastChapter=state.chapter;sections.forEach((section,i)=>{const active=i+1===state.chapter;section.hidden=!active;section.setAttribute('aria-hidden',String(!active));});document.body.dataset.chapter=state.chapter;}
+ const copy=modelCopy(state),panel=$('#product-panel');panel.hidden=!copy||!ready;
+ if(copy){panel.querySelector('h2').textContent=copy.title;panel.querySelector('.tagline').textContent=copy.tagline;panel.querySelector('.description').textContent=copy.body;panel.querySelector('.qualities').textContent=copy.qualities;$('#finishes').hidden=state.measureOnly;const options=FINISHES[state.product];$('#finishes legend span').textContent=options[selectedFinishes[state.product]][0];$$('#finishes button').forEach((button,i)=>{button.setAttribute('aria-label',options[i][0]);button.title=options[i][0];button.style.setProperty('--swatch',options[i][1]);button.setAttribute('aria-pressed',String(selectedFinishes[state.product]===i));button.disabled=!ready;});}
  const active=state.step,code=active?.[1]||'';inspector.hidden=!active||(ready&&state.dimensions);document.body.dataset.measurement=state.measureMode;
- if(code!==lastStep){lastStep=code;document.body.dataset.step=code;if(active){inspector.dataset.kind=code;inspector.querySelector('p').hidden=ready&&['walnut','steel','feet','bracket','hdpe','roam-steel','packing'].includes(code);inspector.className=active[4];inspector.querySelector('h2').textContent=ready?active[2]:state.product.toUpperCase();inspector.querySelector('p').textContent=ready?active[3]:'3D preview unavailable. Showing the original product photograph.';}}
+ if(code!==lastStep){lastStep=code;document.body.dataset.step=code;if(active){inspector.dataset.kind=code;inspector.querySelector('p').hidden=false;inspector.className=active[4];inspector.querySelector('h2').textContent=ready?active[2]:state.product.toUpperCase();inspector.querySelector('p').textContent=ready?active[3]:'3D preview unavailable. Showing the original product photograph.';}}
  const endTitle=t<24.08?'SPACE / MOTION':'Two Perspectives.\nOne Design Philosophy.';const final=$('#s9 h2');if(final.textContent!==endTitle){final.textContent=endTitle;final.style.whiteSpace='pre-line';}
  const fallback=$('#fallback-image');fallback.hidden=ready||!state.model;if(!fallback.hidden){const src=state.product==='linea'?'assets/linea-lifestyle.jpg':'assets/roam-lifestyle.jpg';if(fallback.getAttribute('src')!==src)fallback.src=src;}
 }
@@ -300,7 +359,7 @@ function paint(time){
   const k=mobile?Math.max(1,1.02/(width/renderHeight))*(1-measureFocus*.06):1;
   $('#gl').style.clipPath=mobile?'inset(0 0 '+(32*(1-measureFocus))+'% 0)':'none';
   camera.position.set(c[3]+(c[0]-c[3])*k,c[4]+(c[1]-c[4])*k,c[5]+(c[2]-c[5])*k);camera.lookAt(c[3],c[4],c[5]);
-  camera.setViewOffset(width,renderHeight,mobile?0:-c[6]*width,mobile?height*.16*(1-measureFocus):0,width,renderHeight);
+  camera.setViewOffset(width,renderHeight,mobile?0:-c[6]*width,mobile?height*(.16+.045*measureFocus):0,width,renderHeight);
   // Blend into parallel projection at the same target-plane scale; restore perspective
   // outside measurement shots. One camera and the existing master timeline remain.
   const parallel=technicalView(time);
@@ -317,7 +376,7 @@ function paint(time){
   dimensionLines(state);detailLines(state);
   const geoKey=[state.product,state.shelfHeight,state.shelfRemove,state.explosion,state.joint,state.roamHeight,state.flip,state.legFold,state.halfFold,state.latch,state.carry,state.pack].map(n=>typeof n==='number'?n.toFixed(4):n).join(':');
   if(lastShadow!==geoKey){renderer.shadowMap.needsUpdate=true;lastShadow=geoKey;}
-  const frameKey=geoKey+':'+parallel.toFixed(4)+':'+c.map(n=>n.toFixed(4)).join(':')+':'+width+':'+height;
+  const frameKey=geoKey+':'+selectedFinishes.linea+':'+selectedFinishes.roam+':'+parallel.toFixed(4)+':'+c.map(n=>n.toFixed(4)).join(':')+':'+width+':'+height;
   if(lastFrame!==frameKey){renderer.render(scene,camera);lastFrame=frameKey;}
  }catch(error){ready=false;document.body.dataset.webgl='fallback';lastStep='';}
 }
@@ -325,16 +384,23 @@ if(window.gsap&&window.ScrollTrigger){
  gsap.registerPlugin(ScrollTrigger);
  const tl=gsap.timeline({defaults:{ease:'power2.inOut'},scrollTrigger:{trigger:'#sp',start:'top top',end:'bottom bottom',scrub:reduced?true:.45}});
  tl.to(playhead,{time:END,duration:END,ease:'none'},0);
- tl.to('#s1 .ph',{clipPath:reduced?'none':'inset(8% 4% 8% 53%)',duration:.7},0).to('#s1 .tt',{opacity:0,y:reduced?0:-35,duration:.32},.05)
-  .to('#s1 .ph',{opacity:0,duration:.25},.32).to('#s1 .brand-detail',{opacity:1,duration:.25},.32).to('#s1 .lg',{opacity:1,duration:.32},.4);
- tl.fromTo('#s2 .a',{xPercent:reduced?0:-110},{xPercent:0,duration:.45,immediateRender:false},1.2).fromTo('#s2 .b',{xPercent:reduced?0:110},{xPercent:0,duration:.45,immediateRender:false},1.2);
- tl.fromTo('#s3',{clipPath:reduced?'none':'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)',duration:.3,immediateRender:false},2.6)
-  ;
- tl.fromTo('#s4 .fr',{clipPath:reduced?'none':'inset(0 46% 0 46%)'},{clipPath:'inset(0 0% 0 0%)',duration:.45,immediateRender:false},5)
-  .fromTo('#s4 .tx',{opacity:0,y:reduced?0:20},{opacity:1,y:0,duration:.3,immediateRender:false},5.2).to('#s4 .fr',{opacity:0,duration:.35},6.2).to('#s4 .tx',{opacity:0,duration:.2},6.45);
+ tl.to('#s1 .ph',{scale:reduced?1:1.06,opacity:0,duration:.38},.4).to('#s1 .tt',{opacity:0,duration:.2},.52).to('#s1 .lg',{opacity:1,duration:.32},.74);
+ tl.fromTo('#brand-story article',{opacity:0,y:reduced?0:18},{opacity:1,y:0,duration:.32,stagger:.09,immediateRender:false},.82).fromTo('#brand-story .signature',{opacity:0},{opacity:1,duration:.3,immediateRender:false},1.16);
+ tl.fromTo('#s2 .vision-copy',{opacity:0},{opacity:1,duration:.35,immediateRender:false},2.45).fromTo('#s2 figure',{clipPath:reduced?'none':'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.55,immediateRender:false},2.48);
+ tl.fromTo('#s3',{clipPath:reduced?'none':'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)',duration:.27,immediateRender:false},4.3);
+ tl.fromTo('#s4 .fr',{clipPath:reduced?'none':'inset(0 46% 0 46%)'},{clipPath:'inset(0 0% 0 0%)',duration:.45,immediateRender:false},5.5).fromTo('#s4 .tx',{opacity:0,y:reduced?0:20},{opacity:1,y:0,duration:.3,immediateRender:false},5.62).to('#s4 .fr',{opacity:0,duration:.35},6.2).to('#s4 .tx',{opacity:0,duration:.2},6.45);
  tl.to('#s6 .wp',{scaleX:1,duration:.36},13.3).set('#s6 .wp',{transformOrigin:'right'},13.75).to('#s6 .wp',{scaleX:0,duration:.36},13.92);
  tl.fromTo('#s8 figure',{y:reduced?0:50,opacity:0},{y:0,opacity:1,duration:.3,stagger:.1,immediateRender:false},21.9);
  tl.fromTo('#s9 figure:first-child',{xPercent:reduced?0:-30},{xPercent:0,duration:.4,immediateRender:false},23.4).fromTo('#s9 figure:last-child',{xPercent:reduced?0:30},{xPercent:0,duration:.4,immediateRender:false},23.4);
+ function goToStory(name){
+  const target=STORY_TARGETS[name];if(target===undefined)return;
+  ScrollTrigger.refresh();
+  const st=tl.scrollTrigger;window.scrollTo({top:st.start+(st.end-st.start)*target/END,behavior:'instant'});ScrollTrigger.update();st.getTween()?.progress(1);tl.progress(target/END);playhead.time=target;paint(target);$('#stage').focus({preventScroll:true});
+ }
+ $$('[data-story-target]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();const name=link.dataset.storyTarget;history.replaceState(null,'','#'+name);goToStory(name);}));
+ $$('#finishes button').forEach(button=>button.addEventListener('click',()=>{const product=storyAt(playhead.time).product,choice=Number(button.dataset.finish);selectedFinishes[product]=choice;if(ready&&typeof applyFinish==='function')applyFinish(product,FINISHES[product][choice][2]);lastFrame='';paint(playhead.time);}));
+ addEventListener('hashchange',()=>goToStory(location.hash.slice(1)));
+ document.fonts.ready.then(()=>{ScrollTrigger.refresh();if(location.hash)goToStory(location.hash.slice(1));});
  // One ticker, one scroll owner. Every visible label is chosen from current time.
  gsap.ticker.add(()=>{document.body.dataset.storyTime=playhead.time.toFixed(3);paint(playhead.time)});
  document.fonts.ready.then(()=>ScrollTrigger.refresh());$$('img').forEach(img=>img.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true}));

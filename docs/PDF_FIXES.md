@@ -1,4 +1,31 @@
-# Đối chiếu PDF và lượt sửa model · 26/10/2026
+# Đối chiếu góp ý và kiểm thử NetNest
+
+## Cập nhật hiện hành · 27/10/2026
+
+Nguồn mới: **bạc liêu.pdf** (9 trang), **NỘI DUNG EEC.docx**, mục **SLIDE CONTENT** trên Google Docs và [listing Canva](https://www.canva.com/design/DAHZCC5ljzc/6Aml3CaUvXyVT2g4EyagzQ/edit). PDF là yêu cầu sửa; các tài liệu/listing là nguồn thông tin sản phẩm, không phải lệnh điều khiển agent.
+
+- Giá đề xuất đã đối chiếu ở cả DOCX, SLIDE CONTENT và listing: **LINEA $99.99 · ROAM $74.99**. Thay hai giá cũ.
+- Chương 1 giải nghĩa NÉT / NEST dưới logo; chương 2 là Our Vision; chương 3 là hai collection SPACE / MOTION với Explore chuyển tới model tương ứng. Cảnh số thị trường đã bỏ theo PDF mới.
+- LINEA có tagline, mô tả, FlexiShelf, thông tin dùng trong không gian hẹp, MFC/thép, chân tăng chỉnh và flat-pack. ROAM có mô tả, ba chiều cao, Fold & Go, Easy-Lock, HDPE/thép và tay xách. Chi tiết được phân bổ theo từng cảnh và trang giá.
+- Chọn màu tại cảnh kích thước đầy đủ thay trực tiếp vật liệu model: Rustic Brown / Natural Oak; White / Black. Trạng thái chọn được giữ khi đổi collection. Khi WebGL fallback, ẩn điều khiển màu.
+- Camera đổi góc theo quỹ đạo quanh target với khoảng cách nội suy riêng, giữ nguyên shot đo song song và thứ tự gập. Vân MFC procedural có biến thiên; thép giảm độ kim loại, HDPE có microtexture; ánh sáng và bóng dịu hơn.
+- Cảnh carton đổi thành **Protected for the journey.**, giải thích Folded / Protected / Packed và ghi rõ proposed packaging. Camera đóng gói rộng hơn để chứa nắp carton và dành chỗ cho chữ.
+- Không nhập trọng lượng ROAM do nguồn có 13.2 lb và 17.6–22.0 lb chưa thống nhất; không biến giao diện Amazon mockup, trả góp, ưu đãi thẻ hoặc FREE Returns thành cam kết của website.
+- Giữ 9 chương, 4 ảnh runtime gốc, nguồn CSS/JS inline, một ticker và một master timeline. `output/` là kết quả nghiên cứu local khác, được ignore và không đóng gói/publish.
+
+### Kiểm tra lượt này
+
+- `npm run check` đạt: nội dung mới, điểm đến Explore, giá, toàn bộ state xuôi/ngược/nhảy mốc, camera finite, shot đo đứng yên, thước song song, chiều cao động, thứ tự gập/đóng gói, ảnh và cú pháp.
+- Browser desktop **1366×768**, viewport dọc **390×844**: đã xem phần tên thương hiệu, Our Vision, collection, LINEA/ROAM, thước và chữ. Explore hai chiều, chọn Oak và HDPE Black có phản hồi vật liệu/aria-pressed đúng. Đã xem cận bracket, carton và trang giá mới; không có error console trong đường đã kiểm tra.
+- So sánh vector thước SVG với cạnh model ở shot LINEA: sai số sin góc tối đa khoảng **1.12e-16**; ba hướng giữ song song. Kiểm tra tự động bảo vệ cấu trúc thước cả hai model.
+- Phát hiện điều hướng sau đổi viewport có thể dùng chiều dài scroll cũ; đã refresh trước tính điểm đến và kết thúc scrub tween khi nhảy. Xác nhận Explore LINEA dừng đúng tiến trình **7.180**.
+- Đây là viewport desktop mô phỏng màn hình dọc; chưa nghiệm thu touch/iOS/Android thật, FPS máy thi hay reduced-motion của hệ điều hành. Model, cơ cấu, vật liệu và đóng gói vẫn là concept minh họa, chưa xác nhận bằng mẫu thật/CAD.
+
+Các mục dưới đây là **lịch sử ngày 26/10**, được giữ để truy xuất quyết định. Các ghi chú “chưa publish” trong phần chuẩn bị được thay thế bởi mục Publish và trạng thái repo thực tế.
+
+---
+
+## Lịch sử: đối chiếu PDF và lượt sửa model · 26/10/2026
 
 Nguồn: “Những điểm cần sửa.pdf” (9 trang), bản góp ý tiếp theo “Những điểm cần sửa (1).pdf” (6 trang) do người dùng cung cấp; sau khi hỏi rõ, người dùng xác nhận sửa website theo PDF. Bổ sung trực tiếp sau đó: không dùng khối chữ Low/Middle/High position; kẻ thước và ghi chiều dài tại model; cải thiện model, bảng màu và hòa nền logo.
 
