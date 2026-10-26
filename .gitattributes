@@ -1,0 +1,10 @@
+* text=auto
+*.md text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.cmd text eol=crlf
+# Keep readable diffs for the maintained inline HTML source.
+index.html text eol=lf
+*.jpg binary
+*.yml text eol=lf
+*.code-workspace text eol=lf

@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+coverage/
+*.zip
+*.tmp
+
+# Local packages and generated Pages artifact
+releases/
+_site/
