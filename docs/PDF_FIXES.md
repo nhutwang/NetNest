@@ -1,5 +1,11 @@
 # Đối chiếu góp ý và kiểm thử NetNest
 
+## Bỏ chữ phủ ảnh đầu trang · 27/10/2026
+
+Theo hai screenshot 09:18:06 / 09:17:58, đã xóa khối heading NÉT NEST, tagline và Scroll to explore trên ảnh hero; xóa CSS và tham chiếu JavaScript của hai khối đã bỏ. Giữ phần giải nghĩa NÉT/NEST ở đoạn cuộn tiếp theo. `npm run check` đạt; browser xác nhận ảnh đầu không còn chữ phủ, cuộn sang giải nghĩa tên bình thường và không có console error. Review độc lập không phát hiện selector còn sót.
+
+---
+
 ## Hai ảnh collection theo mẫu 09:14:52 · 27/10/2026
 
 Người dùng yêu cầu dựng lại ảnh cho sát **Screenshot 2026-10-27 091452.png**. Bản ảnh cũ đặt bàn quá lớn, cao và giữa khung, khiến chữ chồng vào đồ trang trí/mặt bàn.
