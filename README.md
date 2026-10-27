@@ -52,7 +52,7 @@ Nếu chỉ có Python, chạy tại thư mục chứa `index.html`:
 python -m http.server 3000 --bind 127.0.0.1
 ```
 
-Nên chạy qua HTTP hoặc Live Server thay vì mở bằng `file://`. Bốn ảnh nguồn có sẵn trong `assets/`; Three.js, GSAP, ScrollTrigger và Google Fonts vẫn cần Internet.
+Nên chạy qua HTTP hoặc Live Server thay vì mở bằng `file://`. Sáu ảnh JPEG có sẵn trong `assets/`; Three.js, GSAP, ScrollTrigger và Google Fonts vẫn cần Internet.
 
 <a id="trai-nghiem"></a>
 
@@ -65,16 +65,16 @@ Cuộn xuống để tiến câu chuyện; cuộn lên để xem lại. Dừng c
 | 01 · Brand | Ảnh mở đầu, logo và giải nghĩa NÉT / NEST |
 | 02 · Vision | Rooted in Vietnam. Designed for modern living. |
 | 03 · Collections | Hai mảng SPACE / MOTION và nút Explore tới model |
-| 04 · LINEA | Ảnh sản phẩm trong không gian sống, chuyển vào model |
-| 05 · LINEA details | Kích thước 110 × 30 × 80 cm; kệ 10/25/40 cm; vật liệu, vít/giá đỡ và exploded view |
-| 06 · Match cut | Chuyển từ LINEA sang ROAM |
-| 07 · ROAM details | Kích thước 122 × 61 × 74 cm; chiều cao 55/65/74 cm; lật, thu/gập chân, gập đôi, chốt, xách, vật liệu và carton |
-| 08 · Products | Ảnh nguyên sản phẩm và hai giá đề xuất |
-| 09 · End | Hai góc nhìn, một triết lý thiết kế |
+| 04 · LINEA details | Kích thước 110 × 30 × 80 cm; kệ 10/25/40 cm; vật liệu, vít/giá đỡ và exploded view |
+| 05 · Match cut | Chuyển từ LINEA sang ROAM |
+| 06 · ROAM details | Kích thước 122 × 61 × 74 cm; chiều cao 55/65/74 cm; lật, thu/gập chân, gập đôi, chốt, xách, vật liệu và carton |
+| 07 · Products | Ảnh nguyên sản phẩm và hai giá đề xuất |
 
 Khung đo dùng hình chiếu song song theo ảnh mẫu: thước dài ở cạnh sau, thước sâu gặp tại góc chung, thước cao đứng dọc. Thước có mũi tên hai đầu, cm và inches; số đo cập nhật theo model khi nâng hạ. Chú thích chi tiết nối bằng một đoạn thẳng có fade. LINEA dùng ivory ấm, ROAM dùng xám xanh nhạt. Vân MFC tạo theo seed, bề mặt thép đen mờ và HDPE có microtexture; camera chuyển góc theo quỹ đạo quanh sản phẩm, giữ khoảng cách có chủ đích để tránh zoom ngoài ý muốn.
 
-Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện. Có nhánh reduced-motion và ảnh thay thế khi không dựng được WebGL. Kiểm tra mạng, máy trình chiếu và toàn bộ hành trình cuộn trước buổi trình bày.
+Theo góp ý “sửa web.docx”, hai cảnh ảnh LINEA/ending bị lặp đã được bỏ. Logo trong ảnh hero được sửa, logo phần giải nghĩa tên lớn hơn; hai ảnh collection mới được dựng theo mẫu, tên bộ sưu tập hiển thị bằng HTML để giữ chữ rõ. Chữ thân bài căn đều, không ngắt từ giữa dòng.
+
+Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện. Brand, Vision, Collections và Products dùng một hàm fade theo vị trí cuộn cho cả khối, tránh hiện–mờ–hiện do khởi tạo tween theo từng phần tử. Có nhánh reduced-motion và ảnh thay thế khi không dựng được WebGL. Kiểm tra mạng, máy trình chiếu và toàn bộ hành trình cuộn trước buổi trình bày.
 
 <a id="cau-truc"></a>
 
@@ -83,11 +83,13 @@ Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện. 
 ```text
 NetNest/
 ├── index.html                   # Nguồn web duy nhất: HTML, CSS, 3D, timeline
-├── assets/                      # 4 ảnh chạy trên website
+├── assets/                      # 6 ảnh chạy trên website
 │   ├── brand-garden.jpg
 │   ├── netnest-logo.jpg
 │   ├── linea-lifestyle.jpg
-│   └── roam-lifestyle.jpg
+│   ├── roam-lifestyle.jpg
+│   ├── space-collection.jpg
+│   └── motion-collection.jpg
 ├── docs/
 │   ├── images/                  # Ảnh minh họa README
 │   └── PDF_FIXES.md             # Đối chiếu góp ý và phạm vi kiểm thử
@@ -113,7 +115,7 @@ NetNest/
 npm run check
 ```
 
-Lệnh kiểm tra chín chương, camera đo cố định, bố cục thước theo ảnh mẫu, số đo động, điểm đến Explore, nội dung thương hiệu/vision, fade chú thích, thứ tự gập/đóng gói, tính xác định khi cuộn ngược/nhảy mốc, bốn ảnh nguồn, giá, JavaScript inline và ảnh README.
+Lệnh kiểm tra bảy phần, fade chỉ tăng một lần trong mỗi cảnh, camera đo cố định, bố cục thước theo ảnh mẫu, số đo động, điểm đến Explore, nội dung thương hiệu/vision, fade chú thích, thứ tự gập/đóng gói, tính xác định khi cuộn ngược/nhảy mốc, sáu ảnh JPEG, giá, JavaScript inline và ảnh README.
 
 Đã xem trực quan ở desktop và viewport mobile; đây chưa phải nghiệm thu touch/iOS/Android thật hoặc đo FPS trên máy thi. Chi tiết và giới hạn nằm trong [docs/PDF_FIXES.md](docs/PDF_FIXES.md).
 
@@ -151,7 +153,7 @@ Trong repository, vào **Settings → Pages → Build and deployment → Source*
 Workflow sẽ:
 
 1. Chạy `npm run check` trên Node.js 22.
-2. Đóng gói `index.html`, `.nojekyll` và 4 ảnh trong `assets/` vào `_site/` tạm thời.
+2. Đóng gói `index.html`, `.nojekyll` và 6 ảnh trong `assets/` vào `_site/` tạm thời.
 3. Upload artifact và deploy lên môi trường `github-pages`.
 
 Mỗi lần push vào `main` sẽ kiểm tra và deploy lại. Pull request chỉ chạy kiểm tra. Hướng dẫn cấu hình theo [tài liệu GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
@@ -160,7 +162,7 @@ GitHub hiển thị URL thật trong **Settings → Pages** và kết quả job 
 
 ### 3. Xác nhận sau deploy
 
-Mở URL do GitHub cung cấp, kiểm tra logo/ảnh, cuộn đủ chín cảnh, thước ba chiều, nâng hạ, gập và hai giá. Thử cuộn ngược, màn hình dọc và tải lại dưới đường dẫn repo. Nếu workflow lỗi, xem job tương ứng trong tab Actions.
+Mở URL do GitHub cung cấp, kiểm tra logo/ảnh, cuộn đủ bảy phần, thước ba chiều, nâng hạ, gập và hai giá. Thử cuộn ngược, màn hình dọc và tải lại dưới đường dẫn repo. Nếu workflow lỗi, xem job tương ứng trong tab Actions.
 
 Website đã được push lên [nhutwang/NetNest](https://github.com/nhutwang/NetNest) và deploy bằng GitHub Pages ngày 26/10/2026. Cả job kiểm tra/đóng gói và deploy đã chạy thành công trên GitHub Actions. Các lần push tiếp theo vào `main` tự kiểm tra và deploy lại.
 

@@ -7,13 +7,21 @@ const bytes=await readFile(new URL('index.html',root));
 const html=bytes.toString('utf8');
 const stateSource=html.match(/\/\* STORY_STATE_START \*\/([\s\S]*?)\/\* STORY_STATE_END \*\//);
 assert(stateSource,'Missing deterministic story state for PDF fixes');
-const {storyAt,cameraAt,dimensionOpacity,modelCopy,detailOpacity,technicalRulers,technicalView,STORY_TARGETS,END}=runInNewContext(stateSource[1]+';({storyAt,cameraAt,dimensionOpacity,modelCopy,detailOpacity,technicalRulers,technicalView,STORY_TARGETS,END})');
-for(const [name,chapter] of [['top',1],['collections',3],['linea',5],['roam',7]])assert.equal(storyAt(STORY_TARGETS[name]).chapter,chapter,'Explore target must resolve to its intended chapter');
+const {storyAt,cameraAt,dimensionOpacity,modelCopy,presentationAt,detailOpacity,technicalRulers,technicalView,STORY_TARGETS,END}=runInNewContext(stateSource[1]+';({storyAt,cameraAt,dimensionOpacity,modelCopy,presentationAt,detailOpacity,technicalRulers,technicalView,STORY_TARGETS,END})');
+for(const [name,chapter] of [['top',1],['collections',3],['linea',4],['roam',6]])assert.equal(storyAt(STORY_TARGETS[name]).chapter,chapter,'Explore target must resolve to its intended chapter');
 assert.equal(storyAt(2.7).chapter,2);assert.equal(storyAt(4.55).chapter,3);
 assert(!html.includes('~2.10M')&&!html.includes('~2.22M'),'Remove market scene per new PDF');
 assert(html.includes('Our vision')&&html.includes('A Vietnamese word for a distinctive line'),'Brand meaning and vision are required');
 assert(html.includes('data-story-target="linea"')&&html.includes('data-story-target="roam"'),'Explore must navigate to both products');
-assert.equal(storyAt(0).chapter,1);assert.equal(storyAt(END).chapter,9);
+assert.equal(storyAt(0).chapter,1);assert.equal(storyAt(END).chapter,7);
+for(const [start,end] of [[.78,2.44],[2.45,4.29],[4.3,6.69],[21.9,END]]){
+ let previous=0;
+ for(let t=start;t<end;t+=.002){const visible=presentationAt(t).contentOpacity;assert(visible>=previous-1e-12,'A new scene must fade in once, never flash and fade before appearing');previous=visible;}
+ assert.equal(presentationAt(end).contentOpacity,1,'Scene must remain fully visible through the hold');
+}
+assert.equal(presentationAt(.78).contentOpacity,0);
+assert(!html.includes('id="s4"')&&!html.includes('id="s9"'),'Remove repeated LINEA introduction and ending photos');
+for(const heading of ['Ready to go.','A considered connection.','The next chapter.','Two Perspectives.'])assert(!html.includes(heading),'Remove unsupported or repeated editorial copy: '+heading);
 for(const [time,height] of [[8.15,.1],[8.65,.25],[9.15,.4]])assert.equal(storyAt(time).shelfHeight,height);
 assert.equal(storyAt(9.7).shelfRemove,1);
 assert(storyAt(8.4).shelfHeight>.1&&storyAt(8.4).shelfHeight<.25);
@@ -45,7 +53,7 @@ for(const t of [0,6.1,10,14.6,17.2,END])assert.equal(technicalView(t),0,'Other c
 assert.equal(detailOpacity(10,9.8,10.7),1);assert.equal(detailOpacity(9.8,9.8,10.7),0);assert.equal(detailOpacity(10.7,9.8,10.7),0);
 assert(!html.includes('L${elbow}'),'Leader must be a single straight segment');
 assert.equal(modelCopy(storyAt(7.2)).title,'LINEA');assert.equal(modelCopy(storyAt(8.5)).title,'FlexiShelf');
-assert.equal(modelCopy(storyAt(16.3)).title,'Three heights.');
+assert.equal(modelCopy(storyAt(16.3)).title,'3 adjustable heights');
 for(const time of [17.5,17.9,18.3,18.9,19.3,21.4]){
  const state=storyAt(time);
  if(state.legFold>0)assert.equal(state.flip,1);
@@ -55,13 +63,13 @@ for(const time of [17.5,17.9,18.3,18.9,19.3,21.4]){
 assert.equal(storyAt(21.8).pack,1);
 for(let t=0;t<=END;t+=.037){const a=storyAt(t);storyAt(END-t);assert.equal(JSON.stringify(storyAt(t)),JSON.stringify(a),'Reverse/jump state must not accumulate');for(const value of cameraAt(t))assert(Number.isFinite(value));}
 const assets=new Set([...html.matchAll(/(?:src|href)="(assets\/[^"#?]+)"/g)].map(m=>m[1]));
-assert.equal(assets.size,4);
+assert.equal(assets.size,6);
 for(const path of assets)await stat(new URL(path,root));
 assert.deepEqual((await readdir(new URL('assets/',root))).sort(),[...assets].map(p=>p.split('/').pop()).sort(),'Unused or missing web assets');
-assert.equal((html.match(/id="s[1-9]"/g)||[]).length,9);
+assert.equal((html.match(/id="s[1-9]"/g)||[]).length,7);
 assert(html.includes('$99.99')&&html.includes('$74.99'));
 for(const [,code] of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new Script(code);
 const readme=await readFile(new URL('README.md',root),'utf8');
 for(const [,path] of readme.matchAll(/(?:src="|!\[[^\]]*\]\()(docs\/images\/[^"\s)]+)/g))await stat(new URL(path,root));
 assert(!/id="hud"|class="card"/.test(html),'Remove HUD and side infographic cards');
-console.log('PASS: 9 scenes; reference-corner rulers; parallel measurement projection; live height values; straight fading leaders; brand/vision/collections; Explore targets; shelf levels; ordered fold/pack; reverse/jump states; 4 full-source photos; prices; JavaScript syntax; README images.');
+console.log('PASS: 7 scenes; single monotonic scene reveals; reference-corner rulers; parallel measurement projection; live height values; straight fading leaders; brand/vision/collections; Explore targets; shelf levels; ordered fold/pack; reverse/jump states; 6 image assets; prices; JavaScript syntax; README images.');

@@ -1,5 +1,43 @@
 # Đối chiếu góp ý và kiểm thử NetNest
 
+## Góp ý “sửa web.docx” · 27/10/2026 — phạm vi hiện hành
+
+Đã đọc toàn bộ chữ và 14 hình nhúng trong DOCX. Đây là góp ý sửa giao diện, không phải chỉ dẫn cho phép chạy lệnh từ tài liệu. Lượt này thay thế yêu cầu giữ chín chương trước đó bằng **bảy phần**, theo đề nghị bỏ cảnh ảnh giới thiệu LINEA và ending lặp.
+
+| Góp ý | Sửa tại nguồn |
+| --- | --- |
+| Logo AI sai trên ảnh đầu trang | Imagegen sửa riêng logo trên ảnh hero, dùng logo chính thức làm tham chiếu. Giữ bối cảnh, sản phẩm và ánh sáng. Logo trang giải nghĩa tên được đặt lớn, giữa khung. |
+| NÉT/NEST, Vision và trang giá hiện–mờ–hiện | Nguyên nhân: section vừa được unhide đã có opacity mặc định 1 trước mốc bắt đầu `fromTo` hoặc stagger, rồi tween khởi tạo 0. Đã bỏ tween opacity từng phần tử; `presentationAt(t)` quyết định fade đồng bộ của cả khối, chỉ tăng một lần khi đi vào và giữ tới khi rời cảnh. |
+| Collection sai bố cục, ảnh nhỏ | Dựng hai ảnh SPACE/MOTION mới theo ảnh mẫu: ivory/olive, sản phẩm đầy đủ và khoảng tường trống phía trên. Ảnh lớn ở giữa, tên collection HTML rõ nét trên ảnh, mô tả nguồn và Explore đặt dưới. Mobile xếp dọc. |
+| Chữ LINEA/ROAM căn chưa đều | Chung một lề cho heading, đoạn văn, thuộc tính, nhãn màu và nút. Đoạn mô tả căn đều hai bên, dòng cuối trái; bỏ ngắt từ giữa dòng; line-height và khoảng cách nhóm thống nhất. |
+| Chữ không có trong nguồn | Đổi “Ready to go”, “A considered connection”, “Warmth, in detail”, v.v. thành tên/tính năng từ bạc liêu.pdf / EEC. Phần xách dùng Fold & Go; cảnh carton không có caption ngoài nguồn. Mô hình/cơ cấu minh họa vẫn giữ. |
+| Ảnh kết và ảnh LINEA giới thiệu trùng | Xóa hai section cùng tween/CSS tương ứng; kết thúc tại hai sản phẩm và giá đề xuất. |
+
+Các mốc model và cơ cấu không đổi, vì vậy thước, zoom, góc quay, thứ tự gập và cuộn ngược vẫn dùng kiểm thử cũ. Số section đổi thành 7, END còn 23.4; không tạo trang trống thay phần đã xóa. Giá giữ LINEA $99.99 / ROAM $74.99.
+
+### Ảnh mới và prompt
+
+Dùng **Imagegen tích hợp**, không dùng CLI/API key. Tệp PNG gốc ở thư mục generated_images; bản JPEG tối ưu được lưu ngay trong dự án:
+
+- `assets/brand-garden.jpg`: chỉnh ảnh garden gốc, thay duy nhất logo Nét NEST sai bằng logo chính thức tham chiếu; giữ bàn, cây, vật dụng, phối cảnh, nắng và bóng. Logo xanh rêu với N serif chia sẻ EST, chữ ét viết tay, không dùng NEST sans serif. 16:9.
+- `assets/space-collection.jpg`: ảnh nội thất thực tế; giữ đúng LINEA 110×30×80 cm, mặt/kệ Rustic Brown và chân thép đen. Bối cảnh ivory entryway theo nửa SPACE của ảnh mẫu; sản phẩm đầy đủ ở nửa dưới, tường trống phía trên cho chữ HTML. Ánh nắng chiều, vân/bóng tự nhiên, 4:3; không chữ/logo sinh sẵn.
+- `assets/motion-collection.jpg`: ảnh đồng bộ với SPACE; giữ ROAM 122×61×74 cm, HDPE trắng, đường gập giữa, chân thép lồng và thanh giằng. Tường olive terrace theo nửa MOTION, bàn đầy đủ ở nửa dưới, tường trống phía trên, ánh sáng điện ảnh tự nhiên, 4:3; không chữ/logo sinh sẵn.
+
+Tổng runtime có 6 JPEG khoảng 1.35 MB, không đưa PNG sinh ảnh hoặc 14 screenshot góp ý vào repo. Máy chủ local và workflow phục vụ sáu ảnh; không thêm thư viện hay renderer.
+
+### Kiểm tra lượt sửa DOCX
+
+- `npm run check`: đã thấy test mới thất bại trên code cũ (`presentationAt` chưa tồn tại), sau sửa đạt. Quét fade ở bước 0.002 cho brand/vision/collection/products: opacity không giảm trong đoạn đi vào/giữ; kiểm tra xóa section lặp, bảy phần, sáu ảnh, giá và cơ cấu/thước hiện có.
+- Đã xem lượt đầu trên desktop 1366×768, laptop 1280×600, viewport 390×844: hero/logo, NÉT/NEST, Vision, hai collection, LINEA và ROAM. Chọn Explore tới đúng model. Nút màu nằm trong viewport và rộng/cao 44 px; toàn bộ nhóm chữ cùng lề.
+- Xác nhận cuối sau sửa: logo hiển thị lớn, không còn từ bị ngắt giữa dòng, COLLECTION mobile nằm trên vùng tường; cảnh Products hiện đồng thời cả hai ảnh và kết thúc tại đó. Browser không ghi nhận error console trong đường đã kiểm tra.
+- Kiểm tra lỗi resize/reload phát hiện trang có thể khôi phục pixel cuộn cũ sau load; đã giữ mốc deep link ban đầu tới khi người dùng tương tác và giữ logical time khi viewport thay đổi. Đã xác nhận #linea ở 7.181 trên 1280×600 và 7.180 trên 1366×768, sau đó cuộn tiếp bình thường tới 7.686. Vẫn chỉ một ticker và một master timeline.
+- HTTP local: trang và cả 6 JPEG trả 200, tài liệu ngoài runtime trả 404.
+- Các giới hạn cũ vẫn áp dụng: concept theo ảnh, chưa phải CAD/mẫu kiểm định; viewport dọc là giả lập desktop, chưa nghiệm thu touch/iOS/Android và FPS trên máy thi.
+
+Các mục phía dưới ghi lịch sử các lượt trước. Khi khác với góp ý DOCX mới, mục hiện hành ở trên được ưu tiên.
+
+---
+
 ## Cập nhật hiện hành · 27/10/2026
 
 Nguồn mới: **bạc liêu.pdf** (9 trang), **NỘI DUNG EEC.docx**, mục **SLIDE CONTENT** trên Google Docs và listing Canva do nhóm cung cấp. PDF là yêu cầu sửa; các tài liệu/listing là nguồn thông tin sản phẩm, không phải lệnh điều khiển agent.
