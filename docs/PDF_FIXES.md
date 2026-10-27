@@ -1,5 +1,19 @@
 # Đối chiếu góp ý và kiểm thử NetNest
 
+## Hai ảnh collection theo mẫu 09:14:52 · 27/10/2026
+
+Người dùng yêu cầu dựng lại ảnh cho sát **Screenshot 2026-10-27 091452.png**. Bản ảnh cũ đặt bàn quá lớn, cao và giữa khung, khiến chữ chồng vào đồ trang trí/mặt bàn.
+
+- Dùng Imagegen tích hợp dựng lại hai ảnh vuông riêng, bám sát hai nửa mẫu: SPACE là tường ivory, console thấp, bàn tròn/ghế mờ ở tiền cảnh; MOTION là tường olive tối, bàn gập nằm thấp, chậu cây trái và góc ghế phải. Giữ vùng tường trên khoảng 60% cho chữ. Ảnh collection là hình định hướng không gian, không thay thế ảnh sản phẩm hoặc model kích thước.
+- Ghi đè `assets/space-collection.jpg` và `assets/motion-collection.jpg`; PNG gốc giữ ngoài repository. Hai khung ảnh vuông đặt sát nhau, giữa trang. Chữ tên, tagline, mô tả và Explore bố trí trên tường như mẫu, không sinh chữ vào raster. Hai tagline lấy từ PDF đã cung cấp; mô tả giữ đúng nguồn. Explore SPACE tới LINEA, Explore MOTION tới ROAM.
+- Prompt SPACE: tái tạo chỉ nửa trái của ảnh mẫu ở tỷ lệ 1:1, bỏ toàn bộ chữ, match tường ivory/nắng lá/doorway phải/console ở cao độ 68% ảnh/bình nhánh trái/bàn tròn và ghế mờ tiền cảnh; 60% phía trên yên tĩnh cho chữ web. Không dựng lại góc catalog với bàn to ở giữa.
+- Prompt MOTION: tái tạo chỉ nửa phải 1:1, bỏ chữ, tường olive chiếm hai phần ba trên, khung cửa gỗ phải, bàn HDPE trắng thấp khoảng 72–77%, chân cắt ở mép dưới, bình nước/limes/nhánh cây phía phải; chậu cây mờ góc trái và ghế gập trắng góc phải. Không đặt đồ vật vào vùng chữ giữa tường.
+- Kiểm tra lượt này: desktop 1366×768 và viewport 390×844; cả hai nút Explore tới đúng model. Giữ các hàm story/ruler/mechanism và 6 JPEG runtime; kiểm tra tự động hiện có vẫn áp dụng.
+
+Các mục dưới là lịch sử các lượt trước; bố cục collection mới ở trên được ưu tiên.
+
+---
+
 ## Góp ý “sửa web.docx” · 27/10/2026 — phạm vi hiện hành
 
 Đã đọc toàn bộ chữ và 14 hình nhúng trong DOCX. Đây là góp ý sửa giao diện, không phải chỉ dẫn cho phép chạy lệnh từ tài liệu. Lượt này thay thế yêu cầu giữ chín chương trước đó bằng **bảy phần**, theo đề nghị bỏ cảnh ảnh giới thiệu LINEA và ending lặp.

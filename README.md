@@ -72,7 +72,7 @@ Cuộn xuống để tiến câu chuyện; cuộn lên để xem lại. Dừng c
 
 Khung đo dùng hình chiếu song song theo ảnh mẫu: thước dài ở cạnh sau, thước sâu gặp tại góc chung, thước cao đứng dọc. Thước có mũi tên hai đầu, cm và inches; số đo cập nhật theo model khi nâng hạ. Chú thích chi tiết nối bằng một đoạn thẳng có fade. LINEA dùng ivory ấm, ROAM dùng xám xanh nhạt. Vân MFC tạo theo seed, bề mặt thép đen mờ và HDPE có microtexture; camera chuyển góc theo quỹ đạo quanh sản phẩm, giữ khoảng cách có chủ đích để tránh zoom ngoài ý muốn.
 
-Theo góp ý “sửa web.docx”, hai cảnh ảnh LINEA/ending bị lặp đã được bỏ. Logo trong ảnh hero được sửa, logo phần giải nghĩa tên lớn hơn; hai ảnh collection mới được dựng theo mẫu, tên bộ sưu tập hiển thị bằng HTML để giữ chữ rõ. Chữ thân bài căn đều, không ngắt từ giữa dòng.
+Theo góp ý “sửa web.docx”, hai cảnh ảnh LINEA/ending bị lặp đã được bỏ. Logo trong ảnh hero được sửa, logo phần giải nghĩa tên lớn hơn; hai ảnh collection được dựng lại sát mẫu ghép ivory/olive: khoảng tường rộng phía trên, bàn thấp và đồ tiền cảnh. Hai khung ảnh vuông đặt sát nhau; tên, tagline, mô tả và Explore là HTML trên vùng tường trống để chữ rõ và nút bấm hoạt động. Chữ thân bài căn đều, không ngắt từ giữa dòng.
 
 Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện. Brand, Vision, Collections và Products dùng một hàm fade theo vị trí cuộn cho cả khối, tránh hiện–mờ–hiện do khởi tạo tween theo từng phần tử. Có nhánh reduced-motion và ảnh thay thế khi không dựng được WebGL. Kiểm tra mạng, máy trình chiếu và toàn bộ hành trình cuộn trước buổi trình bày.
 

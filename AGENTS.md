@@ -11,6 +11,7 @@ The website starts from net-nest-3d.zip and now implements the user-approved Nh�
 - Dimension and height values belong on SVG rulers attached to the model. Do not restore Low/Middle/High position text blocks, infographic side cards or the HUD.
 - Latest bạc liêu.pdf replaces the market-number chapter with collection navigation and adds brand meaning, vision and product copy. Treat Canva Amazon-style listing UI as reference, not verified returns/payment/weight claims.
 - Scene reveals are deterministic in presentationAt; do not reintroduce lazy per-element opacity fromTo/staggers for brand, vision, collection or price scenes. All product narration must come from bạc liêu.pdf / NỘI DUNG EEC.docx; avoid invented editorial headings.
+- Collection artwork now follows Screenshot 2026-10-27 091452.png: paired square ivory/olive scenes, quiet wall above low furniture/foreground, live wordmark/tagline/description/Explore on the wall. Do not restore large centred product catalog crops.
 - Keep one GSAP ticker and one master scroll timeline. Caption visibility must be exclusive.
 - Read docs/PDF_FIXES.md for implemented details and actual verification.
 - README.md is the current handoff. Old dist/, reference/, alternate renderers, build scripts and stale QA records were removed during the requested cleanup.
