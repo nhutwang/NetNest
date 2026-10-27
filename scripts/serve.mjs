@@ -9,7 +9,7 @@ if(!Number.isInteger(port)||port<1||port>65535)throw Error('Port must be an inte
 const server=http.createServer(async(req,res)=>{
  try{
   const path=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
-  const file=path==='/'||path==='/index.html'?'index.html':/^\/assets\/(brand-garden|netnest-logo|linea-lifestyle|roam-lifestyle|space-collection|motion-collection)\.jpg$/.test(path)?path.slice(1):null;
+  const file=path==='/'||path==='/index.html'?'index.html':/^\/assets\/(brand-garden|netnest-logo|linea-lifestyle|roam-lifestyle)\.jpg$/.test(path)?path.slice(1):null;
   if(!file){res.writeHead(404);res.end('Not found');return;}
   const bytes=await readFile(new URL(file,root));
   res.writeHead(200,{'Content-Type':file.endsWith('.jpg')?'image/jpeg':'text/html; charset=utf-8','Cache-Control':'no-cache'});

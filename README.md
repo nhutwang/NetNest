@@ -6,15 +6,15 @@
 
 Website thuyết trình nội thất 3D tương tác bằng cuộn trang.
 
-<img src="docs/images/hero.jpg" alt="Hai bộ sưu tập SPACE và MOTION với nút Explore" width="100%">
+<img src="docs/images/hero.jpg" alt="Trang chữ SPACE và MOTION với nút Explore" width="100%">
 
-**Three.js r152.2 · GSAP / ScrollTrigger 3.12.5 · HTML / CSS / JavaScript**
+**Three.js r152.2 · GSAP / ScrollTrigger 3.12.5 · Lenis 1.3.27 · HTML / CSS / JavaScript**
 
 [Xem website](https://nhutwang.github.io/NetNest/) · [Mã nguồn](https://github.com/nhutwang/NetNest) · [Chạy local](#chay-local) · [Trải nghiệm](#trai-nghiem) · [Cấu trúc](#cau-truc) · [GitHub & deploy](#github-deploy)
 
 </div>
 
-NetNest giới thiệu **LINEA**, bàn console với kệ điều chỉnh vị trí, và **ROAM**, bàn gập thay đổi chiều cao. Camera, mô hình, ảnh và chữ chuyển cảnh theo thao tác cuộn; cuộn ngược quay về trạng thái trước. Website phục vụ bài thuyết trình khoảng 7 phút, không có chế độ video tự chạy hoặc bộ đếm thời gian.
+NetNest giới thiệu **LINEA**, bàn console với kệ điều chỉnh vị trí, và **ROAM**, bàn gập thay đổi chiều cao. Camera, mô hình, ảnh và chữ chuyển cảnh theo thao tác cuộn; cuộn ngược quay về trạng thái trước. Nhịp cuộn được phân bổ theo kịch bản tham chiếu khoảng 115 giây; thời lượng thực tế do người xem quyết định. Website phục vụ bài thuyết trình khoảng 7 phút, không có chế độ video tự chạy hoặc bộ đếm thời gian.
 
 > Website trình bày concept từ ảnh tham chiếu, chưa phải CAD sản xuất hoặc mô phỏng cơ khí đã kiểm định. Giá hiển thị là **giá đề xuất**: LINEA **$99.99**, ROAM **$74.99**, đối chiếu NỘI DUNG EEC.docx, mục SLIDE CONTENT và listing Canva do nhóm cung cấp ngày 27/10/2026.
 
@@ -52,19 +52,19 @@ Nếu chỉ có Python, chạy tại thư mục chứa `index.html`:
 python -m http.server 3000 --bind 127.0.0.1
 ```
 
-Nên chạy qua HTTP hoặc Live Server thay vì mở bằng `file://`. Sáu ảnh JPEG có sẵn trong `assets/`; Three.js, GSAP, ScrollTrigger và Google Fonts vẫn cần Internet.
+Nên chạy qua HTTP hoặc Live Server thay vì mở bằng `file://`. Bốn ảnh JPEG có sẵn trong `assets/`; Three.js, GSAP, ScrollTrigger, Lenis và Google Fonts tải từ CDN nên cần Internet. Nếu Lenis không tải được, cuộn trang sẽ dùng cơ chế thông thường.
 
 <a id="trai-nghiem"></a>
 
 ## Trải nghiệm và nội dung
 
-Cuộn xuống để tiến câu chuyện; cuộn lên để xem lại. Dừng cuộn tại cấu hình cần giải thích. Chọn **Explore LINEA / Explore ROAM** ở bộ sưu tập để tới model tương ứng. Trong cảnh kích thước đầy đủ, bấm mẫu màu để thay vật liệu trực tiếp: Rustic Brown / Natural Oak cho LINEA và White / Black cho ROAM. Camera và cơ cấu model được điều khiển bằng tiến trình cuộn.
+Cuộn xuống để tiến câu chuyện; cuộn lên để xem lại. Dừng cuộn tại cấu hình cần giải thích. Chọn **Explore SPACE / Explore MOTION** ở bộ sưu tập để tới model tương ứng. Trong cảnh kích thước đầy đủ, bấm mẫu màu để thay vật liệu trực tiếp: Rustic Brown / Natural Oak cho LINEA và White / Black cho ROAM. Camera và cơ cấu model được điều khiển bằng tiến trình cuộn.
 
 | Cảnh | Nội dung |
 | --- | --- |
 | 01 · Brand | Ảnh mở đầu, logo và giải nghĩa NÉT / NEST |
 | 02 · Vision | Rooted in Vietnam. Designed for modern living. |
-| 03 · Collections | Hai mảng SPACE / MOTION và nút Explore tới model |
+| 03 · Collections | Hai mảng chữ SPACE / MOTION chuyển động theo cuộn và nút Explore tới model |
 | 04 · LINEA details | Kích thước 110 × 30 × 80 cm; kệ 10/25/40 cm; vật liệu, vít/giá đỡ và exploded view |
 | 05 · Match cut | Chuyển từ LINEA sang ROAM |
 | 06 · ROAM details | Kích thước 122 × 61 × 74 cm; chiều cao 55/65/74 cm; lật, thu/gập chân, gập đôi, chốt, xách, vật liệu và carton |
@@ -72,9 +72,9 @@ Cuộn xuống để tiến câu chuyện; cuộn lên để xem lại. Dừng c
 
 Khung đo dùng hình chiếu song song theo ảnh mẫu: thước dài ở cạnh sau, thước sâu gặp tại góc chung, thước cao đứng dọc. Thước có mũi tên hai đầu, cm và inches; số đo cập nhật theo model khi nâng hạ. Chú thích chi tiết nối bằng một đoạn thẳng có fade. LINEA dùng ivory ấm, ROAM dùng xám xanh nhạt. Vân MFC tạo theo seed, bề mặt thép đen mờ và HDPE có microtexture; camera chuyển góc theo quỹ đạo quanh sản phẩm, giữ khoảng cách có chủ đích để tránh zoom ngoài ý muốn.
 
-Theo góp ý “sửa web.docx”, hai cảnh ảnh LINEA/ending bị lặp đã được bỏ. Logo trong ảnh hero được sửa, logo phần giải nghĩa tên lớn hơn; hai ảnh collection được dựng lại sát mẫu ghép ivory/olive: khoảng tường rộng phía trên, bàn thấp và đồ tiền cảnh. Hai khung ảnh vuông đặt sát nhau; tên, tagline, mô tả và Explore là HTML trên vùng tường trống để chữ rõ và nút bấm hoạt động. Chữ thân bài căn đều, không ngắt từ giữa dòng.
+Theo góp ý mới, phần SPACE / MOTION dùng hai mảng nền ivory và xanh olive với chữ HTML thật thay cho ảnh. Từng ký tự, đường trang trí, tagline và mô tả hiện theo vị trí cuộn; hai nút Explore đưa tới đúng model. Trang tên thương hiệu, Vision, tiêu đề và nội dung trong cảnh model cùng tên, giá và thông số cuối trang cũng có chuyển động chữ theo cuộn. Kệ LINEA mờ tại vị trí khi chuyển sang cấu hình trống và hiện lại khi cuộn ngược, không trượt qua khung hoặc chữ. Nội dung được rút gọn để giữ sự chú ý vào sản phẩm.
 
-Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện. Brand, Vision, Collections và Products dùng một hàm fade theo vị trí cuộn cho cả khối, tránh hiện–mờ–hiện do khởi tạo tween theo từng phần tử. Có nhánh reduced-motion và ảnh thay thế khi không dựng được WebGL. Kiểm tra mạng, máy trình chiếu và toàn bộ hành trình cuộn trước buổi trình bày.
+Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện, đồng bộ Lenis với model và chữ. Các cảnh chuyển bằng lớp che mở theo cuộn; góc máy đi gần, lùi và xoay nhẹ, nhưng giữ cố định ở cảnh đo. Phần mô tả trùng đã được rút gọn; bề mặt và ánh sáng model được điều chỉnh. Có nhánh giảm chuyển động và ảnh thay thế khi không dựng được WebGL. Kiểm tra mạng, máy trình chiếu và toàn bộ hành trình cuộn trước buổi trình bày.
 
 <a id="cau-truc"></a>
 
@@ -83,13 +83,11 @@ Một GSAP ticker và một master ScrollTrigger điều khiển câu chuyện. 
 ```text
 NetNest/
 ├── index.html                   # Nguồn web duy nhất: HTML, CSS, 3D, timeline
-├── assets/                      # 6 ảnh chạy trên website
+├── assets/                      # 4 ảnh chạy trên website
 │   ├── brand-garden.jpg
 │   ├── netnest-logo.jpg
 │   ├── linea-lifestyle.jpg
-│   ├── roam-lifestyle.jpg
-│   ├── space-collection.jpg
-│   └── motion-collection.jpg
+│   └── roam-lifestyle.jpg
 ├── docs/
 │   ├── images/                  # Ảnh minh họa README
 │   └── PDF_FIXES.md             # Đối chiếu góp ý và phạm vi kiểm thử
@@ -115,7 +113,7 @@ NetNest/
 npm run check
 ```
 
-Lệnh kiểm tra bảy phần, fade chỉ tăng một lần trong mỗi cảnh, camera đo cố định, bố cục thước theo ảnh mẫu, số đo động, điểm đến Explore, nội dung thương hiệu/vision, fade chú thích, thứ tự gập/đóng gói, tính xác định khi cuộn ngược/nhảy mốc, sáu ảnh JPEG, giá, JavaScript inline và ảnh README.
+Lệnh kiểm tra bảy phần, fade chỉ tăng một lần trong mỗi cảnh, camera đo cố định, bố cục thước theo ảnh mẫu, số đo động, điểm đến Explore, nội dung thương hiệu/vision, fade chú thích, thứ tự gập/đóng gói, tính xác định khi cuộn ngược/nhảy mốc, bốn ảnh JPEG, giá, JavaScript inline và ảnh README.
 
 Đã xem trực quan ở desktop và viewport mobile; đây chưa phải nghiệm thu touch/iOS/Android thật hoặc đo FPS trên máy thi. Chi tiết và giới hạn nằm trong [docs/PDF_FIXES.md](docs/PDF_FIXES.md).
 
@@ -153,7 +151,7 @@ Trong repository, vào **Settings → Pages → Build and deployment → Source*
 Workflow sẽ:
 
 1. Chạy `npm run check` trên Node.js 22.
-2. Đóng gói `index.html`, `.nojekyll` và 6 ảnh trong `assets/` vào `_site/` tạm thời.
+2. Đóng gói `index.html`, `.nojekyll` và 4 ảnh trong `assets/` vào `_site/` tạm thời.
 3. Upload artifact và deploy lên môi trường `github-pages`.
 
 Mỗi lần push vào `main` sẽ kiểm tra và deploy lại. Pull request chỉ chạy kiểm tra. Hướng dẫn cấu hình theo [tài liệu GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
@@ -171,7 +169,7 @@ Website đã được push lên [nhutwang/NetNest](https://github.com/nhutwang/N
 Giữ `index.html` là nguồn chính. Khi đổi tên ảnh, cập nhật tham chiếu trong trang và danh sách đường dẫn ở `scripts/serve.mjs` cùng lúc. Website tĩnh, không có checkout, analytics hoặc backend.
 
 - **Thiết kế, logo, ảnh:** tài liệu và bộ `net-nest-3d.zip` do nhóm cung cấp, cập nhật theo PDF góp ý và ảnh kích thước mới nhất.
-- **3D và motion:** [Three.js](https://threejs.org/) 0.152.2; [GSAP / ScrollTrigger](https://gsap.com/) 3.12.5.
+- **3D và motion:** [Three.js](https://threejs.org/) 0.152.2; [GSAP / ScrollTrigger](https://gsap.com/) 3.12.5; [Lenis](https://lenis.dev/) 1.3.27.
 - **Phông chữ:** Cormorant Garamond và Hanken Grotesk qua [Google Fonts](https://fonts.google.com/).
 - **Dữ liệu thị trường:** MPG cấp ITK trong 12 tháng; không phải doanh số NÉT NEST.
 

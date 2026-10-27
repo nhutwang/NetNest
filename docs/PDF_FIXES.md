@@ -1,5 +1,26 @@
 # Đối chiếu góp ý và kiểm thử NetNest
 
+## Sửa kệ và bổ sung chuyển động chữ · 27/10/2026
+
+- Theo ba ảnh góp ý, bỏ chuyển động kéo kệ LINEA sang ngang xuyên chân bàn và vùng chữ. Kệ cùng giá đỡ mờ dần tại vị trí của chúng rồi hiện lại khi cuộn ngược; màu kệ vẫn đồng bộ với mặt bàn sau khi chọn Natural Oak hoặc Rustic Brown. Khi kệ hiện hoàn toàn, vật liệu ghi chiều sâu bình thường; phần mờ không để bóng đổ lơ lửng.
+- Thêm chuyển động theo cuộn cho các từ trong Our vision, tiêu đề trong cảnh model, tagline và đoạn mô tả; phần cuối lần lượt xuất hiện tên, giá và thông số. Chữ vẫn giữ nhãn đọc được, có phương án giảm chuyển động, không thêm timeline hoặc ticker.
+- Trên màn hình dọc thấp, thu gọn ảnh trong phần cuối để thanh điều hướng không che ảnh và hai mô tả nằm trong màn hình. Sửa trường hợp trạng thái cuộn bị đưa về liên kết ban đầu sau khi người xem đã tự cuộn trong lúc phông hoặc kích thước tải xong.
+- Kiểm tra tự động xác nhận kệ không dịch ngang khi biến mất, có thể hiện lại; các lớp chữ Vision và giá xuất hiện một lần và giữ ổn định. Kiểm tra trình duyệt desktop và 420×610: kệ trở lại khi cuộn ngược, Natural Oak đổi cả kệ và mặt bàn, nội dung cuối không bị cắt, liên kết ROAM không kéo người xem trở lại sau khi cuộn và không có lỗi console trong đường đã thử.
+- Người dùng đã xem bản này và yêu cầu cập nhật GitHub cùng deploy ngày 27/10/2026.
+
+---
+
+## Bản xem trước — chữ động và nhịp cuộn · 27/10/2026
+
+- Theo hai video 1793090495776 / 1793090495788 và yêu cầu mới, thay hai ảnh collection bằng hai panel chữ HTML nền ivory / xanh olive. Từng ký tự SPACE / MOTION xuất hiện lần lượt, sau đó là đường trang trí, tagline, mô tả và nút Explore. Chữ NÉT / NEST và tiêu đề Vision cũng được chuyển động theo cuộn. Đọc đúng tên bằng screen reader; tắt chuyển động không thiết yếu khi chọn reduced motion. Hai ảnh đã bỏ khỏi runtime, bản trước vẫn có trong lịch sử Git và bản sao lưu cục bộ.
+- Từ ba video trước và tham khảo Three.js / Anime.js / Lenis: thêm Lenis vào cùng GSAP ticker, không tạo vòng lặp RAF thứ hai; giữ cuộn gốc khi Lenis không tải. Kịch bản phân bổ nhịp xem tham chiếu 115 giây nhưng không tự chạy và không bảo đảm người xem nào cũng hoàn thành đúng thời lượng. Chuyển cảnh bằng lớp che, chuyển nền theo sản phẩm, camera xoay nhẹ ở cảnh chi tiết và gập, chi tiết cạnh thép và ánh sáng mềm hơn; cảnh đo giữ nguyên camera và hình chiếu song song.
+- Rút gọn nội dung lặp, giữ thông tin sản phẩm, chức năng, kích thước và giá; các điểm vật liệu hiển thị nhãn nối trực tiếp vào model thay cho khối chữ lặp. Chế độ ảnh dự phòng đã được sửa để không giữ nhầm tiêu đề trong cảnh chuyển. Sửa lỗi nút nhảy cảnh khi ScrollTrigger không có tween scrub.
+- Giữ 7 phần, các cơ cấu model, thước, bốn ảnh JPEG runtime, giá đề xuất LINEA $99.99 / ROAM $74.99, static site. Hai ảnh collection đã thay được giữ trong lịch sử Git và bản sao lưu ngoài repo để có thể khôi phục nếu người dùng đổi ý.
+- Kiểm thử tự động bao gồm tiến trình chữ theo cuộn, định vị lại cảnh, chuyển cảnh không flash, fallback tiến/lùi, mapping nhịp cuộn, model/thước/cơ cấu, 4 ảnh, giá và syntax. Đã xem desktop 1366×768, dọc 390×844 và ngang thấp 844×390 / 1366×500; chọn Explore và đổi màu. Một lượt cuộn điều khiển bằng công cụ chạy trong hai đợt mất khoảng 106 giây thời gian của hai đợt; tổng đồng hồ 126 giây gồm khoảng chờ giữa hai đợt. Đây chưa phải nghiệm thu tốc độ đọc, FPS hoặc cảm ứng trên máy thi / iOS / Android thật.
+- Đây là bản chờ người dùng xem và duyệt trước khi push GitHub và deploy, theo yêu cầu ngày 27/10/2026.
+
+---
+
 ## Bỏ chữ phủ ảnh đầu trang · 27/10/2026
 
 Theo hai screenshot 09:18:06 / 09:17:58, đã xóa khối heading NÉT NEST, tagline và Scroll to explore trên ảnh hero; xóa CSS và tham chiếu JavaScript của hai khối đã bỏ. Giữ phần giải nghĩa NÉT/NEST ở đoạn cuộn tiếp theo. `npm run check` đạt; browser xác nhận ảnh đầu không còn chữ phủ, cuộn sang giải nghĩa tên bình thường và không có console error. Review độc lập không phát hiện selector còn sót.

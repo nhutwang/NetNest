@@ -3,10 +3,11 @@
 <title>NÉT NEST — LINEA × ROAM</title>
 <meta name="description" content="Explore LINEA and ROAM through an interactive furniture story: dimensions, materials and thoughtful details.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.css">
 <style>
 *{box-sizing:border-box;margin:0}[hidden]{display:none!important}:root{color-scheme:light;--iv:#F8F3E9;--cr:#EDE5D5;--ol:#1F3D2E;--sa:#C3AA7E;--ch:#25372D;--se:'Cormorant Garamond',Georgia,serif;--sn:'Hanken Grotesk',system-ui,sans-serif}
-html{scroll-behavior:auto}body{background:var(--iv);color:var(--ch);font:400 17px/1.5 var(--sn);overflow-x:hidden}::selection{background:#1f3d2e;color:var(--iv)}#sp{height:2800vh}#stage{position:fixed;inset:0;overflow:hidden;background:radial-gradient(ellipse at 62% 37%,#fffcf5 0%,var(--iv) 52%,#eae2d1 100%)}#stage.roam-stage{background:radial-gradient(ellipse at 62% 37%,#f6faf6 0%,#e6eee8 56%,#cddbd1 100%)}#stage.roam-stage #detail-note{background:#edf3ed}#gl{position:absolute;inset:0;width:100%;height:100%;opacity:0;pointer-events:none}.sc{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none}.sc img{display:block;width:100%;height:100%;object-fit:cover}.se,h1,h2{font-family:var(--se);font-weight:500;letter-spacing:-.025em;line-height:1.02}h1{font-size:clamp(70px,12vw,180px)}h2{font-size:clamp(40px,5.8vw,84px);text-wrap:balance}.mk{overflow:hidden;display:block}.mk i{font-style:normal;display:block}
-#s1{background:var(--iv)}#s1 .ph{position:absolute;inset:0}#s1 .ph:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#252724a8)}#s1 .lg{position:absolute;left:5vw;top:3vh;width:23vw;height:24vh;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.08);opacity:0}#brand-story{position:absolute;inset:33vh 8vw 10vh;display:grid;grid-template-columns:1fr 1fr;column-gap:10vw;align-content:center}#brand-story h2{font-size:clamp(62px,7vw,100px)}#brand-story p{max-width:35ch;margin-top:24px;font-size:clamp(16px,1.4vw,21px);line-height:1.65}#brand-story .signature{grid-column:1/-1;max-width:none;margin-top:9vh;font-size:15px;letter-spacing:.08em}#brand-story article{border-top:1px solid #1f3d2e40;padding-top:22px}
+html{scroll-behavior:auto}body{background:var(--iv);color:var(--ch);font:400 17px/1.5 var(--sn);overflow-x:hidden}::selection{background:#1f3d2e;color:var(--iv)}#sp{height:2400svh}#stage{position:fixed;inset:0;overflow:hidden;background:radial-gradient(ellipse at 62% 37%,#fffcf5 0%,var(--iv) 52%,#eae2d1 100%)}#stage.roam-stage #detail-note{background:#edf3ed}#gl{position:absolute;inset:0;width:100%;height:100%;opacity:0;pointer-events:none}.sc{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none}.sc img{display:block;width:100%;height:100%;object-fit:cover}.se,h1,h2{font-family:var(--se);font-weight:500;letter-spacing:-.025em;line-height:1.02}h1{font-size:clamp(70px,12vw,180px)}h2{font-size:clamp(40px,5.8vw,84px);text-wrap:balance}.mk{overflow:hidden;display:block}.mk i{font-style:normal;display:block}
+#s1{background:var(--iv)}#s1 .ph{position:absolute;inset:0}#s1 .ph:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#25272445)}#s1 .lg{position:absolute;left:5vw;top:3vh;width:23vw;height:24vh;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.08);opacity:0}#brand-story{position:absolute;inset:33vh 8vw 10vh;display:grid;grid-template-columns:1fr 1fr;column-gap:10vw;align-content:center}#brand-story h2{font-size:clamp(62px,7vw,100px)}#brand-story p{max-width:35ch;margin-top:24px;font-size:clamp(16px,1.4vw,21px);line-height:1.65}#brand-story .signature{grid-column:1/-1;max-width:none;margin-top:9vh;font-size:15px;letter-spacing:.08em}#brand-story article{border-top:1px solid #1f3d2e40;padding-top:22px}
 #s2{background:var(--cr);display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:8vw;padding:8vh 7vw}#s2 h2{font-size:clamp(45px,5.7vw,82px);margin-bottom:25px}#s2 h3{font-family:var(--se);font-size:clamp(25px,2.5vw,38px);font-weight:500;line-height:1.15;margin-bottom:20px}#s2 p{max-width:44ch;font-size:clamp(15px,1.3vw,19px);margin-top:16px;line-height:1.65}#s2 .signature{font-size:13px;letter-spacing:.06em;margin-top:30px}#s2 figure img{height:72vh;object-fit:contain}
 a{color:inherit;text-underline-offset:6px}a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:6px}a:hover{text-decoration-thickness:2px}.explore{pointer-events:auto;align-self:flex-start;padding:10px 0;text-decoration:none;border-bottom:1px solid currentColor;font-size:15px;display:flex;gap:35px;align-items:center}.explore svg{width:30px;height:16px;fill:none;stroke:currentColor;stroke-width:1.2}
 #s6 .wp{position:absolute;inset:0;background:var(--cr);transform:scaleX(0);transform-origin:left}
@@ -14,9 +15,9 @@ a{color:inherit;text-underline-offset:6px}a:focus-visible,button:focus-visible{o
 
 #inspector{position:absolute;left:5vw;top:14vh;width:29vw;z-index:5;pointer-events:none}#inspector.right{left:auto;right:5vw}#inspector.bottom{top:auto;bottom:7vh;width:38vw}#inspector.top{top:8vh;left:auto;right:5vw;width:27vw}#inspector h2{font-size:clamp(38px,5.1vw,76px);line-height:1.02}#inspector p{font-size:clamp(15px,1.5vw,22px);line-height:1.6;margin-top:17px;max-width:27ch;color:#565747}
 #measurements,#leaders{position:absolute;inset:0;width:100%;height:100%;z-index:4;overflow:visible;pointer-events:none}#measurements path,#leaders path{fill:none;stroke:#1f3d2e;stroke-width:1.2}#measurements .arrowheads{fill:#1f3d2e;stroke:none}#measurements text{font:500 17px var(--sn);text-anchor:middle;fill:var(--ch)}#measurements .imperial{font-size:11px;fill:#666650}#detail-note{position:absolute;z-index:5;width:190px;padding:14px 16px;border:1px solid #1f3d2e60;background:#f8f3e9f2;font-size:14px;line-height:1.5;pointer-events:none}#fallback-image{position:absolute;inset:8vh 5vw 8vh auto;width:62vw;height:84vh;object-fit:contain}#network-message{position:absolute;z-index:10;bottom:3vh;left:5vw;background:var(--iv);padding:12px;max-width:36ch;font-size:14px}noscript{position:fixed;bottom:0;z-index:15;background:var(--iv);padding:20px;width:100%}
-#product-panel{position:absolute;left:5vw;top:20vh;width:26vw;max-width:340px;z-index:5}#product-panel h2{font-size:clamp(40px,5.2vw,76px)}#product-panel .tagline{font:500 clamp(23px,2.3vw,34px)/1.15 var(--se);margin-top:18px;text-wrap:balance}#product-panel .description{font-size:clamp(14px,1.1vw,17px);line-height:1.65;margin-top:20px}#product-panel .qualities{font-size:12px;letter-spacing:.04em;margin-top:23px}#finishes{border:0;margin-top:24px}#finishes legend{font-size:12px;margin-bottom:10px}#finishes .choices{display:flex;gap:10px}#finishes button{width:44px;height:44px;cursor:pointer;border-radius:50%;border:1px solid #25372d50;background:var(--swatch);padding:4px;background-clip:content-box}#finishes button[aria-pressed=true]{outline:1px solid var(--ch);outline-offset:3px}#finishes button:hover{border-color:var(--ch)}#finishes button:disabled{cursor:default;opacity:.4}#story-nav{position:absolute;top:3vh;right:4vw;z-index:8;display:flex;gap:24px;font-size:13px}#story-nav a{padding:8px 0}#s8 .product-details{font-size:13px;line-height:1.7;margin-top:15px}#s8 figure img{height:48vh}#s8 .product-details strong{font-weight:500}#stage:focus{outline:none}
-@media(max-width:700px){#sp{height:3000svh}h1{font-size:19vw}#s1 .lg{left:5vw;top:3vh;width:55vw;height:19vh}#brand-story{inset:27vh 8vw 6vh;display:block}#brand-story article{padding-top:14px;margin-bottom:25px}#brand-story h2{font-size:46px}#brand-story p{font-size:14px;line-height:1.6;margin-top:10px}#brand-story .signature{font-size:11px;margin-top:20px}#s2{grid-template-columns:1fr;padding:8vh 8vw;gap:4vh;align-content:center}#s2 h2{font-size:49px;margin-bottom:20px}#s2 h3{font-size:28px;margin-bottom:15px}#s2 p{font-size:14px;line-height:1.6;margin-top:14px}#s2 .signature{margin-top:20px;font-size:11px}#s2 figure img{height:23vh;object-position:center}.explore{font-size:13px;gap:17px;padding:7px 0}#product-panel{left:7vw;right:7vw;top:auto;bottom:6vh;width:auto;max-width:none}#product-panel h2{font-size:46px}#product-panel .tagline{font-size:24px;margin-top:9px;max-width:29ch}#product-panel .description{font-size:14px;line-height:1.5;margin-top:12px;max-width:42ch}#product-panel .qualities{font-size:11px;margin-top:12px}#finishes{margin-top:16px}#finishes legend{font-size:11px}#finishes button{width:44px;height:44px}#story-nav{top:2vh;right:7vw;font-size:11px;gap:18px}#inspector,#inspector.right,#inspector.bottom,#inspector.top{left:7vw;right:7vw;top:auto;bottom:7vh;width:auto}#inspector h2{font-size:12vw;max-width:19ch}#inspector p{font-size:14px;max-width:38ch;margin-top:10px}#detail-note{width:146px;font-size:11px;padding:10px 12px}#measurements text{font-size:13px}#measurements .imperial{font-size:9px}#s8{padding:7vh 7vw;gap:4vh;grid-template-columns:1fr;align-content:center}#s8 figure img{height:21vh}#s8 figcaption{margin-top:6px;padding-top:6px}#s8 b{font-size:32px}#s8 figcaption span{font-size:15px}#s8 .product-details{font-size:11px;margin-top:8px}#fallback-image{inset:6vh 2vw auto;width:96vw;height:51vh}}
-@media(max-height:720px) and (min-width:701px){#brand-story{inset:29vh 8vw 6vh}#brand-story p{font-size:15px;margin-top:15px}#brand-story .signature{margin-top:5vh}#product-panel{top:16vh}#product-panel h2{font-size:50px}#product-panel .tagline{font-size:26px}#product-panel .description{font-size:14px;margin-top:14px}#product-panel .qualities{margin-top:14px}#finishes{margin-top:18px}#s2 h2{font-size:54px}#s2 h3{font-size:27px}#s2 p{font-size:15px}}
+#product-panel{position:absolute;left:5vw;top:20vh;width:26vw;max-width:340px;z-index:5}#product-panel h2{font-size:clamp(40px,5.2vw,76px)}#product-panel .tagline{font:500 clamp(23px,2.3vw,34px)/1.15 var(--se);margin-top:18px;text-wrap:balance}#product-panel .description{font-size:clamp(14px,1.1vw,17px);line-height:1.65;margin-top:20px}#finishes{border:0;margin-top:24px}#finishes legend{font-size:12px;margin-bottom:10px}#finishes .choices{display:flex;gap:10px}#finishes button{width:44px;height:44px;cursor:pointer;border-radius:50%;border:1px solid #25372d50;background:var(--swatch);padding:4px;background-clip:content-box}#finishes button[aria-pressed=true]{outline:1px solid var(--ch);outline-offset:3px}#finishes button:hover{border-color:var(--ch)}#finishes button:disabled{cursor:default;opacity:.4}#story-nav{position:absolute;top:3vh;right:4vw;z-index:8;display:flex;gap:24px;font-size:13px}#story-nav a{padding:8px 0}#s8 .product-details{font-size:13px;line-height:1.7;margin-top:15px}#s8 figure img{height:48vh}#s8 .product-details strong{font-weight:500}#stage:focus{outline:none}
+@media(max-width:700px){#sp{height:2400svh}h1{font-size:19vw}#s1 .lg{left:5vw;top:3vh;width:55vw;height:19vh}#brand-story{inset:27vh 8vw 6vh;display:block}#brand-story article{padding-top:14px;margin-bottom:25px}#brand-story h2{font-size:46px}#brand-story p{font-size:14px;line-height:1.6;margin-top:10px}#brand-story .signature{font-size:11px;margin-top:20px}#s2{grid-template-columns:1fr;padding:8vh 8vw;gap:4vh;align-content:center}#s2 h2{font-size:49px;margin-bottom:20px}#s2 h3{font-size:28px;margin-bottom:15px}#s2 p{font-size:14px;line-height:1.6;margin-top:14px}#s2 .signature{margin-top:20px;font-size:11px}#s2 figure img{height:23vh;object-position:center}.explore{font-size:13px;gap:17px;padding:7px 0}#product-panel{left:7vw;right:7vw;top:auto;bottom:6vh;width:auto;max-width:none}#product-panel h2{font-size:46px}#product-panel .tagline{font-size:24px;margin-top:9px;max-width:29ch}#product-panel .description{font-size:14px;line-height:1.5;margin-top:12px;max-width:42ch}#finishes{margin-top:16px}#finishes legend{font-size:11px}#finishes button{width:44px;height:44px}#story-nav{top:2vh;right:7vw;font-size:11px;gap:18px}#inspector,#inspector.right,#inspector.bottom,#inspector.top{left:7vw;right:7vw;top:auto;bottom:7vh;width:auto}#inspector h2{font-size:12vw;max-width:19ch}#inspector p{font-size:14px;max-width:38ch;margin-top:10px}#detail-note{width:146px;font-size:11px;padding:10px 12px}#measurements text{font-size:13px}#measurements .imperial{font-size:9px}#s8{padding:7vh 7vw;gap:4vh;grid-template-columns:1fr;align-content:center}#s8 figure img{height:21vh}#s8 figcaption{margin-top:6px;padding-top:6px}#s8 b{font-size:32px}#s8 figcaption span{font-size:15px}#s8 .product-details{font-size:11px;margin-top:8px}#fallback-image{inset:6vh 2vw auto;width:96vw;height:51vh}}
+@media(max-height:720px) and (min-width:701px){#brand-story{inset:29vh 8vw 6vh}#brand-story p{font-size:15px;margin-top:15px}#brand-story .signature{margin-top:5vh}#product-panel{top:16vh}#product-panel h2{font-size:50px}#product-panel .tagline{font-size:26px}#product-panel .description{font-size:14px;margin-top:14px}#finishes{margin-top:18px}#s2 h2{font-size:54px}#s2 h3{font-size:27px}#s2 p{font-size:15px}}
 @media(max-height:740px) and (max-width:700px){#product-panel h2{font-size:36px}#product-panel .tagline{font-size:21px}#product-panel .description{font-size:12px}#product-panel{bottom:4vh}#brand-story{top:24vh}#brand-story p{font-size:12px}#brand-story article{margin-bottom:19px}#s2 figure{display:none}}
 @media(min-width:701px) and (max-height:650px){#inspector h2{font-size:clamp(32px,4.7vw,58px)}#inspector p{font-size:16px}#inspector{top:11vh}#detail-note{font-size:12px;padding:11px 13px}}
 @media(min-width:701px){#inspector[data-kind=bracket]{top:6vh}#inspector[data-kind=packing] h2{font-size:clamp(36px,4.1vw,62px)}#inspector[data-kind=packing] p{font-size:clamp(14px,1.2vw,18px)}}
@@ -24,27 +25,81 @@ a{color:inherit;text-underline-offset:6px}a:focus-visible,button:focus-visible{o
 
 #s1 .lg{left:50%;top:3vh;width:40vw;height:30vh;max-width:650px;transform:translateX(-50%);object-fit:cover;opacity:1}#brand-story{inset:35vh 9vw 8vh;column-gap:9vw}#brand-story p,#s2 .vision-copy>p:not(.signature),#product-panel .description{text-align:justify;text-align-last:left;text-justify:inter-word;hyphens:none}#brand-story p{max-width:none;line-height:1.7}#s2 .vision-copy>p:not(.signature){max-width:43ch;line-height:1.75}#s2 h3{text-wrap:pretty}
 .explore{font-size:14px;gap:26px;padding:9px 0}
-#product-panel{width:28vw;max-width:375px;top:17vh}#product-panel .tagline{text-align:left;text-wrap:pretty;max-width:23ch;font-size:clamp(24px,2.2vw,33px);line-height:1.2}#product-panel .description{font-size:clamp(14px,1.12vw,17px);line-height:1.75;margin-top:24px}#product-panel .qualities{margin-top:24px;line-height:1.6}#finishes{padding:0;margin:25px 0 0;min-inline-size:0}#finishes legend{padding:0;margin:0 0 12px;line-height:1.6}#finishes .choices{gap:14px}#product-panel[data-mode=height] h2{font-size:clamp(37px,4.1vw,60px);max-width:12ch}#inspector h2{text-wrap:pretty;font-size:clamp(38px,4.5vw,68px)}#inspector p{text-wrap:pretty;line-height:1.7}
-@media(min-width:701px) and (max-height:720px){#s1 .lg{height:28vh;width:31vw}#brand-story{inset:34vh 9vw 6vh}#brand-story h2{font-size:64px}#brand-story .signature{margin-top:4vh}#product-panel{top:14vh}#product-panel .description{font-size:14px;line-height:1.65;margin-top:18px}#product-panel .qualities{margin-top:18px}#finishes{margin-top:18px}}
-@media(max-width:700px){#s1 .lg{top:2vh;width:78vw;height:23vh}#brand-story{inset:29vh 8vw 5vh}#brand-story h2{font-size:45px}#brand-story p{font-size:14px;line-height:1.65}#brand-story article{margin-bottom:25px}#brand-story .signature{font-size:10px;margin-top:18px;text-align:left}#s2 .vision-copy>p:not(.signature){line-height:1.65}.explore{font-size:12px;padding:6px 0;gap:22px}#product-panel{top:auto;bottom:5vh;left:7vw;right:7vw;width:auto;max-width:none}#product-panel .tagline{font-size:24px;max-width:29ch;line-height:1.2;margin-top:10px}#product-panel .description{font-size:13px;line-height:1.6;margin-top:14px}#product-panel .qualities{margin-top:14px;font-size:11px}#finishes{margin-top:17px}#finishes legend{margin-bottom:10px;font-size:11px}#product-panel[data-mode=height] h2{font-size:39px;max-width:none}#inspector h2{font-size:11vw}}
-@media(max-height:740px) and (max-width:700px){#brand-story{top:26vh}#brand-story article{margin-bottom:18px}#brand-story p{font-size:12px}#brand-story .signature{margin-top:12px}#product-panel h2{font-size:36px}#product-panel .tagline{font-size:21px}#product-panel .description{font-size:12px;margin-top:10px}#product-panel .qualities{margin-top:10px}#finishes{margin-top:12px}#product-panel{bottom:3vh}.explore{font-size:11px}}
+#product-panel{width:28vw;max-width:375px;top:17vh}#product-panel .tagline{text-align:left;text-wrap:pretty;max-width:23ch;font-size:clamp(24px,2.2vw,33px);line-height:1.2}#product-panel .description{font-size:clamp(14px,1.12vw,17px);line-height:1.75;margin-top:24px}#finishes{padding:0;margin:25px 0 0;min-inline-size:0}#finishes legend{padding:0;margin:0 0 12px;line-height:1.6}#finishes .choices{gap:14px}#product-panel[data-mode=height] h2{font-size:clamp(37px,4.1vw,60px);max-width:12ch}#inspector h2{text-wrap:pretty;font-size:clamp(38px,4.5vw,68px)}#inspector p{text-wrap:pretty;line-height:1.7}
+@media(min-width:701px) and (max-height:720px){#s1 .lg{height:28vh;width:31vw}#brand-story{inset:34vh 9vw 6vh}#brand-story h2{font-size:64px}#brand-story .signature{margin-top:4vh}#product-panel{top:14vh}#product-panel .description{font-size:14px;line-height:1.65;margin-top:18px}#finishes{margin-top:18px}}
+@media(max-width:700px){#s1 .lg{top:2vh;width:78vw;height:23vh}#brand-story{inset:29vh 8vw 5vh}#brand-story h2{font-size:45px}#brand-story p{font-size:14px;line-height:1.65}#brand-story article{margin-bottom:25px}#brand-story .signature{font-size:10px;margin-top:18px;text-align:left}#s2 .vision-copy>p:not(.signature){line-height:1.65}.explore{font-size:12px;padding:6px 0;gap:22px}#product-panel{top:auto;bottom:5vh;left:7vw;right:7vw;width:auto;max-width:none}#product-panel .tagline{font-size:24px;max-width:29ch;line-height:1.2;margin-top:10px}#product-panel .description{font-size:13px;line-height:1.6;margin-top:14px}#finishes{margin-top:17px}#finishes legend{margin-bottom:10px;font-size:11px}#product-panel[data-mode=height] h2{font-size:39px;max-width:none}#inspector h2{font-size:11vw}}
+@media(max-height:740px) and (max-width:700px){#brand-story{top:26vh}#brand-story article{margin-bottom:18px}#brand-story p{font-size:12px}#brand-story .signature{margin-top:12px}#product-panel h2{font-size:36px}#product-panel .tagline{font-size:21px}#product-panel .description{font-size:12px;margin-top:10px}#finishes{margin-top:12px}#product-panel{bottom:3vh}.explore{font-size:11px}}
 
 @media(max-width:700px){#s1 .lg{width:88vw;object-fit:cover}}
 
-#s3{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:11vh max(5vw,calc((100vw - 158vh)/2)) 5vh;align-items:start;background:var(--iv)}#s3>h2{position:absolute;top:2.7vh;left:max(5vw,calc((100vw - 158vh)/2));font-size:clamp(28px,2.8vw,43px)}#s3 article{padding:0;background:none;color:#3c402b}#s3 figure{position:relative;height:79vh;width:100%;overflow:hidden;background:#e5dccb}#s3 img{display:block;width:100%;height:100%;object-fit:cover}#s3 .collection-copy{position:absolute;inset:0;text-align:center}#s3 h3{position:absolute;top:14%;left:10%;right:10%;display:flex;flex-direction:column;align-items:center;gap:15px;font:500 clamp(38px,min(5.6vw,10vh),82px)/1 var(--se);letter-spacing:.025em}#s3 h3>span:last-child{font:400 clamp(8px,1.35vh,11px)/1.2 var(--sn);letter-spacing:.45em;margin:0}#s3 .collection-word{position:relative;display:inline-block;line-height:1.05}#s3 .word-line{position:absolute;inset:0;width:100%;height:105%;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;pointer-events:none}#s3 .space .word-line{height:107%}#s3 .motion{color:#f4f0e5}#s3 .collection-tagline{position:absolute;top:34%;left:7%;right:7%;margin:0;font:500 clamp(15px,2.8vh,23px)/1.25 var(--se);text-wrap:balance}#s3 .collection-description{position:absolute;top:42%;left:20%;right:20%;margin:0;font:400 clamp(11px,1.7vh,15px)/1.6 var(--sn);color:#65664f;text-wrap:pretty}#s3 .motion .collection-description{color:#e1dfc9}#s3 .explore{position:absolute;top:53%;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:12px;padding:7px 0;min-height:36px;border-bottom:1px solid currentColor;font:400 clamp(9px,1.3vh,11px)/1.4 var(--sn);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;text-decoration:none;pointer-events:auto}#s3 .explore svg{width:20px;height:12px}#s3 .explore:hover{border-bottom-width:2px}#s3 .explore:focus-visible{outline:2px solid currentColor;outline-offset:5px}
-@media(max-width:700px){#s3{grid-template-columns:1fr;grid-template-rows:repeat(2,39.5vh);padding:8vh max(7vw,calc((100vw - 39.5vh)/2)) 5vh;gap:0}#s3>h2{top:2vh;left:7vw;font-size:27px}#s3 figure{height:39.5vh}#s3 h3{top:11%;font-size:clamp(27px,4.6vh,38px);gap:8px;left:9%;right:9%}#s3 h3>span:last-child{font-size:7px;letter-spacing:.35em}#s3 .collection-tagline{top:31%;font-size:clamp(10px,1.65vh,14px);left:6%;right:6%}#s3 .collection-description{top:39%;left:15%;right:15%;font-size:clamp(9px,1.2vh,11px);line-height:1.45}#s3 .explore{top:54%;font-size:8px;letter-spacing:.1em;gap:9px;min-height:29px;padding:4px 0}#s3 .explore svg{width:16px;height:10px}}
+
+/* Scroll cinema: fixed measuring shots, restrained type, continuous scene curtains. */
+html{scrollbar-color:#6a7869 #ede5d5;scrollbar-width:thin}
+#stage::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 62% 37%,#f2f6f1 0%,#e2eae2 56%,#c5d3c8 100%);opacity:var(--roam-tone,0)}
+#gl{z-index:1}#s1 .ph{transform-origin:57% 42%}#s2 figure{overflow:hidden}#s2 figure img{transform-origin:50% 70%}
+#brand-story{align-content:center;bottom:15vh}#brand-story h2{font-size:clamp(64px,8vw,110px)}#brand-story p{max-width:32ch;text-align:left;font-size:clamp(17px,1.6vw,23px)}
+#s2 .vision-copy>p:not(.signature){max-width:38ch;text-align:left;font-size:clamp(16px,1.45vw,21px)}
+#product-panel .description{text-align:left;max-width:30ch;font-size:clamp(15px,1.2vw,18px);line-height:1.7}
+#product-panel{top:22vh}#finishes{margin-top:30px}#finishes button{transition:outline-color .18s,border-color .18s}#finishes button:active{border-color:var(--ol)}
+#product-panel h2,#inspector h2{clip-path:inset(0 0 var(--title-mask,0%) 0);transform:translateY(var(--title-shift,0px))}
+#inspector p:empty{display:none}#detail-note{border:0;border-bottom:1px solid #1f3d24a0;background:transparent!important;padding:12px 0;font-size:16px;color:var(--ol)}
+#story-nav{align-items:center}#story-nav a{display:flex;align-items:center;min-height:44px}
+
+#s8{background:#e6decc}#s8 .product-details{max-width:42ch}#s8 .product-name{font-size:clamp(30px,3vw,44px);font-family:var(--se);text-decoration:none;pointer-events:auto}
+#s6 .wp{background:linear-gradient(110deg,#d8c3a2,#ece6d7 48%,#d5dfd4);transform:translateX(-101%);transform-origin:center}
+@media(max-width:700px){#brand-story{bottom:13vh}#brand-story h2{font-size:53px}#brand-story p{font-size:15px;max-width:31ch}#s2 .vision-copy>p:not(.signature){font-size:15px}#product-panel{top:auto;bottom:7vh}#product-panel .description{font-size:14px;max-width:34ch;line-height:1.6}#finishes{margin-top:20px}#detail-note{font-size:13px}#s8 .product-name{font-size:30px}}
+@media(max-width:700px) and (max-height:740px){#product-panel{bottom:4vh}#product-panel .description{font-size:13px}}
+@media(prefers-reduced-motion:reduce){#product-panel h2,#inspector h2{clip-path:none;transform:none}#finishes button{transition:none}}
+
+/* Collection is live typography, not a photograph: both panels share the brand palette. */
+#s3{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:12vh max(5vw,calc((100vw - 160vh)/2)) 7vh;align-items:stretch;background:var(--iv)}
+#s3>h2{position:absolute;top:2.7vh;left:max(5vw,calc((100vw - 160vh)/2));font-size:clamp(28px,2.8vw,43px)}
+#s3 article{display:flex;align-items:center;justify-content:center;min-width:0;overflow:hidden}
+#s3 .space{background:#e5dcc8;color:#293c2e}#s3 .motion{background:#1f3d2e;color:#f8f3e9}
+#s3 .collection-copy{display:flex;flex-direction:column;align-items:center;text-align:center;padding:4vh 7%;width:100%}
+#s3 h3{display:flex;flex-direction:column;align-items:center;gap:16px;max-width:100%;font:500 clamp(48px,7.3vw,112px)/1 var(--se);letter-spacing:.025em}
+#s3 .collection-word{position:relative;display:inline-block;line-height:1.08;max-width:100%;perspective:500px;white-space:nowrap}
+#s3 .glyph-run,.brand-word{display:inline-block;white-space:nowrap;perspective:600px}
+#s3 .glyph,#brand-story .glyph{--r:clamp(0,calc((var(--letters,1) - var(--i)*.075)*2.7),1);display:inline-block;opacity:var(--r);transform:translateY(calc((1 - var(--r))* .62em)) rotateX(calc((1 - var(--r))* -60deg));transform-origin:50% 100%}
+#s3 .word-line{position:absolute;inset:0;width:100%;height:105%;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;opacity:var(--label-reveal,1);transform:scaleX(var(--label-reveal,1));transform-origin:center;pointer-events:none}
+#s3 .collection-label{font:500 11px/1.3 var(--sn);letter-spacing:.42em;opacity:var(--label-reveal,1);transform:translateY(calc((1 - var(--label-reveal,1))*10px))}
+#s3 .collection-tagline{font:500 clamp(19px,2.1vw,29px)/1.25 var(--se);margin-top:3.5vh;text-wrap:balance;opacity:var(--tag-reveal,1);transform:translateY(calc((1 - var(--tag-reveal,1))*12px))}
+#s3 .collection-description{font:400 clamp(14px,1.15vw,17px)/1.65 var(--sn);max-width:34ch;min-height:4.95em;margin-top:2.5vh;text-wrap:pretty;opacity:var(--body-reveal,1);transform:translateY(calc((1 - var(--body-reveal,1))*10px))}
+#s3 .explore{position:static;display:flex;align-self:center;align-items:center;justify-content:center;gap:14px;margin-top:3vh;padding:7px 0;min-height:44px;border-bottom:1px solid currentColor;font:500 12px/1.4 var(--sn);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;text-decoration:none;pointer-events:auto;opacity:var(--cta-reveal,1);transform:translateY(calc((1 - var(--cta-reveal,1))*8px));transition:border-color .2s}
+#s3 .explore svg{width:22px;height:12px;transition:transform .2s}#s3 .explore:hover svg{transform:translateX(5px)}#s3 .explore:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+#brand-story h2{overflow:hidden}#s2 .vision-copy h2{clip-path:inset(0 0 calc((1 - var(--vision-reveal,1))*100%) 0);transform:translateY(calc((1 - var(--vision-reveal,1))*14px))}
+@media(max-width:700px){#s3{grid-template-columns:1fr;grid-template-rows:1fr 1fr;padding:8vh 7vw 6vh;gap:0}#s3>h2{top:2vh;left:7vw;font-size:27px}#s3 .collection-copy{padding:2.2vh 7%}#s3 h3{font-size:clamp(39px,8vw,52px);gap:8px}#s3 .collection-label{font-size:9px;letter-spacing:.35em}#s3 .collection-tagline{font-size:18px;margin-top:1.6vh}#s3 .collection-description{font-size:12px;line-height:1.5;margin-top:1.3vh;max-width:31ch}#s3 .explore{font-size:10px;margin-top:1.3vh;min-height:44px}}
+@media(max-width:700px) and (max-height:740px){#s3 .collection-description{display:none}#s3 .collection-tagline{font-size:16px}#s3 .explore{margin-top:1vh}}
+@media(min-width:701px) and (max-height:600px){#s3 .collection-copy{padding:2vh 7%}#s3 h3{font-size:clamp(36px,min(6vw,12vh),68px);gap:6px}#s3 .collection-label{font-size:9px}#s3 .collection-tagline{font-size:clamp(16px,4vh,21px);margin-top:1.5vh}#s3 .collection-description{font-size:12px;line-height:1.4;min-height:0;margin-top:1vh}#s3 .explore{font-size:10px;margin-top:1vh}}
+@media(min-width:701px) and (max-height:450px){#s3 .collection-description{display:none}}
+@media(prefers-reduced-motion:reduce){#s3 .glyph,#brand-story .glyph{opacity:1;transform:none}#s3 .word-line,#s3 .collection-label,#s3 .collection-tagline,#s3 .collection-description,#s3 .explore{opacity:1;transform:none}#s2 .vision-copy h2{clip-path:none;transform:none}}
+/* Text enters in readable groups while the viewer controls the pace. */
+.motion-word{--word:clamp(0,calc((var(--word-progress,1) - var(--i,0)*.1)*2.5),1);display:inline-block;opacity:var(--word);transform:translateY(calc((1 - var(--word))*.32em)) rotateX(calc((1 - var(--word))*-35deg));transform-origin:50% 100%}
+#s2 .vision-copy h2,#product-panel h2,#inspector h2{overflow:hidden;perspective:500px}
+#s2 .vision-copy h2{--word-progress:var(--vision-reveal,1)}
+#s2 .vision-copy h3{opacity:var(--vision-subtitle,1);transform:translateY(calc((1 - var(--vision-subtitle,1))*15px))}
+#s2 .vision-copy>p{opacity:var(--vision-body,1);transform:translateY(calc((1 - var(--vision-body,1))*12px))}
+#product-panel .tagline{opacity:var(--panel-tag,1);transform:translateY(calc((1 - var(--panel-tag,1))*12px))}
+#product-panel .description,#product-panel #finishes{opacity:var(--panel-body,1);transform:translateY(calc((1 - var(--panel-body,1))*10px))}
+#inspector p{transform:translateY(calc((1 - var(--inspector-body,1))*10px))}
+#s8 .product-name{opacity:var(--final-title,1);transform:translateY(calc((1 - var(--final-title,1))*14px))}
+#s8 b,#s8 small{opacity:var(--final-price,1);transform:translateY(calc((1 - var(--final-price,1))*12px))}#s8 b{display:inline-block}
+#s8 .product-details{opacity:var(--final-body,1);transform:translateY(calc((1 - var(--final-body,1))*10px))}
+@media(max-width:700px) and (max-height:740px){#s8{padding:65px 7vw 3vh;gap:2vh}#s8 figure img{height:17vh}#s8 figcaption{margin-top:4px;padding-top:4px}#s8 b{font-size:28px}#s8 .product-details{font-size:10px;line-height:1.5;margin-top:6px}}
+@media(prefers-reduced-motion:reduce){.motion-word,#s2 .vision-copy h3,#s2 .vision-copy>p,#product-panel .tagline,#product-panel .description,#product-panel #finishes,#inspector p,#s8 .product-name,#s8 b,#s8 small,#s8 .product-details{opacity:1;transform:none}}
 </style></head><body>
 <div id="sp" aria-hidden="true"></div><main id="stage" tabindex="-1" aria-label="NÉT NEST furniture story"><canvas id="gl" role="img" aria-label="Proposed LINEA and ROAM furniture models"></canvas>
-<section class="sc" id="s1"><div class="ph"><img src="assets/brand-garden.jpg" alt="NÉT NEST garden scene"></div><img class="lg" src="assets/netnest-logo.jpg" alt="NÉT NEST — Vietnamese Roots × Modern Living"><div id="brand-story" hidden><article><h2>NÉT</h2><p>A Vietnamese word for a distinctive line, detail, or character.<br>It represents the subtle Vietnamese design elements we bring into each product.</p></article><article><h2>NEST</h2><p>A place of comfort, belonging, and everyday living.<br>It reflects our goal of creating furniture that naturally becomes part of the home.</p></article><p class="signature">NÉT NEST — Vietnamese Roots × Modern Living</p></div></section>
-<section class="sc" id="s2" hidden><div class="vision-copy"><h2>Our vision</h2><h3>Rooted in Vietnam.<br>Designed for modern living.</h3><p>We bring the warmth, simplicity, and thoughtful details of Vietnamese design into furniture made for contemporary homes.</p><p>By combining cultural character with practical, space-conscious design, NÉT NEST creates pieces that feel distinctive, functional, and naturally at home in everyday life.</p><p class="signature">Vietnamese Roots × Modern Living</p></div><figure><img src="assets/linea-lifestyle.jpg" alt="LINEA bringing warmth to a contemporary entryway"></figure></section>
-<section class="sc" id="s3" hidden><h2>Our collection</h2><article class="space"><figure><img src="assets/space-collection.jpg" alt="SPACE collection: ivory entryway with a low console and warm leafy shadows"><figcaption class="collection-copy"><h3><span class="collection-word">SPACE<svg class="word-line" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 98H112Q150 64 188 98H300"/></svg></span><span>COLLECTION</span></h3><p class="collection-tagline">“Make more of the space you have.”</p><p class="collection-description">Designed to make better use of compact spaces through smart, adaptable furniture.</p><a class="explore" href="#linea" data-story-target="linea" aria-label="Explore SPACE — LINEA">Explore SPACE <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8H29M22 1L29 8L22 15"/></svg></a></figcaption></figure></article><article class="motion"><figure><img src="assets/motion-collection.jpg" alt="MOTION collection: olive terrace wall above a low white folding table"><figcaption class="collection-copy"><h3><span class="collection-word">MOTION<svg class="word-line" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90C80 135 190 -8 300 29"/></svg></span><span>COLLECTION</span></h3><p class="collection-tagline">“Made to move with your life.”</p><p class="collection-description">Designed to move, fold, and adapt as everyday needs change.</p><a class="explore" href="#roam" data-story-target="roam" aria-label="Explore MOTION — ROAM">Explore MOTION <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8H29M22 1L29 8L22 15"/></svg></a></figcaption></figure></article></section>
+<section class="sc" id="s1"><div class="ph"><img src="assets/brand-garden.jpg" alt="NÉT NEST garden scene"></div><img class="lg" src="assets/netnest-logo.jpg" alt="NÉT NEST — Vietnamese Roots × Modern Living"><div id="brand-story" hidden><article><h2 aria-label="NÉT"><span class="brand-word" aria-hidden="true"><span class="glyph" style="--i:0">N</span><span class="glyph" style="--i:1">É</span><span class="glyph" style="--i:2">T</span></span></h2><p>A Vietnamese word for a distinctive line, detail, or character.</p></article><article><h2 aria-label="NEST"><span class="brand-word" aria-hidden="true"><span class="glyph" style="--i:0">N</span><span class="glyph" style="--i:1">E</span><span class="glyph" style="--i:2">S</span><span class="glyph" style="--i:3">T</span></span></h2><p>A place of comfort, belonging, and everyday living.</p></article></div></section>
+<section class="sc" id="s2" hidden><div class="vision-copy"><h2 aria-label="Our vision"><span class="motion-word" style="--i:0" aria-hidden="true">Our</span> <span class="motion-word" style="--i:1" aria-hidden="true">vision</span></h2><h3>Rooted in Vietnam.<br>Designed for modern living.</h3><p>We bring the warmth, simplicity, and thoughtful details of Vietnamese design into furniture made for contemporary homes.</p></div><figure><img src="assets/linea-lifestyle.jpg" alt="LINEA bringing warmth to a contemporary entryway"></figure></section>
+<section class="sc" id="s3" hidden><h2>Our collection</h2><article class="space"><div class="collection-copy"><h3 aria-label="SPACE COLLECTION"><span class="collection-word"><span class="glyph-run" aria-hidden="true"><span class="glyph" style="--i:0">S</span><span class="glyph" style="--i:1">P</span><span class="glyph" style="--i:2">A</span><span class="glyph" style="--i:3">C</span><span class="glyph" style="--i:4">E</span></span><svg class="word-line" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 98H112Q150 64 188 98H300"/></svg></span><span class="collection-label" aria-hidden="true">COLLECTION</span></h3><p class="collection-tagline">“Make more of the space you have.”</p><p class="collection-description">Designed to make better use of compact spaces through smart, adaptable furniture.</p><a class="explore" href="#linea" data-story-target="linea" aria-label="Explore SPACE — LINEA">Explore SPACE <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8H29M22 1L29 8L22 15"/></svg></a></div></article><article class="motion"><div class="collection-copy"><h3 aria-label="MOTION COLLECTION"><span class="collection-word"><span class="glyph-run" aria-hidden="true"><span class="glyph" style="--i:0">M</span><span class="glyph" style="--i:1">O</span><span class="glyph" style="--i:2">T</span><span class="glyph" style="--i:3">I</span><span class="glyph" style="--i:4">O</span><span class="glyph" style="--i:5">N</span></span><svg class="word-line" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90C80 135 190 -8 300 29"/></svg></span><span class="collection-label" aria-hidden="true">COLLECTION</span></h3><p class="collection-tagline">“Made to move with your life.”</p><p class="collection-description">Designed to move, fold, and adapt as everyday needs change.</p><a class="explore" href="#roam" data-story-target="roam" aria-label="Explore MOTION — ROAM">Explore MOTION <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8H29M22 1L29 8L22 15"/></svg></a></div></article></section>
 <section class="sc" id="s5" aria-label="LINEA dimensions, shelf, materials and assembly" hidden></section>
 <section class="sc" id="s6" aria-label="Walnut to ivory match cut" hidden><div class="wp"></div></section>
 <section class="sc" id="s7" aria-label="ROAM dimensions, folding, materials and packaging" hidden></section>
-<section class="sc" id="s8" hidden><figure><img src="assets/linea-lifestyle.jpg" alt="Complete LINEA console, styled in an entryway"><figcaption><span>LINEA</span><div><b>$99.99</b><small>Proposed price</small></div></figcaption><p class="product-details"><strong>43.3&quot;W × 11.8&quot;D × 31.5&quot;H</strong><br>4 FlexiShelf configurations · Adjustable feet · Flat-pack design</p></figure><figure><img src="assets/roam-lifestyle.jpg" alt="Complete ROAM table, styled on a terrace"><figcaption><span>ROAM</span><div><b>$74.99</b><small>Proposed price</small></div></figcaption><p class="product-details"><strong>48&quot;W × 24&quot;D × 21.7–29.1&quot;H</strong><br>3 adjustable heights · Fold-in-half design · Carrying handle</p></figure></section>
-<nav id="story-nav" aria-label="Story navigation" hidden><a href="#collections" data-story-target="collections">Collections</a><a href="#top" data-story-target="top">Back to start</a></nav><div id="product-panel" hidden><h2></h2><p class="tagline"></p><p class="description"></p><p class="qualities"></p><fieldset id="finishes"><legend>Finish: <span></span></legend><div class="choices"><button type="button" data-finish="0" aria-pressed="true"></button><button type="button" data-finish="1" aria-pressed="false"></button></div></fieldset></div>
+<section class="sc" id="s8" hidden><figure><img src="assets/linea-lifestyle.jpg" alt="Complete LINEA console, styled in an entryway"><figcaption><a class="product-name" href="#linea" data-story-target="linea" aria-label="Explore LINEA again">LINEA</a><div><b>$99.99</b><small>Proposed price</small></div></figcaption><p class="product-details"><strong>43.3&quot;W × 11.8&quot;D × 31.5&quot;H</strong><br>4 FlexiShelf configurations · Adjustable feet · Flat-pack design</p></figure><figure><img src="assets/roam-lifestyle.jpg" alt="Complete ROAM table, styled on a terrace"><figcaption><a class="product-name" href="#roam" data-story-target="roam" aria-label="Explore ROAM again">ROAM</a><div><b>$74.99</b><small>Proposed price</small></div></figcaption><p class="product-details"><strong>48&quot;W × 24&quot;D × 21.7–29.1&quot;H</strong><br>3 adjustable heights · Fold-in-half design · Carrying handle</p></figure></section>
+<nav id="story-nav" aria-label="Story navigation" hidden><a href="#collections" data-story-target="collections">Collections</a><a href="#top" data-story-target="top">Back to start</a></nav><div id="product-panel" hidden><h2></h2><p class="tagline"></p><p class="description"></p><fieldset id="finishes"><legend>Finish: <span></span></legend><div class="choices"><button type="button" data-finish="0" aria-pressed="true"></button><button type="button" data-finish="1" aria-pressed="false"></button></div></fieldset></div>
 <div id="inspector" hidden aria-live="polite" aria-atomic="true"><h2></h2><p></p></div><svg id="measurements" aria-label="Product dimensions" hidden></svg><svg id="leaders" aria-hidden="true" hidden><path/></svg><div id="detail-note" hidden></div><img id="fallback-image" src="assets/linea-lifestyle.jpg" alt="Original product photograph" hidden><p id="network-message" hidden>Connect to the Internet and reload to load the 3D presentation.</p>
 </main><noscript>Enable JavaScript to view the interactive furniture story.</noscript>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script>
 /* STORY_STATE_START */
@@ -54,8 +109,8 @@ const phase=(t,a,b)=>clamp((t-a)/(b-a));
 const smooth=x=>x*x*x*(x*(x*6-15)+10),blend=(a,b,x)=>a+(b-a)*x;
 const STEPS=[
  [6.7,'linea-dimensions','LINEA','Designed to fit where life happens.','bottom'],
- [7.8,'shelf-low','FlexiShelf','One table. Four possibilities.','right'],[8.3,'shelf-middle','FlexiShelf','One table. Four possibilities.','right'],[8.8,'shelf-high','FlexiShelf','One table. Four possibilities.','right'],[9.3,'shelf-removed','Made for modern spaces','At only 11.8" deep, LINEA fits naturally into entryways, hallways, behind sofas, bedrooms, and other compact spaces.','right'],
- [9.8,'walnut','Materials','Woodgrain MFC · Powder-Coated Steel. Warm woodgrain surfaces meet a matte-black steel frame for a clean, contemporary character.','right'],[10.7,'steel','Materials','Woodgrain MFC · Powder-Coated Steel.','left'],[11.05,'feet','Product details','Adjustable Feet · Flat-Pack Design.','right'],[11.4,'bracket','Product details','Flat-Pack Design.','right'],[12.3,'exploded','Product details','Flat-Pack Design.','bottom'],
+ [7.8,'shelf-low','FlexiShelf','One table. Four possibilities.','right'],[8.3,'shelf-middle','FlexiShelf','One table. Four possibilities.','right'],[8.8,'shelf-high','FlexiShelf','One table. Four possibilities.','right'],[9.3,'shelf-removed','Made for modern spaces','At only 11.8" deep, LINEA fits naturally into entryways, hallways, and behind sofas.','right'],
+ [9.8,'walnut','Materials','Woodgrain MFC · Powder-Coated Steel. Warm woodgrain surfaces meet a matte-black steel frame for a clean, contemporary character.','right'],[10.7,'steel','Materials','Woodgrain MFC · Powder-Coated Steel.','left'],[11.05,'feet','Product details','Adjustable Feet · Flat-Pack Design.','right'],[11.4,'bracket','Product details','Flat-Pack Design.','right'],[12.3,'exploded','Flat-Pack Design','','bottom'],
  [14.3,'roam-intro','ROAM','Made to move. Ready to adapt.','right'],[15,'roam-dimensions','ROAM','Made to move. Ready to adapt.','bottom'],[15.8,'height-low','3 adjustable heights','One table. Different moments.','left'],[16.15,'height-middle','3 adjustable heights','One table. Different moments.','left'],[16.5,'height-high','3 adjustable heights','One table. Different moments.','left'],
  [16.85,'flip','Fold & Go','Fold-in-Half Design.','right'],[17.45,'legs','Fold & Go','Store the legs neatly inside.','right'],[18.05,'half','Fold & Go','Fold the tabletop in half.','right'],[18.65,'latch','Easy-Lock','Open. Lock. Use. Fold.','left'],[19.05,'carry','Fold & Go','Use the built-in handle for easier carrying, transport, and storage.','left'],[19.55,'hdpe','Materials','Hollow-Molded HDPE · Powder-Coated Steel.','right'],[20.15,'roam-steel','Materials','A practical, easy-care tabletop meets a reinforced steel frame designed for flexible everyday use.','left'],[20.65,'packing','','','right']
 ];
@@ -65,19 +120,19 @@ function storyAt(t){
  const shelfHeight=t<8.8?blend(.1,.25,smooth(phase(t,8.3,8.55))):blend(.25,.4,smooth(phase(t,8.8,9.05)));
  const measureMode=step?.[1]?.startsWith('shelf-')&&step[1]!=='shelf-removed'?'shelf':step?.[1]?.startsWith('height-')?'height':step?.[1]?.endsWith('-dimensions')?'full':'';
  const height=t<16.15?blend(.74,.55,smooth(phase(t,15.84,16.04))):t<16.5?blend(.55,.65,smooth(phase(t,16.19,16.39))):blend(.65,.74,smooth(phase(t,16.54,16.74)));
- return {chapter,step,product:t<13.85?'linea':'roam',model:t>=6.2&&t<21.9,shelfHeight,shelfRemove:smooth(phase(t,9.32,9.62))*(1-phase(t,11.3,11.4)),explosion:smooth(phase(t,12.35,12.85)),joint:Math.sin(Math.PI*phase(t,11.5,12.2)),roamHeight:blend(height,.53,smooth(phase(t,17.46,17.6))),flip:smooth(phase(t,16.91,17.36)),legFold:smooth(phase(t,17.63,17.98)),halfFold:smooth(phase(t,18.12,18.52)),latch:smooth(phase(t,18.73,18.96)),carry:smooth(phase(t,19.1,19.43))*(1-smooth(phase(t,20.67,20.98))),pack:smooth(phase(t,20.72,21.6)),measureMode,measureOnly:measureMode==='shelf'||measureMode==='height',dimensions:!!measureMode,dimReveal:dimensionOpacity(t)};
+ return {chapter,step,product:t<13.85?'linea':'roam',model:t>=6.2&&t<22.28,shelfHeight,shelfRemove:smooth(phase(t,9.32,9.62))*(1-phase(t,11.3,11.4)),explosion:smooth(phase(t,12.35,12.85)),joint:Math.sin(Math.PI*phase(t,11.5,12.2)),roamHeight:blend(height,.53,smooth(phase(t,17.46,17.6))),flip:smooth(phase(t,16.91,17.36)),legFold:smooth(phase(t,17.63,17.98)),halfFold:smooth(phase(t,18.12,18.52)),latch:smooth(phase(t,18.73,18.96)),carry:smooth(phase(t,19.1,19.43))*(1-smooth(phase(t,20.67,20.98))),pack:smooth(phase(t,20.72,21.6)),measureMode,measureOnly:measureMode==='shelf'||measureMode==='height',dimensions:!!measureMode,dimReveal:dimensionOpacity(t)};
 }
 // Full dimensions fade; adjustable rulers stay visible while their values change.
 function dimensionOpacity(t){
  const windows=[[6.9,7.8],[7.8,9.3],[15.18,15.8],[15.8,16.85]];
  return Math.max(...windows.map(([a,b])=>smooth(phase(t,a,a+.06))*(1-smooth(phase(t,b-.06,b)))));
 }
-const STORY_TARGETS={top:0,collections:4.72,linea:7.18,roam:15.42};
+const STORY_TARGETS={top:0,collections:5.42,linea:7.18,roam:15.42};
 function modelCopy(state){
  if(!state.dimensions)return null;
- if(state.measureMode==='shelf')return {title:'FlexiShelf',tagline:'One table. Four possibilities.',body:'Adjust the lower shelf between three heights — 3.9", 9.8", and 15.7" — or remove it completely for an open configuration.',qualities:'Make more of the space you have.'};
- if(state.measureMode==='height')return {title:'3 adjustable heights',tagline:'One table. Different moments.',body:'Choose between 21.7", 25.6", and 29.1" to adapt ROAM for dining, working, gatherings, and everyday activities.',qualities:'Made to move with your life.'};
- return state.product==='linea'?{title:'LINEA',tagline:'Designed to fit where life happens.',body:'A slim, adaptable console table designed for modern homes where every inch matters. LINEA combines a clean silhouette with flexible storage that adapts to different spaces and everyday needs.',qualities:'Slim · Flexible · Functional'}:{title:'ROAM',tagline:'Made to move. Ready to adapt.',body:'A compact folding table designed for flexible everyday living. ROAM combines adjustable height, easy portability, and a foldable structure that adapts as spaces and activities change.',qualities:'Portable · Adjustable · Versatile'};
+ if(state.measureMode==='shelf')return {title:'FlexiShelf',tagline:'One table. Four possibilities.',body:'Three shelf heights, or an open configuration.'};
+ if(state.measureMode==='height')return {title:'3 adjustable heights',tagline:'One table. Different moments.',body:'For dining, working, gatherings, and everyday activities.'};
+ return state.product==='linea'?{title:'LINEA',tagline:'Designed to fit where life happens.',body:'A slim, adaptable console table designed for modern homes where every inch matters.'}:{title:'ROAM',tagline:'Made to move. Ready to adapt.',body:'A compact folding table designed for flexible everyday living.'};
 }
 function presentationAt(t){
  const state=storyAt(t),brand=t>=.78&&state.chapter===1;
@@ -85,6 +140,31 @@ function presentationAt(t){
  const reveal=brand||[2,3,7].includes(state.chapter);
  return {heroOpacity:1-smooth(phase(t,.4,.78)),brandVisible:brand,contentOpacity:reveal?smooth(phase(t,start,start+.26)):1};
 }
+// Scroll distance is apportioned to reading and mechanism beats, not a playback timer.
+// Seconds describe a 115-second rehearsal at a steady scroll rate.
+const PACE=[[0,0],[3,.78],[10,2.45],[18,4.3],[28,6.7],[36,7.8],[43.5,9.3],[47,9.8],[51.5,10.7],[54,11.05],[56.5,11.4],[60,12.3],[65,13.2],[68,14.3],[70,15],[77,15.8],[83,16.85],[86.5,17.45],[90,18.05],[93.5,18.65],[96,19.05],[99,19.55],[101.5,20.15],[104,20.65],[108,21.9],[115,END]];
+function paceMap(value,from,to){let i=0;while(i<PACE.length-2&&value>=PACE[i+1][from])i++;const a=PACE[i],b=PACE[i+1];return blend(a[to],b[to],phase(value,a[from],b[from]));}
+function pacedTime(progress){return paceMap(clamp(progress)*115,0,1);}
+function pacedProgress(time){return paceMap(clamp(time,0,END),1,0)/115;}
+function sceneFrameAt(t){
+ const chapter=storyAt(t).chapter,start=CHAPTERS[chapter-1];
+ const curtain=[2,3,7].includes(chapter),reveal=curtain?smooth(phase(t,start,start+.38)):1;
+ return {chapter,reveal,previous:curtain&&reveal<1?chapter-1:0,collectionExit:1-smooth(phase(t,6.18,6.7)),heroScale:1+.075*smooth(phase(t,0,.78)),roamTone:smooth(phase(t,13.55,14.18)),wipe:smooth(phase(t,13.28,13.72))*(1-smooth(phase(t,13.96,14.3)))};
+}
+const DETAIL_KEYS=['walnut','steel','feet','bracket','hdpe','roam-steel'];
+function captionAt(t){
+ const state=storyAt(t),step=state.step;
+ if(!step||state.dimensions||!step[2]||DETAIL_KEYS.includes(step[1]))return null;
+ let i=STEPS.indexOf(step),first=i,last=i;
+ while(first>0&&STEPS[first-1][2]===step[2]&&!DETAIL_KEYS.includes(STEPS[first-1][1]))first--;
+ while(last<STEPS.length-1&&STEPS[last+1][2]===step[2]&&!DETAIL_KEYS.includes(STEPS[last+1][1]))last++;
+ const end=Math.min(STEPS[last+1]?.[0]??21.9,CHAPTERS[state.chapter]??END);
+ return {title:step[2],body:step[3],side:step[4],key:step[1],opacity:detailOpacity(t,STEPS[first][0],end),bodyOpacity:detailOpacity(t,step[0],Math.min(STEPS[i+1]?.[0]??end,end))};
+}
+function collectionTypeAt(t){return {letters:smooth(phase(t,4.38,4.97)),label:smooth(phase(t,4.55,5.05)),tag:smooth(phase(t,4.64,5.11)),body:smooth(phase(t,4.72,5.21)),cta:smooth(phase(t,4.86,5.3))};}
+function textMotionAt(t){return {visionTitle:smooth(phase(t,2.5,2.9)),visionSubtitle:smooth(phase(t,2.65,3.05)),visionBody:smooth(phase(t,2.85,3.3)),finalTitle:smooth(phase(t,21.98,22.32)),finalPrice:smooth(phase(t,22.08,22.43)),finalBody:smooth(phase(t,22.2,22.58))};}
+// Removing a shelf is shown as a dissolve in place, not a sideways pass through the legs.
+function shelfPlacement(state){return {x:0,y:state.shelfHeight+state.explosion*.05,z:state.explosion*.32,opacity:clamp(1-state.shelfRemove)};}
 function detailOpacity(t,start,end){return smooth(phase(t,start,start+.16))*(1-smooth(phase(t,end-.12,end)));}
 // Photo-reference layout: both top rulers meet above the same rear corner.
 // Orthographic measurement shots keep all three model axes parallel on screen.
@@ -104,13 +184,13 @@ function technicalRulers(state){
 // Position, target and editorial horizontal view offset; holds use identical keys.
 const SHOTS=[
  [0,1.45,1.02,2.2,0,.4,0,.13],[6.2,1.45,1.02,2.2,0,.4,0,.13],[6.7,-.9,.83,2.6,0,.4,0,.15],[7.75,-.9,.83,2.6,0,.4,0,.15],
- [8,-.9,.83,2.6,0,.4,0,.15],[9.3,-.9,.83,2.6,0,.4,0,.15],[9.6,1.3,.94,2.1,0,.4,0,-.14],[10.05,.95,.96,.85,.3,.78,.04,-.14],[10.65,.95,.96,.85,.3,.78,.04,-.14],
+ [8,-.9,.83,2.6,0,.4,0,.15],[9.3,-.9,.83,2.6,0,.4,0,.15],[9.6,1.3,.94,2.1,0,.4,0,-.14],[10.05,.95,.96,.85,.3,.78,.04,-.14],[10.65,1.02,1.005,.89,.3,.78,.04,-.14],
  [10.86,1.05,.74,.84,.51,.55,.12,.15],[11,.98,.7,.8,.51,.52,.12,.15],[11.17,.9,.22,.7,.51,.045,.12,-.14],[11.35,.9,.22,.7,.51,.045,.12,-.14],
- [11.62,.84,1.02,.52,.5,.87,.12,-.13],[12.22,.84,1.02,.52,.5,.87,.12,-.13],[12.5,1.85,1.35,2.6,0,.47,0,0],[13.12,1.85,1.35,2.6,0,.47,0,0],
+ [11.62,.84,1.02,.52,.5,.87,.12,-.13],[12.22,.88,1.06,.6,.5,.87,.12,-.13],[12.5,1.85,1.35,2.6,0,.47,0,0],[13.12,1.35,1.5,2.65,0,.47,0,0],
  [13.6,.25,1.13,.36,.16,.96,.03,0],[13.84,.25,1.13,.36,.16,.96,.03,0],[13.85,.2,.93,.38,.13,.74,.03,0],[14.18,.2,.93,.38,.13,.74,.03,0],[14.65,1.6,1.1,2.2,0,.36,0,-.14],
  [15,-1.1,.82,2.7,0,.35,0,.15],[15.75,-1.1,.82,2.7,0,.35,0,.15],[16,-1.1,.82,2.7,0,.35,0,.15],[16.85,-1.1,.82,2.7,0,.35,0,.15],
- [17.15,1.3,1.6,1.9,0,.28,0,-.14],[18.6,1.3,1.6,1.9,0,.28,0,-.14],[18.88,1.25,.9,1.6,0,.2,0,.14],[19.45,1.3,.86,1.7,0,.37,0,.14],
- [19.76,.9,.74,.96,0,.44,0,-.14],[20.1,.9,.74,.96,0,.44,0,-.14],[20.38,.9,.86,.9,0,.6,0,.13],[20.6,.9,.86,.9,0,.6,0,.13],[21.08,1.6,1.75,2.2,0,.25,0,-.18],[END,1.6,1.75,2.2,0,.25,0,-.18]
+ [17.15,1.3,1.6,1.9,0,.28,0,-.14],[18.6,1.55,1.45,1.68,0,.28,0,-.14],[18.88,1.25,.9,1.6,0,.2,0,.14],[19.45,1.3,.86,1.7,0,.37,0,.14],
+ [19.76,.9,.74,.96,0,.44,0,-.14],[20.1,.98,.78,1.04,0,.44,0,-.14],[20.38,.9,.86,.9,0,.6,0,.13],[20.6,.9,.86,.9,0,.6,0,.13],[21.08,1.6,1.75,2.2,0,.25,0,-.18],[END,1.6,1.75,2.2,0,.25,0,-.18]
 ];
 function cameraAt(t){
  if(t>=6.7&&t<9.3)t=7.2;if(t>=15&&t<16.85)t=15.3;
@@ -127,27 +207,28 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Navigation restores story anchors rather than native document pixel offsets.
 if('scrollRestoration' in history)history.scrollRestoration='manual';
 let renderer,scene,camera,linea,roam,assembly,leftHalf,rightPivot,shelfGroup,topGroup,sideFrames=[],joints=[],railGroup,carton,lid;
-let ready=false,lastFrame='',lastShadow='',lastStep='',lastChapter=0;
+let ready=false,lastFrame='',lastShadow='',lastStep='',lastChapter=0,lastPaint='',lastPanel='',noteLayout='',noteHeight=0;
+let scrollController=null;
 const selectedFinishes={linea:0,roam:0},FINISHES={linea:[['Rustic Brown × Matte Black','#875733','rustic'],['Natural Oak × Matte Black','#c4a170','oak']],roam:[['White × Matte Black','#e9e7df','white'],['Black × Matte Black','#282a29','black']]};
 const legFrames=[],feet=[],braces=[];
 try{
  if(new URLSearchParams(location.search).has('fallback'))throw Error('Fallback preview');
  renderer=new THREE.WebGLRenderer({canvas:$('#gl'),alpha:true,antialias:true,powerPreference:'high-performance'});
  renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;
- renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;
- renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;renderer.shadowMap.autoUpdate=false;
+ renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.92;
+ renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
  scene=new THREE.Scene();camera=new THREE.PerspectiveCamera(32,1,.012,45);
  const envScene=new THREE.Scene();envScene.background=new THREE.Color('#c8c4b8');
  for(const [x,y,z,w,h,power] of [[-3,3,2,3,5,3],[3,2,-2,2,4,1.8],[0,5,0,5,3,2]]){
   const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color('#fff5e6').multiplyScalar(power),side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,.4,0);envScene.add(m);
  }
  const pmrem=new THREE.PMREMGenerator(renderer),environment=pmrem.fromScene(envScene,.025);scene.environment=environment.texture;pmrem.dispose();envScene.traverse(o=>{o.geometry?.dispose();o.material?.dispose()});
- scene.add(new THREE.HemisphereLight('#fffaf1','#9caa9f',.7));
+ scene.add(new THREE.HemisphereLight('#fffaf1','#89998c',.58));
  const key=new THREE.DirectionalLight('#fff3df',2.15);key.position.set(-1.8,3,2.2);key.castShadow=true;key.shadow.mapSize.set(innerWidth<=700?1024:2048,innerWidth<=700?1024:2048);Object.assign(key.shadow.camera,{left:-2,right:2,top:2,bottom:-2,near:.1,far:8});key.shadow.bias=-.00012;key.shadow.normalBias=.001;key.shadow.radius=3.5;scene.add(key);
  const rim=new THREE.DirectionalLight('#e6eeed',.85);rim.position.set(2,2,-2);scene.add(rim);
- const fill=new THREE.DirectionalLight('#fff9f0',.5);fill.position.set(1,1,3);scene.add(fill);
- const ground=new THREE.Mesh(new THREE.PlaneGeometry(25,25),new THREE.ShadowMaterial({opacity:.21}));ground.rotation.x=-Math.PI/2;ground.position.y=-.0015;ground.receiveShadow=true;scene.add(ground);
- const steel=new THREE.MeshStandardMaterial({color:'#242923',roughness:.52,metalness:.22,envMapIntensity:.6});
+ const fill=new THREE.DirectionalLight('#fff9f0',.38);fill.position.set(1,1,3);scene.add(fill);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(25,25),new THREE.ShadowMaterial({opacity:.25}));ground.rotation.x=-Math.PI/2;ground.position.y=-.0015;ground.receiveShadow=true;scene.add(ground);
+ const steel=new THREE.MeshStandardMaterial({color:'#242923',roughness:.43,metalness:.28,envMapIntensity:.7});
  const rubber=new THREE.MeshStandardMaterial({color:'#262b25',roughness:.9});
  const zinc=new THREE.MeshStandardMaterial({color:'#7b8179',roughness:.38,metalness:.82});
  let seed=23;
@@ -170,10 +251,10 @@ try{
   const latewood=Math.pow(Math.abs(Math.sin(flow*Math.PI)),18);
   const fine=Math.pow(Math.abs(Math.sin(flow*7.3+grainNoise(u*17,v*80)*2)),12);
   const broad=grainNoise(u*4,v*9)-.5,pores=grainNoise(u*110,v*190)-.5;
-  const tone=1+broad*.29-latewood*.13-fine*.045+pores*.065;
+  const tone=1+broad*.35-latewood*.2-fine*.055+pores*.05;
   const i=(y*1024+x)*4;
   for(let c=0;c<3;c++){
-   grainImage.data[i+c]=[108,63,35][c]*tone;
+   grainImage.data[i+c]=[96,61,38][c]*tone;
    oakImage.data[i+c]=[169,129,79][c]*(1+(tone-1)*.8);
   }
   grainImage.data[i+3]=oakImage.data[i+3]=255;
@@ -185,7 +266,8 @@ try{
   map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());finishMaps[name]=map;
  }
  const woodMap=finishMaps.rustic,woodBump=woodMap.clone();woodBump.colorSpace=THREE.NoColorSpace;
- const wood=new THREE.MeshPhysicalMaterial({color:'#ffffff',map:woodMap,bumpMap:woodBump,bumpScale:.00018,roughness:.55,metalness:0,clearcoat:.06,clearcoatRoughness:.62,envMapIntensity:.55});
+ const wood=new THREE.MeshPhysicalMaterial({color:'#ffffff',map:woodMap,bumpMap:woodBump,bumpScale:.00014,roughness:.48,metalness:0,clearcoat:.06,clearcoatRoughness:.62,envMapIntensity:.55});
+ const shelfWood=wood.clone(),shelfSteel=steel.clone();
  const noiseCanvas=document.createElement('canvas');noiseCanvas.width=noiseCanvas.height=128;
  const ng=noiseCanvas.getContext('2d'),pix=ng.createImageData(128,128);
  for(let i=0;i<pix.data.length;i+=4){const v=120+Math.floor(random()*20);pix.data.set([v,v,v,255],i);}ng.putImageData(pix,0,0);
@@ -193,14 +275,28 @@ try{
  steel.bumpMap=micro;steel.bumpScale=.00008;
  const hdpe=new THREE.MeshPhysicalMaterial({color:'#e5e3dc',roughness:.68,envMapIntensity:.45,bumpMap:micro,bumpScale:.0002,metalness:0,clearcoat:.04,clearcoatRoughness:.72});
  var applyFinish=(product,choice)=>{
-  if(product==='linea'&&finishMaps[choice]){wood.map=finishMaps[choice];wood.needsUpdate=true;}
+  if(product==='linea'&&finishMaps[choice]){for(const material of [wood,shelfWood]){material.map=finishMaps[choice];material.needsUpdate=true;}}
   else if(product==='roam'&&['white','black'].includes(choice)){hdpe.color.set(choice==='black'?'#343a35':'#e5e3dc');}
   else return false;
   lastFrame='';return true;
  };
- const boxGeometry=new THREE.BoxGeometry(1,1,1),tubeGeometry=new THREE.CylinderGeometry(1,1,1,16);
+ const boxGeometry=new THREE.BoxGeometry(1,1,1),tubeGeometry=new THREE.CylinderGeometry(1,1,1,24);
  function mesh(parent,geometry,material,x=0,y=0,z=0){const o=new THREE.Mesh(geometry,material);o.position.set(x,y,z);o.castShadow=o.receiveShadow=true;parent.add(o);return o;}
- function box(parent,w,h,d,x,y,z,mat=steel){const o=mesh(parent,boxGeometry,mat,x,y,z);o.scale.set(w,h,d);return o;}
+ const steelProfiles=new Map();
+ function box(parent,w,h,d,x,y,z,mat=steel){
+  if(mat!==steel){const o=mesh(parent,boxGeometry,mat,x,y,z);o.scale.set(w,h,d);return o;}
+  const key=[w,h,d].join(':');
+  if(!steelProfiles.has(key)){
+   // Small real edge radii catch the studio light without changing outer dimensions.
+   const radius=Math.min(.0009,w*.18,h*.18,d*.18),geo=new THREE.BoxGeometry(w,h,d,3,3,3),p=geo.attributes.position,n=geo.attributes.normal;
+   for(let i=0;i<p.count;i++){
+    const a=[p.getX(i),p.getY(i),p.getZ(i)],half=[w/2,h/2,d/2],core=a.map((v,j)=>clamp(v,-half[j]+radius,half[j]-radius)),v=a.map((x,j)=>x-core[j]),len=Math.hypot(...v);
+    p.setXYZ(i,...core.map((x,j)=>x+v[j]/len*radius));n.setXYZ(i,...v.map(x=>x/len));
+   }
+   steelProfiles.set(key,geo);
+  }
+  return mesh(parent,steelProfiles.get(key),mat,x,y,z);
+ }
  function tube(parent,r,len,x,y,z,mat=steel,sides=16){const o=mesh(parent,sides===16?tubeGeometry:new THREE.CylinderGeometry(1,1,1,sides),mat,x,y,z);o.scale.set(r,len,r);return o;}
  function slab(parent,w,d,t,x,y,z,mat,r=.016,notched=false){
   const s=new THREE.Shape(),a=-w/2,b=-d/2;
@@ -224,13 +320,13 @@ try{
   box(frame,.022,.022,.262,0,.762,0);box(frame,.018,.018,.262,0,.048,0);
  }
  railGroup=new THREE.Group();linea.add(railGroup);for(const y of [.755,.07]){const rail=tube(railGroup,.0045,1.04,0,y,-.12);rail.rotation.z=Math.PI/2;}
- shelfGroup=new THREE.Group();linea.add(shelfGroup);slab(shelfGroup,1.06,.28,.018,0,0,0,wood,.012,true);
+ shelfGroup=new THREE.Group();linea.add(shelfGroup);slab(shelfGroup,1.06,.28,.018,0,0,0,shelfWood,.012,true);
  for(const x of [-.518,.518])for(const z of [-.12,.12]){
   const side=Math.sign(x),bracket=new THREE.Group();linea.add(bracket);
   box(bracket,.034,.003,.025,-side*.015,.016,0);box(bracket,.003,.037,.025,-side*.003,0,0);
   const bolt=tube(bracket,.004,.008,-side*.005,-.005,.017,zinc,6);bolt.rotation.x=Math.PI/2;
   const screw=tube(bracket,.0022,.019,-side*.02,.021,0,zinc);joints.push({bracket,bolt,screw,x,z});
-  const support=new THREE.Group();shelfGroup.add(support);box(support,.03,.003,.024,x-side*.018,-.012,z);box(support,.003,.028,.024,x-side*.006,-.025,z);
+  const support=new THREE.Group();shelfGroup.add(support);box(support,.03,.003,.024,x-side*.018,-.012,z,shelfSteel);box(support,.003,.028,.024,x-side*.006,-.025,z,shelfSteel);
  }
  // ROAM: nested round tube frames, telescoping lower legs and two hinged shells.
  roam=new THREE.Group();scene.add(roam);assembly=new THREE.Group();roam.add(assembly);assembly.rotation.order='ZXY';
@@ -279,7 +375,9 @@ try{
   linea.rotation.y=.12;roam.rotation.y=.12;
   topGroup.position.set(0,.791+e*.19,0);
   sideFrames.forEach(frame=>frame.position.x=frame.userData.side*(.52+e*.25));railGroup.position.z=-e*.18;
-  shelfGroup.position.set(s.shelfRemove*.74,s.shelfHeight+e*.05+s.shelfRemove*.1,e*.32+s.shelfRemove*.08);shelfGroup.rotation.z=s.shelfRemove*.15;shelfGroup.visible=s.shelfRemove<.99;
+  const shelf=shelfPlacement(s);shelfGroup.position.set(shelf.x,shelf.y,shelf.z);shelfGroup.rotation.z=0;shelfGroup.visible=shelf.opacity>.001;
+  for(const material of [shelfWood,shelfSteel]){const fading=shelf.opacity<.999;if(material.transparent!==fading){material.transparent=fading;material.depthWrite=!fading;material.needsUpdate=true;}material.opacity=shelf.opacity;}
+  shelfGroup.traverse(child=>{if(child.isMesh)child.castShadow=shelf.opacity>.995;});
   joints.forEach(j=>{j.bracket.position.set(j.x+Math.sign(j.x)*e*.25,.764-e*.03,j.z);j.bolt.position.z=.017+s.joint*.055+e*.035;j.screw.position.y=.011-s.joint*.045-e*.04;});
   const length=s.roamHeight-.043-.028,legAngle=s.legFold*Math.PI/2;
   legFrames.forEach(({frame,side})=>frame.rotation.z=-side*legAngle);
@@ -309,7 +407,7 @@ for(let i=0;i<3;i++){
  measurement.append(group);measureGroups.push(group);
 }
 let width=innerWidth,height=innerHeight,renderHeight=innerHeight,resizeStoryTime=null;
-function resize(){if(lastChapter&&(width!==innerWidth||height!==innerHeight))resizeStoryTime=playhead.time;width=innerWidth;height=innerHeight;renderHeight=height;for(const svg of [measurement,leader])svg.setAttribute('viewBox',`0 0 ${width} ${height}`);if(renderer){renderer.setSize(width,renderHeight,false);camera.aspect=width/renderHeight;camera.fov=width<=700?36:32;camera.updateProjectionMatrix();}lastFrame='';}
+function resize(){if(lastChapter&&(width!==innerWidth||height!==innerHeight))resizeStoryTime=playhead.time;width=innerWidth;height=innerHeight;renderHeight=height;for(const svg of [measurement,leader])svg.setAttribute('viewBox',`0 0 ${width} ${height}`);if(renderer){renderer.setSize(width,renderHeight,false);camera.aspect=width/renderHeight;camera.fov=width<=700?36:32;camera.updateProjectionMatrix();}lastFrame=lastPaint=noteLayout='';scrollController?.resize();}
 addEventListener('resize',resize,{passive:true});resize();
 const projected=ready?new THREE.Vector3():null;
 function screenPoint(parent,p){projected.set(...p);parent.localToWorld(projected);projected.project(camera);return[(projected.x*.5+.5)*width,(-projected.y*.5+.5)*renderHeight];}
@@ -339,10 +437,11 @@ function dimensionLines(state){
 function detailLines(state){
  const key=state.step?.[1],items={walnut:[linea,[.45,.798,.11],'Woodgrain MFC'],steel:[linea,[.52,.55,.12],'Powder-coated steel'],feet:[linea,[.52,.012,.12],'Adjustable Feet'],bracket:[linea,[.505,.752,.12],'Flat-Pack Design'],hdpe:[assembly,[-.305,0,.15],'Hollow-Molded HDPE'],'roam-steel':[assembly,[-.65,-.013,0],'Built-in Carrying Handle']};
  const item=ready?items[key]:null;note.hidden=!item;leader.toggleAttribute('hidden',!item);if(!item)return;
- note.textContent=item[2];const mobile=width<=700,side=state.step[4],right=side==='right',boxW=mobile?146:190;
+ const mobile=width<=700,side=state.step[4],right=side==='right',boxW=mobile?146:190;
  const x=right?width-(mobile?.07:.06)*width-boxW:(mobile?.07:.06)*width,y=height*(mobile?.54:.59);
- note.style.left=x+'px';note.style.top=y+'px';
- const point=screenPoint(item[0],item[1]),boxH=note.getBoundingClientRect().height,cx=x+boxW/2,cy=y+boxH/2;
+ const layoutKey=key+':'+width+':'+height;
+ if(noteLayout!==layoutKey){note.textContent=item[2];note.style.left=x+'px';note.style.top=y+'px';noteHeight=note.getBoundingClientRect().height;noteLayout=layoutKey;}
+ const point=screenPoint(item[0],item[1]),boxH=noteHeight,cx=x+boxW/2,cy=y+boxH/2;
  const vx=point[0]-cx,vy=point[1]-cy,scale=Math.min((boxW/2)/Math.max(Math.abs(vx),.001),(boxH/2)/Math.max(Math.abs(vy),.001));
  const end=[cx+vx*scale,cy+vy*scale];
  leader.querySelector('path').setAttribute('d',`M${point}L${end}`);
@@ -350,26 +449,63 @@ function detailLines(state){
  const opacity=reduced?1:detailOpacity(playhead.time,state.step[0],next);
  note.style.opacity=leader.style.opacity=String(opacity);
 }
+const ui={stage:$('#stage'),brand:$('#brand-story'),logo:$('#s1 .lg'),hero:$('#s1 .ph'),vision:$('#s2 figure img'),visionSection:$('#s2'),collection:$('#s3'),finalSection:$('#s8'),panel:$('#product-panel'),finishes:$('#finishes'),finishButtons:$$('#finishes button'),nav:$('#story-nav'),wipe:$('#s6 .wp'),fallback:$('#fallback-image')};
+function setMotionHeading(element,text){
+ element.setAttribute('aria-label',text);
+ const words=text.trim().split(/\s+/),fragment=document.createDocumentFragment();
+ words.forEach((word,i)=>{const span=document.createElement('span');span.className='motion-word';span.style.setProperty('--i',i);span.setAttribute('aria-hidden','true');span.textContent=word;if(i)fragment.append(document.createTextNode(' '));fragment.append(span);});
+ element.replaceChildren(fragment);
+}
 function syncText(state,t){
- $('#stage').classList.toggle('roam-stage',state.model&&state.product==='roam');
- const presentation=presentationAt(t);
- $('#brand-story').hidden=!presentation.brandVisible;$('#story-nav').hidden=state.chapter<4;
- $('#s1 .ph').style.opacity=String(presentation.heroOpacity);
- $('#s1 .lg').hidden=!presentation.brandVisible;$('#s1 .lg').style.opacity=$('#brand-story').style.opacity=String(presentation.contentOpacity);
- for(const id of ['s2','s3','s8'])$('#'+id).style.opacity=String(presentation.contentOpacity);
-
- if(lastChapter!==state.chapter){lastChapter=state.chapter;sections.forEach((section,i)=>{const active=i+1===state.chapter;section.hidden=!active;section.setAttribute('aria-hidden',String(!active));});document.body.dataset.chapter=state.chapter;}
- const copy=modelCopy(state),panel=$('#product-panel');panel.hidden=!copy||!ready;
- if(copy){panel.dataset.mode=state.measureMode;panel.querySelector('h2').textContent=copy.title;panel.querySelector('.tagline').textContent=copy.tagline;panel.querySelector('.description').textContent=copy.body;panel.querySelector('.qualities').textContent=copy.qualities;$('#finishes').hidden=state.measureOnly;const options=FINISHES[state.product];$('#finishes legend span').textContent=options[selectedFinishes[state.product]][0];$$('#finishes button').forEach((button,i)=>{button.setAttribute('aria-label',options[i][0]);button.title=options[i][0];button.style.setProperty('--swatch',options[i][1]);button.setAttribute('aria-pressed',String(selectedFinishes[state.product]===i));button.disabled=!ready;});}
- const active=state.step,code=active?.[1]||'';inspector.hidden=!active||!active[2]||(ready&&state.dimensions);document.body.dataset.measurement=state.measureMode;
- if(code!==lastStep){lastStep=code;document.body.dataset.step=code;if(active){inspector.dataset.kind=code;inspector.querySelector('p').hidden=false;inspector.className=active[4];inspector.querySelector('h2').textContent=ready?active[2]:state.product.toUpperCase();inspector.querySelector('p').textContent=ready?active[3]:'3D preview unavailable. Showing the original product photograph.';}}
- const fallback=$('#fallback-image');fallback.hidden=ready||!state.model;if(!fallback.hidden){const src=state.product==='linea'?'assets/linea-lifestyle.jpg':'assets/roam-lifestyle.jpg';if(fallback.getAttribute('src')!==src)fallback.src=src;}
+ const frame=sceneFrameAt(t),presentation=presentationAt(t),brand=t>=.78&&t<2.83;
+ ui.stage.classList.toggle('roam-stage',state.product==='roam');ui.stage.style.setProperty('--roam-tone',frame.roamTone.toFixed(4));
+ ui.brand.hidden=ui.logo.hidden=!brand;ui.nav.hidden=state.chapter<4;
+ ui.hero.style.opacity=String(presentation.heroOpacity);ui.hero.style.transform=reduced?'none':`scale(${frame.heroScale})`;
+ const brandReveal=reduced?1:smooth(phase(t,.78,1.04));ui.logo.style.opacity=ui.brand.style.opacity=String(brandReveal);
+ ui.vision.style.transform=reduced?'none':`scale(${1.055-.055*smooth(phase(t,2.45,4.3))})`;
+ const type=collectionTypeAt(t),one=reduced?1:null;
+ ui.brand.style.setProperty('--letters',String(one??smooth(phase(t,.82,1.36))));
+ const textMotion=textMotionAt(t);
+ for(const [name,value] of [['vision-reveal',textMotion.visionTitle],['vision-subtitle',textMotion.visionSubtitle],['vision-body',textMotion.visionBody]])ui.visionSection.style.setProperty('--'+name,String(one??value));
+ for(const [name,value] of [['final-title',textMotion.finalTitle],['final-price',textMotion.finalPrice],['final-body',textMotion.finalBody]])ui.finalSection.style.setProperty('--'+name,String(one??value));
+ ui.finalSection.querySelectorAll('.product-name').forEach(link=>{const available=(one??textMotion.finalTitle)>.95;link.tabIndex=available?0:-1;link.style.pointerEvents=available?'auto':'none';});
+ for(const [name,value] of Object.entries(type))ui.collection.style.setProperty(name==='letters'?'--letters':`--${name}-reveal`,String(one??value));
+ ui.collection.querySelectorAll('.explore').forEach(link=>{const available=(one??type.cta)>.95&&frame.collectionExit>.1;link.tabIndex=available?0:-1;link.style.pointerEvents=available?'auto':'none';});
+ ui.wipe.style.transform=`translateX(${t<13.85?-101*(1-frame.wipe):101*(1-frame.wipe)}%)`;
+ sections.forEach((section,i)=>{
+  const chapter=i+1,active=chapter===state.chapter,visible=active||(!reduced&&chapter===frame.previous);
+  if(section.hidden===visible)section.hidden=!visible;
+  section.inert=!active;section.setAttribute('aria-hidden',String(!active));
+  section.style.zIndex=String(chapter===frame.previous?2:3);
+  section.style.opacity=String(chapter===3?frame.collectionExit:1);
+  const reveal=reduced||!active?1:frame.reveal;
+  section.style.clipPath=chapter===2?`inset(0 ${(1-reveal)*100}% 0 0)`:chapter===3?`inset(${(1-reveal)*100}% 0 0 0)`:chapter===7?`inset(0 0 0 ${(1-reveal)*100}%)`:'none';
+ });
+ if(lastChapter!==state.chapter){lastChapter=state.chapter;document.body.dataset.chapter=state.chapter;}
+ const copy=modelCopy(state),panel=ui.panel;panel.hidden=!copy||!ready;
+ if(copy){
+  const panelKey=state.product+':'+state.measureMode+':'+selectedFinishes[state.product];
+  if(panelKey!==lastPanel){
+   lastPanel=panelKey;panel.dataset.mode=state.measureMode;setMotionHeading(panel.querySelector('h2'),copy.title);panel.querySelector('.tagline').textContent=copy.tagline;panel.querySelector('.description').textContent=copy.body;ui.finishes.hidden=state.measureOnly;
+   const options=FINISHES[state.product];ui.finishes.querySelector('legend span').textContent=options[selectedFinishes[state.product]][0];
+   ui.finishButtons.forEach((button,i)=>{button.setAttribute('aria-label',options[i][0]);button.title=options[i][0];button.style.setProperty('--swatch',options[i][1]);button.setAttribute('aria-pressed',String(selectedFinishes[state.product]===i));button.disabled=!ready;});
+  }
+  const start=state.measureMode==='shelf'?7.8:state.measureMode==='height'?15.8:state.product==='linea'?6.7:15;
+  const reveal=reduced?1:smooth(phase(t,start,start+.16)),title=reduced?1:smooth(phase(t,start,start+.28)),tag=reduced?1:smooth(phase(t,start+.09,start+.34)),body=reduced?1:smooth(phase(t,start+.17,start+.45));
+  panel.style.opacity=String(reveal);panel.style.setProperty('--title-mask',`${(1-reveal)*100}%`);panel.style.setProperty('--title-shift',`${(1-reveal)*12}px`);panel.style.setProperty('--word-progress',String(title));panel.style.setProperty('--panel-tag',String(tag));panel.style.setProperty('--panel-body',String(body));
+  ui.finishes.inert=body<.95;
+ }
+ const caption=captionAt(t),active=state.step,code=active?.[1]||'';
+ inspector.hidden=ready?!caption:!active;document.body.dataset.measurement=state.measureMode;
+ if(code!==lastStep){lastStep=code;document.body.dataset.step=code;if(active){inspector.dataset.kind=code;inspector.className=caption?.side||'right';setMotionHeading(inspector.querySelector('h2'),ready?(caption?.title||''):state.product.toUpperCase());inspector.querySelector('p').textContent=ready?(caption?.body||''):'3D preview unavailable. Showing the original product photograph.';}}
+ const opacity=reduced?1:caption?.opacity??1;inspector.style.opacity=String(opacity);inspector.style.setProperty('--title-mask',`${(1-opacity)*100}%`);inspector.style.setProperty('--title-shift',`${(1-opacity)*10}px`);inspector.style.setProperty('--word-progress',String(opacity));const bodyOpacity=reduced||!caption?1:caption.bodyOpacity;inspector.style.setProperty('--inspector-body',String(bodyOpacity));inspector.querySelector('p').style.opacity=String(bodyOpacity);
+ ui.fallback.hidden=ready||!state.model;if(!ui.fallback.hidden){const src=state.product==='linea'?'assets/linea-lifestyle.jpg':'assets/roam-lifestyle.jpg';if(ui.fallback.getAttribute('src')!==src)ui.fallback.src=src;}
 }
 function paint(time){
- if(document.hidden)return;let state=storyAt(time);
+ if(document.hidden)return;const paintKey=[time.toFixed(5),width,height,selectedFinishes.linea,selectedFinishes.roam,ready,reduced].join(':');if(paintKey===lastPaint)return;lastPaint=paintKey;let state=storyAt(time);
  if(reduced&&state.step){const index=STEPS.indexOf(state.step),end=Math.min(STEPS[index+1]?.[0]??END,CHAPTERS[state.chapter]??END);state=storyAt(blend(state.step[0],end,.98));}
  syncText(state,time);
- $('#gl').style.opacity=ready&&state.model?String(reduced?1:smooth(phase(time,6.2,6.6))*(1-phase(time,21.7,21.9))):'0';
+ $('#gl').style.opacity=ready&&state.model?String(reduced?1:smooth(phase(time,6.2,6.6))):'0';
  if(!ready||!state.model){measurement.setAttribute('hidden','');leader.setAttribute('hidden','');note.hidden=true;return;}
  try{
   updateGeometry(state);let c=cameraAt(time);
@@ -402,15 +538,17 @@ function paint(time){
 }
 if(window.gsap&&window.ScrollTrigger){
  gsap.registerPlugin(ScrollTrigger);
- const tl=gsap.timeline({defaults:{ease:'power2.inOut'},scrollTrigger:{trigger:'#sp',start:'top top',end:'bottom bottom',scrub:reduced?true:.45}});
- tl.to(playhead,{time:END,duration:END,ease:'none'},0);
- tl.to('#s6 .wp',{scaleX:1,duration:.36},13.3).set('#s6 .wp',{transformOrigin:'right'},13.75).to('#s6 .wp',{scaleX:0,duration:.36},13.92);
+ // One clock: Lenis advances native scroll; ScrollTrigger and WebGL use that same position.
+ if(!reduced&&window.Lenis){scrollController=new Lenis({autoRaf:false,lerp:.12,smoothWheel:true,syncTouch:false,anchors:false});scrollController.on('scroll',ScrollTrigger.update);}
+ document.body.dataset.scrollEngine=scrollController?'lenis':'native';
+ const tl=gsap.timeline({scrollTrigger:{trigger:'#sp',start:'top top',end:'bottom bottom',scrub:reduced||scrollController?true:.28}});
+ tl.to(playhead,{time:END,duration:END,ease:p=>pacedTime(p)/END},0);
  let initialAnchor=STORY_TARGETS[location.hash.slice(1)];
  // A browser may restore its old scroll pixels after the load event. Keep a
  // requested deep link stable until the visitor first interacts with the page.
- for(const type of ['wheel','touchstart','pointerdown','keydown'])addEventListener(type,()=>{initialAnchor=undefined;},{passive:true,once:true});
+ for(const type of ['wheel','touchstart','pointerdown','keydown'])addEventListener(type,()=>{initialAnchor=undefined;resizeStoryTime=null;},{passive:true});
  function seekStoryTime(target){
-  const st=tl.scrollTrigger;window.scrollTo({top:st.start+(st.end-st.start)*target/END,behavior:'instant'});ScrollTrigger.update();st.getTween()?.progress(1);tl.progress(target/END);playhead.time=target;paint(target);
+  const st=tl.scrollTrigger,p=pacedProgress(target),offset=st.start+(st.end-st.start)*p;if(scrollController){scrollController.resize();scrollController.scrollTo(offset,{immediate:true,force:true});}else window.scrollTo({top:offset,behavior:'instant'});ScrollTrigger.update();st.getTween()?.progress?.(1);tl.progress(p);playhead.time=target;paint(target);
  }
  function goToStory(name){
   const target=STORY_TARGETS[name];if(target===undefined)return;
@@ -422,10 +560,13 @@ if(window.gsap&&window.ScrollTrigger){
  $$('[data-story-target]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();const name=link.dataset.storyTarget;history.replaceState(null,'','#'+name);goToStory(name);}));
  $$('#finishes button').forEach(button=>button.addEventListener('click',()=>{const product=storyAt(playhead.time).product,choice=Number(button.dataset.finish);selectedFinishes[product]=choice;if(ready&&typeof applyFinish==='function')applyFinish(product,FINISHES[product][choice][2]);lastFrame='';paint(playhead.time);}));
  addEventListener('hashchange',()=>goToStory(location.hash.slice(1)));
- document.fonts.ready.then(()=>{ScrollTrigger.refresh();if(location.hash)goToStory(location.hash.slice(1));});
+ // Font loading can finish after the visitor has started scrolling. Do not
+ // pull them back to the deep link once they have taken control.
+ document.fonts.ready.then(()=>{lastPaint=noteLayout='';ScrollTrigger.refresh();if(initialAnchor!==undefined)seekStoryTime(initialAnchor);});
  // One ticker, one scroll owner. Every visible label is chosen from current time.
- gsap.ticker.add(()=>{if(initialAnchor!==undefined&&document.readyState==='complete'){const st=tl.scrollTrigger,offset=st.start+(st.end-st.start)*initialAnchor/END;if(Math.abs(scrollY-offset)>2)seekStoryTime(initialAnchor);}document.body.dataset.storyTime=playhead.time.toFixed(3);paint(playhead.time)});
+ gsap.ticker.lagSmoothing(0);
+ gsap.ticker.add(seconds=>{if(document.hidden)return;scrollController?.raf(seconds*1000);if(initialAnchor!==undefined&&document.readyState==='complete'){const st=tl.scrollTrigger,offset=st.start+(st.end-st.start)*pacedProgress(initialAnchor);if(Math.abs(scrollY-offset)>2)seekStoryTime(initialAnchor);}document.body.dataset.storyTime=playhead.time.toFixed(3);paint(playhead.time)});
  document.fonts.ready.then(()=>ScrollTrigger.refresh());$$('img').forEach(img=>img.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true}));
- document.addEventListener('visibilitychange',()=>{if(!document.hidden){lastFrame='';ScrollTrigger.refresh();}});
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden){lastFrame=lastPaint='';ScrollTrigger.refresh();}});
 }else{$('#network-message').hidden=false;}
 </script></body></html>
